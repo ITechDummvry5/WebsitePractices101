@@ -1,1 +1,70 @@
 Numbers and Math Lesson2
+
+Syntax rule numbers : 
+
+xample
+console : 10.90 * 2 + 20.95 
+                        --> see exercisesjs lesson2  //example1
+xample2
+console : jstotal + 4.99 
+                        --> See exercisesjs lesson2  //with shipping fee
+
+Order Operation? 
+ans : in javascript  it called (Operator Precedence)
+* / Are done first 
++ - are done after 
+
+more details: 
+=Multiplication * and Division / → evaluated FIRST (left to right if multiple)
+same Priority example : 2 * 3 / 5  Left -> right
+
+=Addition + and Subtraction - → evaluated AFTER * and / (left to right)
+same Priority example : 2 + 4 - 5 Left -> right
+
+problem and solution:
+cause : not controlled because of the rule of Order Operation
+Solution : We can use (...) Brackets to control which part gets done first
+
+Syntax Rules for Brackets? 
+(...) are the Highest Priority
+* / Are done first 
++ - are done after 
+
+Terminology: Numbers and Operations
+ans: in programming : 2,3,4 = integers  2.2,2.5 = Floating Point numbers (floats)
+ans: computers have a problem working with floats
+ans: Computers can store => 0.1
+ans: Humans can store -> 0,1,2,...,8,9
+
+More Detail In Math and Numbers 
+1. Weird Behavior of math in javascript
+
+details :  Human 2 , 99 ,, 0.2  | Computer 10 , 1100011 , ???? 
+notes  :   computers cant Store Floats Properly 
+notes2 :   this doesnt happen on all Floats
+notes3 :   calculation with floats are sometimes inaccurate
+
+solution to this problem : we can counting in cents instead dollar
+                                        --> See exercisesjs lesson2 //example Counting in cent instead of dollar (Floats Solution) using example 2
+
+
+2. How To round a Number? 
+
+xample3 
+console : Math.round(2.2) //Output 2 
+console : Math.round(2.8) //Output 3
+                            --> see exercisesjs lesson2 //example  cent calculating tax  percentages using example 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
