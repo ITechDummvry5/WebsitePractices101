@@ -1,0 +1,33 @@
+JavaScript Basic Lesson1
+
+What is Javascript? 
+ans : Giving Instructions to a Computer
+ans : The Computer follows Our Instructions
+ans : Javascript is a case-sensitive
+
+Exercise xample1:
+Console : alert('hello;); alert('Good Job!');
+Cause  Show Pop Up Hello  again Good Job!
+
+Terminology
+
+Programming Languages?
+ans : similar to human languages (but for Code)
+Cause : Command That translate into Computer
+
+Exercise xample2:
+Console : document.body.innerHtml = 'hello';
+Cause : is Modified The Webpages or Html Elements 
+
+
+What is Syntax?
+ans : Rules that we have to follow when using a programming languages
+Cause : Correct Compiler
+
+what is DOMContentLoaded?
+DOMContentLoaded is a JavaScript event that fires when the HTML is fully loaded and parsed,
+but before images, videos, and CSS backgrounds finish loading.
+Cause : ✔ JS waits until the HTML is ready
+        ✔ No errors
+        ✔ Safe DOM access
+
