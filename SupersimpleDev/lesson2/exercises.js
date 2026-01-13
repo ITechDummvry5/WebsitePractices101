@@ -83,12 +83,12 @@ document.getElementById("totalrest4").textContent = "$" + totalp5; //Output $6.7
 const toastercent = 4793;
 
 const totaltoastercent = toastercent / 100;
-document.getElementById("totalrest5").textContent = "$" + totaltoastercent; //Output $4793
+document.getElementById("totalrest5").textContent = "$" + totaltoastercent; //Output $47.93
 
 const shippingstart = 499; // in cents
 const shippingdollars = shippingstart / 100;
 
-// total befor tax
+// total befor tax and ship
 const befortax = (totaltoastercent + shippingdollars);
 document.getElementById("totalrest6").textContent = "$" + befortax.toFixed(2); // output $52.92
 
@@ -99,6 +99,7 @@ const withtaxCents = Math.round(befortaxCents * taxpercentage) / 100 ; // tax in
 document.getElementById("totalrest7").textContent = "$" + (withtaxCents).toFixed(2);// output $5.29
 
 
-
-
+//Calculate Order total with total item shipp and tax
+const totalorderbottom = befortax + withtaxCents; // subtotal + tax
+document.getElementById("totalrest8").textContent = "$" + totalorderbottom.toFixed(2); // $58.21
 
