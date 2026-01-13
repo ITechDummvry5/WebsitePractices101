@@ -77,4 +77,28 @@ const totalqty = 2
 
 const qtotal = shirtcent * totalqty;
 const totalp5 =  Math.round((toactercent + qtotal) * percenttax) / 100;
-document.getElementById("totalrest4").textContent = "$" + totalp5; //Output $
+document.getElementById("totalrest4").textContent = "$" + totalp5; //Output $6.74
+
+
+const toastercent = 4793;
+
+const totaltoastercent = toastercent / 100;
+document.getElementById("totalrest5").textContent = "$" + totaltoastercent; //Output $4793
+
+const shippingstart = 499; // in cents
+const shippingdollars = shippingstart / 100;
+
+// total befor tax
+const befortax = (totaltoastercent + shippingdollars);
+document.getElementById("totalrest6").textContent = "$" + befortax.toFixed(2); // output $52.92
+
+const taxpercentage = 0.1;
+const befortaxCents = Math.round(befortax * 100); // convert to cents
+const withtaxCents = Math.round(befortaxCents * taxpercentage) / 100 ; // tax in cents
+// withtacCents  convert in to dollar  Like it Back Into
+document.getElementById("totalrest7").textContent = "$" + (withtaxCents).toFixed(2);// output $5.29
+
+
+
+
+
