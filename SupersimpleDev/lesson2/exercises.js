@@ -68,9 +68,6 @@ const fahrenheit3 = (celsius3 * 9/5) + 32;
 
 
 
-
-
-
 //Practice 
 const soup = 10;
 const burger = 8;
