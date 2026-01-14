@@ -27,6 +27,7 @@ Type coercion      -> automatic type conversion
 4 types of String  -> single quotes, double quotes, escape character , template strings
 Character          -> it can be letter|number|symbol|escape character = \
 Interpolation      -> insert a value directly into a string  special features of template Strings
+Multi Line Strings -> another special features of template Strings
 
 
 Demo Codes Pratical example,
@@ -42,20 +43,20 @@ solution -> Use order of operation by controlling it with brackets
             Correct Result: $28.94
             [See Js Lesson3  //Practical 1 uncomment Output2 and comment Output1]
 
-Practical 2:  Display "P2string1 (" + Pqty + ") : $" + result4A  [See Js Lesson3  //Practical 2 using the --> Output2A]
+Practical 2:  Display "P2string1 (" + Pqty + ") : $" + result4A                  [See Js Lesson3  //Practical 2 using the  Output2A]
 
+Practical 3 : 4 Ways To create a Strings                                         [See Js Lesson3  //Practical 3 Output3]
 
-More Details In JavaScript 
-Practical 3 : 4 Ways To create a Strings
-- '..' use single quotes - use reccomend Default                                    
-- ".." use double quotes - use reccomend if the single quotes inside of the string  
-- \    use escape character  - for inorder to store string even it bunch of character
-                                                                  // escape single quote inside single quotes 
-                                                                  // escape double quote inside double quotes
-- `...` use backticks = template strings (supports multi-line & ${} interpolation), \ escape character (special chars: \', \", \n, \t, \\).
-            [See Js Lesson3  //Practical 3 ]
+            - '..'  use single quotes - use reccomend Default                                    
+            - ".."  use double quotes - use reccomend if the single quotes inside of the string  
+            - \     use Escape character – used to include special characters inside a string, such as quotes, newlines, tabs, or backslashes.
+            - `..`  use backticks = template strings (supports multi-line & ${} interpolation), \ escape character (special chars: \', \", \n, \t, \\).
+          
+Practical 4 : Its a Recommended method The Interpolation Method  more easy way compare to Practical 2 
+            '${}' ex: `${P2string1} (${Pqty}): ${Pstring1} ${result6}`           [See Js Lesson3  //Practical 4  Output4] 
+           
 
-Practical 4 : Method interpolation more easy way to Practical 2 Display 
-         '${}' ex: `${P2string1} (${Pqty}): ${Pstring1} ${result5}` 
-            [See Js Lesson3  //Practical 4]
-
+More Details In JavaScript,
+What should we use to create a string?
+1. Use '...' by default
+2. If we need interpolation, multi-line strings use `...` 

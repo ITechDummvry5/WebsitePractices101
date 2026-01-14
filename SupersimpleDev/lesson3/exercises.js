@@ -55,7 +55,7 @@ const singleWithEscape = 'It\'s using backslash to escape single quote';
 const doubleDefault = "It's correct to use double quotes here"; 
 const doubleWithEscape = "He said, \"Hello World!\""; 
 // 3 Template strings
-const templateLiteral = `You can use 'single' and "double" quotes without escape`; 
+const templateLiteral = `You can use 'single' and "double" quotes without escape`; //Output3
 document.getElementById("practical3").innerHTML =
   "Single quotes (default): " + singleDefault + "<br>" +
   "Single quotes (with \\ escape): " + singleWithEscape + "<br><br>" +
