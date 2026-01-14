@@ -55,6 +55,12 @@ console : Math.round(2.2) //Output 2
 console : Math.round(2.8) //Output 3
                             --> see exercisesjs lesson2 //example  cent calculating tax  percentages using example 2
 
+3. How To Convert Celceius to Fahrenheit  or Fahrenheit to Celceius
+
+• Fahrenheit = (Celsius * 9/ 5) + 32
+•Celsius = (Fahrenheit - 32) * 5/9
+                            --> see exercisesjs lesson2 //   Convert F To C  Or C to F
+
 
 
 

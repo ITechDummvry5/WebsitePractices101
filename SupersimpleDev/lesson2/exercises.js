@@ -43,6 +43,33 @@ document.getElementById("centtotal").textContent = "$" + countcent; //Output $28
 const totalroundtax = Math.round((product3incent + product4incent) * percentage) / 100;
 document.getElementById("roundtotal").textContent = "$" + totalroundtax; //Output $2.89 
 
+//Round down or RoundUp
+document.getElementById("roundDown").textContent =
+  Math.floor(2.8);   // 2
+
+document.getElementById("roundUp").textContent =
+  Math.ceil(2.2);    // 3
+
+//   Convert F To C  Or C to F
+    const celsius1 = 25;
+    const fahrenheit1 = (celsius1 * 9/5) + 32;
+    document.getElementById("temp1").textContent =
+      celsius1 + "°C = " + fahrenheit1 + "°F";
+
+const fahrenheit2 = 86;
+const celsius2 = (fahrenheit2 - 32) * 5/9;
+document.getElementById("temp2").textContent = fahrenheit2 + "°F = " + celsius2 + "°C";
+
+const celsius3 = -5;
+const fahrenheit3 = (celsius3 * 9/5) + 32;
+    document.getElementById("temp3").textContent =
+      celsius3 + "°C = " + fahrenheit3 + "°F";
+
+
+
+
+
+
 
 //Practice 
 const soup = 10;
@@ -79,7 +106,6 @@ const qtotal = shirtcent * totalqty;
 const totalp5 =  Math.round((toactercent + qtotal) * percenttax) / 100;
 document.getElementById("totalrest4").textContent = "$" + totalp5; //Output $6.74
 
-
 const toastercent = 4793;
 
 const totaltoastercent = toastercent / 100;
@@ -98,8 +124,9 @@ const withtaxCents = Math.round(befortaxCents * taxpercentage) / 100 ; // tax in
 // withtacCents  convert in to dollar  Like it Back Into
 document.getElementById("totalrest7").textContent = "$" + (withtaxCents).toFixed(2);// output $5.29
 
-
 //Calculate Order total with total item shipp and tax
 const totalorderbottom = befortax + withtaxCents; // subtotal + tax
 document.getElementById("totalrest8").textContent = "$" + totalorderbottom.toFixed(2); // $58.21
+
+
 
