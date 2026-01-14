@@ -1,0 +1,61 @@
+Strings Lesson 3 
+
+Trivia : [] -> means i have example in exercises.js | See Js Lesson3 Thank You!
+         -->   means FinalOutput
+            My Bullet Before To Start  - Syntax Rules Of strings,
+                                       - Notes!,
+                                       - Demo Codes Pratical example,
+                                       - More Details In JavaScript,
+
+
+Syntax Rules Of strings,
+typeof 2          -->  output 'numbers'                                                     [See Js Lesson3  //TypeOF using]
+typeof 'hello'    -->  output 'strings'                                                     [See Js Lesson3  //TypeOF using]
+xample1 - 'Hello'               --> output 'Hello'                                          [See Js Lesson3  //Example 1]
+xample2 - 'Hello' + 'World'     --> output 'HelloWorld'                                     [See Js Lesson3  //Example 2]
+cause   -  Combine 2 or more string  in a bigger strings called Concatenation
+xample3 - 'Hello' + 2           --> output 'Hello2'                                         [See Js Lesson3  //Example 3]
+cause   -  The number 2 It Will automaticaly convert into strings  called Type Coercion
+${}     - iNSERT Values directly at the string method Interpolation
+
+
+Notes!,
+Strings = Text
+Numbers and Strings are different types of Values
+Concatenation      -> Combine Strings Together
+Type coercion      -> automatic type conversion
+4 types of String  -> single quotes, double quotes, escape character , template strings
+Character          -> it can be letter|number|symbol|escape character = \
+Interpolation      -> insert a value directly into a string  special features of template Strings
+
+
+Demo Codes Pratical example,
+Practical 1 Problem Output:  $20.957.99
+
+cause    -> Operator precedence and JavaScript automatically converts numbers into strings
+            Pstring1 + Pnumber1 becomes a string, then adding Pnumber2 results in string concatenation
+            Result: $20.957.99
+            [See Js Lesson3  //Practical 1 uncomment the Output1 and comment Output2]
+
+solution -> Use order of operation by controlling it with brackets
+            Pstring1 + (Pnumber1 + Pnumber2) Numbers are added first, then converted to a string
+            Correct Result: $28.94
+            [See Js Lesson3  //Practical 1 uncomment Output2 and comment Output1]
+
+Practical 2:  Display "P2string1 (" + Pqty + ") : $" + result4A  [See Js Lesson3  //Practical 2 using the --> Output2A]
+
+
+More Details In JavaScript 
+Practical 3 : 4 Ways To create a Strings
+- '..' use single quotes - use reccomend Default                                    
+- ".." use double quotes - use reccomend if the single quotes inside of the string  
+- \    use escape character  - for inorder to store string even it bunch of character
+                                                                  // escape single quote inside single quotes 
+                                                                  // escape double quote inside double quotes
+- `...` use backticks = template strings (supports multi-line & ${} interpolation), \ escape character (special chars: \', \", \n, \t, \\).
+            [See Js Lesson3  //Practical 3 ]
+
+Practical 4 : Method interpolation more easy way to Practical 2 Display 
+         '${}' ex: `${P2string1} (${Pqty}): ${Pstring1} ${result5}` 
+            [See Js Lesson3  //Practical 4]
+
