@@ -47,6 +47,12 @@ const result6 = `${P2string1} (${Pqty}): ${Pstring1} ${addnumber+addnumber1}`; /
 document.getElementById("practical4").textContent = "Practical 4 " + result6; 
 
 
+const multilinestrings = `Hello,
+Welcome to JavaScript and HTML.
+This is a multi-line string.`;
+    document.getElementById("practical5").textContent = multilinestrings;
+
+
     // Practical 3: 4 Ways to create Strings with Escapes
 // 1 Single quotes
 const singleDefault = 'Its correct to use single quotes here'; 
@@ -62,3 +68,79 @@ document.getElementById("practical3").innerHTML =
   "Double quotes (default): " + doubleDefault + "<br>" +
   "Double quotes (with \\ escape): " + doubleWithEscape + "<br><br>" +
   "Template literal (default): " + templateLiteral + "<br>";
+
+
+// Exercises 
+
+//basic string 01
+const intro = 'My name is: ';
+const myname = 'Charles Andrei Ignacio';
+    // type of check
+    // console.log(typeof intro);   // string
+    // console.log(typeof myname);  // string
+const stringname =  intro + myname;
+    // console.log(typeof stringname); // string
+document.getElementById("exercises1").textContent = stringname;
+
+//using concatenation  02
+const coffee = 5;
+const bagel =3;
+const cost = 'Total cost :';
+const dollarsign = '$';
+const stringname1 = cost + dollarsign + (coffee + bagel);
+document.getElementById("exercises2").textContent = stringname1;
+
+//using template String and Type of Checking uncomment it  03
+const templatestring = `Total cost : $${coffee + bagel}`;
+    // document.getElementById("exercises3").innerHTML = "Type of" + typeof templatestring;
+document.getElementById("exercises3").textContent = templatestring;
+
+// Uncomment it but its exercises 04
+// alert(templatestring);
+
+//using Interpolation  05 Best Practices 
+const basketballs = 2095;
+const tshirts = 799;
+const qty = 2;
+const sign = "$";
+const stringitems = "Items";
+const numberitems = 4;
+// calculate total safely
+const total = (Number(basketballs) + Number(tshirts)) * Number(qty) / 100;
+// display with template string
+const stringname2 = `${stringitems} (${numberitems}): ${sign}${total}`;
+document.getElementById("exercises4").textContent = stringname2;
+
+// string and number 06
+//using Interpolation  05 Best Practices
+const textshipping = 'Shipping & Handling';
+const costshipping = 499;
+const toship = 2;
+const signship = "$";
+const  totalship = (Number(costshipping) * Number(toship)) / 100;
+// display with template string
+const stringname3 = `${textshipping}: ${signship} ${totalship}`;
+document.getElementById("exercises5").textContent = stringname3;
+
+
+// before tax stingname3 + stringname2 = Before tax 07
+const texttax = 'Total Before Tax';
+// display with template string
+const stringname4 = `${texttax}: $${totalship + total}`;
+document.getElementById("exercises6").textContent = stringname4;
+
+// Step	Value
+// totalship + total	67.86 (dollars)
+// multiply by percenttax	6.786 (dollars)
+// multiply by 100	678.6 (cents)
+// Math.round()	679 (cents)
+// divide by 100	6.79 (dollars) 
+const percenttax = 0.1;
+const taxten = 'Estimated tax (10%)';
+// multiply by 100 to convert dollars to cents, round, then divide by 100
+const tax = Math.round((totalship + total) * percenttax * 100) / 100;
+const stringname5 = `${taxten}: $${tax}`;
+document.getElementById("exercises7").textContent = stringname5;
+
+const stringname6 =  `Orders Total :  ${(totalship + total + tax)}`;
+document.getElementById("exercises8").textContent = stringname6;

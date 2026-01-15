@@ -53,8 +53,20 @@ Practical 3 : 4 Ways To create a Strings                                        
             - `..`  use backticks = template strings (supports multi-line & ${} interpolation), \ escape character (special chars: \', \", \n, \t, \\).
           
 Practical 4 : Its a Recommended method The Interpolation Method  more easy way compare to Practical 2 
-            '${}' ex: `${P2string1} (${Pqty}): ${Pstring1} ${result6}`           [See Js Lesson3  //Practical 4  Output4] 
-           
+             xample js  :   `${expression}`
+             xample js 2 :  '${}' ex: `${P2string1} (${Pqty}): ${Pstring1} ${result6}`       [See Js Lesson3  //Practical 4  Output4] 
+
+
+Practical 5 : Multiline-strings                                                  [See Js Lesson3  //Practical 5 Output3]
+Important behavior
+JavaScript keeps the line breaks (\n)
+HTML ignores those line breaks by default
+Result: text may appear on one line unless CSS is used 
+
+xample css :    #practical5 { white-space: pre-line;} 
+
+
+
 
 More Details In JavaScript,
 What should we use to create a string?
