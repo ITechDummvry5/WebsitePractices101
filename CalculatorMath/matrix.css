@@ -1,0 +1,207 @@
+/* =================== BODY & APP =================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  max-width: 1100px;
+  height: 95vh;
+  gap: 12px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #0f172a;
+}
+
+/* =================== HEADER =================== */
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #38bdf8;
+}
+
+.header p {
+  margin: 2px 0 10px 0;
+  font-size: 0.9rem;
+  color: #a1a1aa;
+}
+
+/* =================== MATRICES CONTAINER =================== */
+.matrices-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+/* =================== MATRIX SECTION =================== */
+.matrix-section {
+  flex: 1;
+  min-width: 280px;
+  margin-bottom: 30px;
+  background: #020617;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+  display: flex;
+  flex-direction: column; /* stack header + inner content */
+}
+
+/* =================== MATRIX INNER CONTAINER =================== */
+.matrix-inner {
+  display: flex;
+  gap: 12px;             /* space between controls and cells */
+  justify-content: flex-start;
+  align-items: flex-start; /* top-aligned */
+}
+
+/* =================== CONTROLS (ROWS/COLS) =================== */
+.controls-row {
+  display: flex;
+  /* flex-direction: column;   stack row/col inputs vertically */
+  gap: 6px;
+}
+
+.controls-row input {
+  width: 50px;
+  padding: 6px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  background: #1e293b;
+  color: #38bdf8;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.controls-row input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 5px #38bdf8, inset 0 1px 3px rgba(0,0,0,0.3);
+  background: #1f2937;
+}
+
+/* =================== MATRIX GRID =================== */
+.matrix-grid {
+  display: grid;
+  gap: 6px;
+  justify-content: start;  /* align left inside container */
+}
+
+.matrix-grid input {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-family: monospace;
+  background: #020617;
+  color: #38bdf8;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Remove number input arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =================== CONTROLS BUTTONS =================== */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.control-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: #111827;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Color coding for button groups */
+.control-group.swap button { background: #facc15; color: #020617; }
+.control-group.transpose button { background: #38bdf8; }
+.control-group.basic button { background: #4ade80; color: #020617; }
+.control-group.advanced button { background: #a78bfa; }
+
+.control-group button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #0e0000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-group button:hover {
+  filter: brightness(1.2);
+  transform: translateY(-1px);
+}
+
+.control-group button:active {
+  transform: translateY(0);
+  filter: brightness(0.9);
+}
+
+/* =================== OUTPUT & FEEDBACK =================== */
+.output-feedback {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+.output, .feedback {
+  flex: 1;
+  min-width: 200px;
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.output h2, .feedback h2 {
+  margin: 0 0 4px 0;
+  font-size: 0.85rem;
+  color: #38bdf8;
+  text-align: center;
+}
+
+.output pre, .feedback pre {
+  background: #111827;
+  color: #facc15;
+  font-size: 0.75rem;
+  padding: 6px;
+  border-radius: 6px;
+  margin: 0;
+  flex: 1;
+  overflow: auto;
+}

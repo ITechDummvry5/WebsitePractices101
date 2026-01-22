@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matrix Calculator</title>
+  <link rel="stylesheet" href="matrix.css">
+</head>
+<body>
+
+<main class="app">
+
+  <header class="header">
+    <h1>Matrix Calculator</h1>
+    <p>Cell-based matrix input</p>
+  </header>
+
+  <section class="matrices-container">
+
+    <!-- MATRIX A -->
+    <div class="matrix-section">
+      <h2>Matrix A</h2>
+      <div class="matrix-inner">
+        <!-- Controls stacked vertically -->
+        <div class="controls-row">
+          <label>Rows <input type="number" id="rowsA" value="2" min="1"></label>
+          <label>Cols <input type="number" id="colsA" value="2" min="1"></label>
+        </div>
+        <!-- Matrix cells -->
+        <div id="matrixA" class="matrix-grid"></div>
+      </div>
+    </div>
+
+    <!-- MATRIX B -->
+    <div class="matrix-section">
+      <h2>Matrix B</h2>
+      <div class="matrix-inner">
+        <div class="controls-row">
+          <label>Rows <input type="number" id="rowsB" value="3" min="1"></label>
+          <label>Cols <input type="number" id="colsB" value="3" min="1"></label>
+        </div>
+        <div id="matrixB" class="matrix-grid"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- OPERATIONS -->
+  <section class="controls">
+    <!-- SWAP -->
+    <div class="control-group swap">
+      <button id="swapBtn">Swap A ↔ B</button>
+    </div>
+
+    <!-- TRANSPOSE -->
+    <div class="control-group transpose">
+      <button id="transposeBBtn">Transpose B</button>
+      <button id="transposeBtn">Transpose A</button>
+    </div>
+
+    <!-- BASIC OPERATIONS -->
+    <div class="control-group basic">
+      <button id="addBtn">A + B</button>
+      <button id="subtractBtn">A − B</button>
+      <button id="multiplyBtn">A × B</button>
+    </div>
+
+    <!-- ADVANCED OPERATIONS -->
+    <div class="control-group advanced">
+      <button id="detBtn">det(A)</button>
+      <button id="detBBtn">det(B)</button>
+      <button id="inverseBtn">A⁻¹</button>
+    </div>
+  </section>
+
+  <!-- OUTPUT -->
+  <section class="output-feedback">
+    <div class="output">
+      <h2>Result</h2>
+      <pre id="result"></pre>
+    </div>
+
+    <div class="feedback">
+      <h2>Calculation Steps</h2>
+      <pre id="feedback">Steps will appear here</pre>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.optimized.js"></script>
+</body>
+</html>
