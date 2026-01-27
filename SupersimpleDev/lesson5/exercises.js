@@ -1,8 +1,8 @@
-let v1 = 'basic example to store variable';
+const v1 = 'basic example to store variable';
 console.log(v1);
 document.getElementById("vr1").textContent = v1;
 
-let v2 = 2;
+ v2 = 2;
 document.getElementById("vr2").textContent = v2;
 console.log(v2); // output 2
 
@@ -21,6 +21,19 @@ console.log(v2); // output 5
 // At the top, v2 = 2 → assigning a value
 // At the bottom, v2 = 5 → re-assigning a value
 
+// Const is Create A variable That cant change later
+const noChange = 67 + 3;
+document.getElementById("vr5").textContent = noChange; 
+console.log(noChange); // output 70
+
+const Nochangeresult = noChange + 5;
+document.getElementById("vr5").textContent = Nochangeresult; 
+console.log(Nochangeresult); // output 75
+
+// var
+var var3 = 8;
+console.log(var3); // output 8
+
 // Practical Exercises
 let cartQty = 0;
 
@@ -33,7 +46,9 @@ showQtyBtn.addEventListener("click", function () {
 // Decrease quantity button
 let negativeQtyBtn = document.getElementById("NegativeQty");
 negativeQtyBtn.addEventListener("click", function () {
-  cartQty = cartQty - 1;
+  // cartQty = cartQty - 1;
+  // or Shorter Version 
+  cartQty--;
   alert(`Cart Quantity is ${cartQty}`);
 });
 
