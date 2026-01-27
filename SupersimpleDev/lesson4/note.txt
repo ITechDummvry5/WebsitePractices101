@@ -1,0 +1,15 @@
+HTML CSS Js
+
+Trivia :
+         []        means i have example in exercises.js
+         No01      means Example
+         //!       means NOTE: This code is currently commented out
+         [EX]      means Start Of exercises
+         {Customn} means I Have My own Code
+
+
+No0  --> Inline Onclick Using
+No01 --> same function as No0 But seperate JS and clean  //!
+No02 --> A better Way or Most Recommended
+
+
