@@ -1,1 +1,26 @@
-Lesson6 Boolean And If Statement
+Lesson 6 - BOOLEAN AND IF-STATEMENT
+
+What is Booleans? 
+ans : Is a anothe type  of Value it is TRUE & FALSE
+ans : A Boolean value is represents whether something is true or false
+
+Syntax Rules for Boolean
+1.true  - not 'true' its not Boolean its string
+
+Comparison Operators
+> greater than
+    ans: Checks if the left value is bigger than the right value.
+< less than
+    ans: Checks if the left value is smaller than the right value.
+>= greater than or equal to 
+    ans: Checks if the left value is greater than OR equal to the right value.
+=== Strict Equal To
+    ans: Checks if value AND data type are the same.
+== equal to (Loose Equality)
+    ans: Checks if values are equal, but ignores data type. it convert value
+!== not equal to 
+    ans: Checks if the values are NOT equal OR NOT the same type.
+!== not equal to (loose) 
+    ans: Checks if the values are NOT equal but it does NOT check the data type.
+    
+
