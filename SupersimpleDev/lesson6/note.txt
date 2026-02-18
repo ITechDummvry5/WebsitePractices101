@@ -22,5 +22,72 @@ Comparison Operators
     ans: Checks if the values are NOT equal OR NOT the same type.
 !== not equal to (loose) 
     ans: Checks if the values are NOT equal but it does NOT check the data type.
-    
+||  OR 
+    ans: Atleat One Is True 
+&&  And 
+    ans: Both Must Be True
+
+Order of Operations (Operator Precedence)
+1. (...) are the Highest Priority
+2.  * / Are done first 
+3.  + - are done after 
+4.  Comparison Operators  is the least 
+
+Note: For Comparison Operators
+ex: 5 + 3 > 6   // true
+Math first:
+    5 + 3 = 8
+Then comparison:
+    8 > 6 → true.
+
+IF-STATEMENT
+ans: lets us write multiple groups of code and then decide which code to run 
+
+Syntax Rules OF IF-STATEMENT
+1.Basic if Syntax
+if (condition) {
+    // code runs if condition is true, IT Called 1Branches
+}
+
+ex : let age = 18;
+if (age >= 18) {
+    console.log("You are an adult");  
+}
+
+2.if...else
+if (condition) {
+    // runs if true,     IT Called 1Branches
+} else {
+    // runs if false,    IT Called 2Branches
+}
+
+ex : let age = 16;
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+
+3.if...else if...else
+if (condition1) {
+    // code,            IT Called 1Branches
+} else if (condition2) {
+    // code,            IT Called 2Branches
+} else {
+    // code,            IT Called 3Branches 1fallback
+}
+
+ex :  let score = 85;
+if (score >= 90) {
+    console.log("Grade A");
+} else if (score >= 70) {
+    console.log("Grade B");
+} else {
+    console.log("Grade C");
+}
+
+Key Points About Branches
+Each branch is mutually exclusive — only one branch executes per if statement.
+You can have multiple else if branches, but only one else Fallback.
+Branches can contain any code, including nested if statements.
 
