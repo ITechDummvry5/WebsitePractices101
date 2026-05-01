@@ -1,0 +1,33 @@
+API = 
+a human-readable description of how
+developers will enable machines to
+communicate with each other
+
+Let's talk documentation :
+1. Product Documentation
+Helps people use a product with or without an API.
+
+2. API Documentation
+Helps developers programmatically use products.
+
+Who is documentation for ?
+In parallel, both:
+
+• Developers
+• AND, Non-Developers
+
+REMEMBER:
+"Developers try, business buys!"
+
+Internal vs. external documentation 
+• Internal = Different authN/authZ patterns 
+           = Internal proprietary information and links
+• External = More polished design
+           = Focus on reasons to adopt
+
+Types of API Documentation
+
+Organize content into these types:
+- Reference
+- Concepts
+- Tasks
