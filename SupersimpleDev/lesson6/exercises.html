@@ -3,14 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booleans</title>
-
+    <title>Boolean</title>
 </head>
 <body>
-    <div id="ex1"></div>
-    <div id="ex2"></div>
-    <div id="ex3"></div>
-    
-    <script src="exercises.js"></script>
+    <script>
+        const age = 18;
+        const isPermitted = true // true
+
+        console.log(5 > 3); // true
+        console.log(5 < 3); // false
+        console.log(5 >= 3); // true
+        console.log(5 <= 3); // false
+        console.log(5 == 3); // false
+        console.log(5 != 3); // true
+        console.log(true); // true
+        console.log(false); // false
+        console.log(5 === 5); // true
+        console.log(5 === '5'); // false it checks for value and type. string and number are different types
+        console.log(5 !== '5'); // true
+        
+// false = falsy value
+// The code inside this block will NOT run
+if (false) {
+    console.log('This will not run False is a falsy value');
+} else {
+    // else block runs because condition is false
+    console.log('This will run');
+}
+
+// true = truthy value
+// The code inside this block WILL run
+if (true) {
+    console.log('This will run True is a truthy value');
+} else {
+    console.log('This will not run');
+}
+
+// && means BOTH conditions must be true
+// age must be 16 or above AND isPermitted must be true
+// best example  console.log(true && true); // true   console.log(true && false); // false
+
+if (age >= 16 && isPermitted) {
+    console.log('You are old enough to drive.');
+} else {
+    console.log('You are not old enough to drive.');
+}
+
+// || means ONLY ONE condition needs to be true
+// Either age is 16 or below OR user has permission
+// best example console.log(true || true); // true   console.log(true || false); // true   console.log(false || false); // false
+if (age <= 16 || isPermitted) {
+    console.log('You are old enough to drive or you have permission.');
+} else {
+    console.log('You are not old enough to drive and you do not have permission.');
+}
+
+
+    </script>
 </body>
 </html>
