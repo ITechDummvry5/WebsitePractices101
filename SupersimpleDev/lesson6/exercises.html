@@ -24,20 +24,82 @@
         
 // false = falsy value
 // The code inside this block will NOT run
+// also works in any value that is considered falsy like 0, '', null, undefined, NaN, etc.
 if (false) {
-    console.log('This will not run False is a falsy value');
+    console.log('This will not run');
 } else {
     // else block runs because condition is false
-    console.log('This will run');
+    console.log('This will run because the condition is false');
 }
 
 // true = truthy value
 // The code inside this block WILL run
+// also works in any value that is considered truthy like 1, 'hello', [], {}, etc.
 if (true) {
     console.log('This will run True is a truthy value');
 } else {
     console.log('This will not run');
 }
+
+const cartQty = 5;
+if (cartQty) {
+    console.log('You have items in your cart');
+} else {
+    console.log('Your cart is empty');   
+}
+
+console.log(!0);
+console.log('text' / 5);
+console.log(undefined);
+
+// Ternary operator is a shorthand for if-else statement
+const result = true ? 'truthy' : 'falsy'; // ternary operator, it checks if the condition is true or false and returns the corresponding value
+console.log(result);
+
+//example of without ternary operator
+
+// let result1;
+// if (true) {
+//     result1 = 'truthy';
+// } else {
+//     result1 = 'falsy';
+// }
+// console.log(result1);
+
+// Ternary operator with a falsy value
+const result1 = 0 ? 'truthy' : 'falsy'; // 0 is a falsy value, so it will return 'falsy'
+console.log(result1);
+
+// guard Operator && and || are logical operators that are used to combine multiple conditions in an if statement
+false && console.log('Yellow');
+
+// example of without guard operator
+
+// if (false) {
+//     console.log('Yellow');
+// }
+
+// example of with guard operator
+const message = false && 'Yellow';
+console.log(message); // false because the first condition is false, it does not evaluate the second condition
+
+// example of without guard operator
+// let message1;
+// if (false) {
+//     message1 = 'Yellow';
+// } else {
+//     message1 = 'Not Yellow';
+// }
+// console.log(message1);
+
+// example of Or operator or Default operator
+const currency = undefined || 'EUR' || 'GBP'; // it will return 'EUR' because it is the first truthy value in the expression. If all values were falsy, it would return the last value, which is 'GBP' in this case.
+console.log(currency);
+
+// example of without Or operator or Default operator
+// let currency1;
+// if(!condition) {
+//     currency1 = 'EUR';}
 
 // && means BOTH conditions must be true
 // age must be 16 or above AND isPermitted must be true
