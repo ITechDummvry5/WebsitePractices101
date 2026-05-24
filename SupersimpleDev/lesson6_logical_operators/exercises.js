@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boolean</title>
-</head>
-<body>
-    <script>
         const age = 18;
         const isPermitted = true // true
 
@@ -120,7 +111,16 @@ if (age <= 16 || isPermitted) {
     console.log('You are not old enough to drive and you do not have permission.');
 }
 
+const hours = new Date().getHours();
 
-    </script>
-</body>
-</html>
+if (hours >= 6 && hours < 12) {
+    console.log('Good morning!'); 
+}else if (hours >= 12 && hours < 18) {
+    console.log('Good afternoon!');
+} else {
+    console.log('Good evening!');
+}
+
+
+
+
