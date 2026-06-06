@@ -332,4 +332,6 @@ console.log(computerMove);   // ❌ Error — computerMove is not defined here
 
 ---
 
+
+
 *End of Notes — Lessons 1 through 7*
