@@ -4,42 +4,12 @@
 
 ## Lesson 1 — JavaScript Basics
 
-### What is JavaScript?
-- JavaScript is a way of giving instructions to a computer.
-- The computer follows those instructions.
-- JavaScript is **case-sensitive** — `Hello` and `hello` are different.
+### In This Lesson : 
+1. JavaScript is giving instructions to a computer
+2. Wrote JavaScript code
+3. Run our code using the Console
+4. Syntax
 
-### What is a Programming Language?
-- Similar to human languages, but written for computers.
-- Commands get translated into instructions the computer can execute.
-
-### What is Syntax?
-- Syntax = the rules you must follow when writing code.
-- Correct syntax allows the code to be compiled and run without errors.
-
-### Key Examples
-```js
-alert('Hello');          // Shows a pop-up saying "Hello"
-alert('Good Job!');      // Shows a pop-up saying "Good Job!"
-
-document.body.innerHTML = 'hello';  // Modifies the webpage / HTML element
-```
-
-### What is `DOMContentLoaded`?
-An event that fires when the HTML is **fully loaded and parsed** — but *before* images, videos, and CSS backgrounds finish loading.
-
-```js
-document.addEventListener('DOMContentLoaded', function() {
-  // Safe to access the DOM here
-});
-```
-
-**Why use it?**
-- JS waits until the HTML is ready
-- Prevents errors from trying to access elements that don't exist yet
-- Safe DOM access guaranteed
-
----
 
 ## Lesson 2 — Numbers & Math
 

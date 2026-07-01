@@ -1,0 +1,69 @@
+
+
+
+    <!-- ===================================================== -->
+    <!-- LUCKY DRAW -->
+    <!-- Concepts:
+         - Arrays
+         - length
+         - Random Index
+         - Array Access
+    -->
+    <!-- ===================================================== -->
+
+    <h1>Lucky Draw</h1>
+
+    <button onclick="drawPrize()">
+        Draw Prize
+    </button>
+
+    <p id="prizeResult">
+        Click the button
+    </p>
+
+    <script>
+
+        // Array of possible prizes
+        const prizes = [
+            '🍎 Apple',
+            '🍌 Banana',
+            '🍕 Pizza',
+            '🍔 Burger',
+            '🍟 Fries'
+        ];
+
+        function drawPrize() {
+
+            /*
+                length
+
+                Returns total number
+                of items in an array
+
+                prizes.length
+                -> 5
+            */
+            const randomIndex =
+                Math.floor(
+                    Math.random() * prizes.length
+                );
+
+            /*
+                Array Access
+
+                Get item using index
+
+                prizes[0]
+                prizes[1]
+                prizes[2]
+                ...
+            */
+            const prize =
+                prizes[randomIndex];
+
+            document.getElementById(
+                'prizeResult'
+            ).textContent =
+                `You won: ${prize}`;
+        }
+    </script>

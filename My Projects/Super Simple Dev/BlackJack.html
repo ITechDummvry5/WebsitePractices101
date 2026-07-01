@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack Game</title>
+</head>
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- GAME TITLE -->
+    <!-- ===================================================== -->
+    <h1>Blackjack</h1>
+
+    <!-- ===================================================== -->
+    <!-- CONTROLS (BUTTONS) -->
+    <!-- data-action is used to connect buttons to JS functions -->
+    <!-- ===================================================== -->
+    <button data-action="start">New Game</button>
+    <button data-action="hit">Hit</button>
+    <button data-action="stand">Stand</button>
+
+    <!-- ===================================================== -->
+    <!-- GAME DISPLAY AREA -->
+    <!-- ===================================================== -->
+
+    <h3>Your Cards</h3>
+    <p id="cards">-</p>
+
+    <h3>Your Score</h3>
+    <p id="score">0</p>
+
+    <h3>Result</h3>
+    <p id="result">Click "New Game" to start</p>
+
+    <!-- ===================================================== -->
+    <!-- JAVASCRIPT GAME LOGIC -->
+    <!-- ===================================================== -->
+    <script>
+        "use strict";
+
+        // =====================================================
+        // GAME STATE (DATA)
+        // =====================================================
+
+        let playerCards = [];   // Stores player's cards
+        let gameOver = false;    // Tracks if the round is finished
+
+        // =====================================================
+        // CORE GAME FUNCTIONS
+        // =====================================================
+
+        /**
+         * Generates a random card (1–10)
+         */
+        function drawCard() {
+            return Math.floor(Math.random() * 10) + 1;
+        }
+
+        /**
+         * Calculates total score from cards
+         */
+        function getScore(cards) {
+            return cards.reduce((sum, card) => sum + card, 0);
+        }
+
+        // =====================================================
+        // UI UPDATE FUNCTION
+        // =====================================================
+
+        /**
+         * Updates all UI elements (cards, score, result)
+         */
+        function updateUI() {
+            const score = getScore(playerCards);
+
+            document.getElementById("cards").textContent =
+                playerCards.join(", ");
+
+            document.getElementById("score").textContent = score;
+
+            // Check bust condition
+            if (score > 21) {
+                document.getElementById("result").textContent =
+                    "Bust! You lose!";
+                gameOver = true;
+            }
+        }
+
+        // =====================================================
+        // GAME ACTIONS
+        // =====================================================
+
+        /**
+         * Starts a new game
+         */
+        function startGame() {
+            gameOver = false;
+
+            // Deal 2 initial cards
+            playerCards = [drawCard(), drawCard()];
+
+            document.getElementById("result").textContent =
+                "Game started!";
+
+            updateUI();
+        }
+
+        /**
+         * Player draws another card
+         */
+        function hit() {
+            if (gameOver) return;
+
+            playerCards.push(drawCard());
+            updateUI();
+        }
+
+        /**
+         * Player ends turn and dealer plays
+         */
+        function stand() {
+            if (gameOver) return;
+
+            const playerScore = getScore(playerCards);
+
+            // Simple random dealer logic (16–26 approx)
+            const dealerScore = Math.floor(Math.random() * 11) + 16;
+
+            let resultText = "";
+
+            if (dealerScore > 21 || playerScore > dealerScore) {
+                resultText = `You win! Dealer: ${dealerScore}`;
+            } 
+            else if (playerScore === dealerScore) {
+                resultText = `Tie! Dealer: ${dealerScore}`;
+            } 
+            else {
+                resultText = `You lose! Dealer: ${dealerScore}`;
+            }
+
+            document.getElementById("result").textContent = resultText;
+
+            gameOver = true;
+        }
+
+        // =====================================================
+        // BUTTON EVENT SYSTEM (ACTION MAPPING)
+        // =====================================================
+
+        /**
+         * Maps button actions to functions
+         */
+        const actions = {
+            start: startGame,
+            hit: hit,
+            stand: stand
+        };
+
+        /**
+         * Attach event listeners to all buttons
+         */
+        document.querySelectorAll("button").forEach((button) => {
+            button.addEventListener("click", () => {
+                const action = button.dataset.action;
+
+                // Call function if it exists
+                actions[action]?.();
+            });
+        });
+
+    </script>
+
+</body>
+</html>

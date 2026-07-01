@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers and Math in JavaScript</title>
+</head>
+<body>
+
+<h1>Numbers and Math in JavaScript</h1>
+
+<h2>Numbers in JavaScript</h2>
+<ul>
+    <li>JavaScript has two types of numbers: integers and floats.</li>
+    <li>Integers are whole numbers (e.g., 5, -10).</li>
+    <li>Floats are decimal numbers (e.g., 3.14, -2.5).</li>
+</ul>
+
+<h2>Mathematical Operators</h2>
+<ul>
+    <li><strong>Addition</strong>: +</li>
+    <li><strong>Subtraction</strong>: -</li>
+    <li><strong>Multiplication</strong>: *</li>
+    <li><strong>Division</strong>: /</li>
+    <li><strong>Modulus</strong>: % (returns the remainder)</li>
+</ul>
+
+<h2>Order of Operations (Operator Precedence)</h2>
+
+<p>JavaScript follows the standard order of operations (PEMDAS/BODMAS).</p>
+
+<ul>
+    <li>* and / are done first</li>
+    <li>+ and - are done after</li>
+    <li>* and / have the same priority and are evaluated from left to right</li>
+    <li>+ and - have the same priority and are evaluated from left to right</li>
+</ul>
+
+<table border="1">
+    <tr>
+        <th>Priority</th>
+        <th>Operation</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>1st</td>
+        <td>Parentheses</td>
+        <td>()</td>
+    </tr>
+    <tr>
+        <td>2nd</td>
+        <td>Exponents</td>
+        <td>**</td>
+    </tr>
+    <tr>
+        <td>3rd</td>
+        <td>Multiplication and Division</td>
+        <td>* /</td>
+    </tr>
+    <tr>
+        <td>4th</td>
+        <td>Addition and Subtraction</td>
+        <td>+ -</td>
+    </tr>
+</table>
+
+<h2>Control the Order of Operations</h2>
+
+<p>Parentheses (<strong>( )</strong>) are used to group expressions and control the order of operations.</p>
+
+<p>Example:</p>
+<pre>(5 + 3) * 2</pre>
+<p>Result is <strong>16</strong> because the expression inside parentheses is calculated first.</p>
+
+<h2>Calculate Percent</h2>
+
+<p>To calculate a percentage of a number, use this formula:</p>
+
+<pre>(percent / 100) * number</pre>
+
+<p>Example: 20% of 50</p>
+
+<pre>(20 / 100) * 50 = 10</pre>
+
+<h2>Terminology</h2>
+
+<ul>
+    <li><strong>Integer</strong>: A whole number (e.g., 5, -10).</li>
+    <li><strong>Float</strong>: A decimal number (e.g., 3.14, -2.5).</li>
+    <li><strong>Operator</strong>: A symbol that performs an operation on one or more values (e.g., +, -, *, /).</li>
+    <li><strong>Expression</strong>: A combination of values, variables, and operators that evaluates to a single value.</li>
+</ul>
+ <h2>Problem in Floats</h2>
+
+<p>JavaScript uses floating-point arithmetic, which can lead to precision issues.</p>
+
+<p>Example in console:</p>
+<pre>0.1 + 0.2</pre>
+
+<p>
+    Result is <strong>0.30000000000000004</strong> instead of <strong>0.3</strong>.
+</p>
+
+<p>To avoid this, you can use:</p>
+
+<ol>
+    <li><strong>toFixed()</strong> – round to a fixed number of decimals</li>
+    <li><strong>Math.round()</strong> – round to nearest whole or adjusted value</li>
+    <li><strong>Convert to cents</strong> – multiply by 100, do math, then divide back to dollar</li>
+</ol>
+
+<h2>Simplified Explanation</h2>
+
+<ul>
+    <li>
+        Computers do not use decimal numbers like humans. They use a system called 
+        <strong>binary</strong>, which only uses <strong>0</strong> and <strong>1</strong>.
+    </li>
+
+    <li>
+        Humans use decimal numbers: <strong>0–9</strong>.
+    </li>
+
+    <li>
+        Computers use binary numbers: <strong>0</strong> and <strong>1</strong>.
+    </li>
+</ul>
+
+<p>Example:</p>
+
+<table border="1">
+    <tr>
+        <th>Decimal (Human)</th>
+        <th>Binary (Computer)</th>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>100</td>
+    </tr>
+</table>
+
+<p>
+    This means computers convert all numbers into binary before storing or processing them.
+</p>
+<script src="numbers&math.js"></script>
+
+</body>
+</html>
