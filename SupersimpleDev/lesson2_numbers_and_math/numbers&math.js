@@ -26,7 +26,7 @@ console.log("GOOD - Total Amount Due:", totalAmountDue.toFixed(2)); // Format to
 
 console.log( "//==============================================");
 
-// ELECTRONICS STORE - SHOPPING CART FLOW (GOOD EXAMPLE - CENTS-BASED SAFE MATH)
+// ELECTRONICS STORE - SHOPPING CART FLOW (GOOD EXAMPLE - CENTS-BASED SAFE MATH And using Math.round And Tofixed)
 
 const smartphone = 7.99; // price of smartphone in dollars
 const earbuds = 20.95; // price of earbuds in dollars
