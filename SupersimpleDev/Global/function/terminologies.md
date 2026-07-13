@@ -28,18 +28,18 @@ Math.round() rounds a number to the nearest whole number (up or down depending o
 
 > Does it affect calculations?
 
-1. YES — if you use it inside math operations
+6. A. YES — if you use it inside math operations
 --- 
 ex: 
 const price = Math.round(7.49);
 const total = price * 2;
 console.log(total);
 
-2. NO — if you only use it for display
+6. B. NO — if you only use it for display
 ---
 ex:
 const value = 7.49;
 console.log(Math.round(value));
 
-
-6. console.log(Math.round(7.49));
+### 
+7. 

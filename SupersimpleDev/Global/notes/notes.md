@@ -50,7 +50,7 @@ JavaScript follows standard math rules:
 | Integers | `2`, `3`, `99` |
 | Floating Point (floats) | `2.2`, `0.1`, `3.99` |
 
-> ⚠️ **Computers cannot store floats perfectly.** This can cause small inaccuracies in calculations.
+> **Computers cannot store floats perfectly.** This can cause small inaccuracies in calculations.
 
 **Solution:** Count in the smallest unit (e.g., **cents** instead of dollars).
 ```js
@@ -63,16 +63,6 @@ JavaScript follows standard math rules:
 Math.round(2.2);  // → 2
 Math.round(2.8);  // → 3
 ```
-
-### Temperature Conversion Formulas
-```js
-// Celsius → Fahrenheit
-fahrenheit = (celsius * 9 / 5) + 32;
-
-// Fahrenheit → Celsius
-celsius = (fahrenheit - 32) * 5 / 9;
-```
-
 ---
 
 ## Lesson 3 — Strings
@@ -89,7 +79,7 @@ typeof 'hello'  // → 'string'
 
 | Type | Syntax | When to Use |
 |------|--------|-------------|
-| Single quotes | `'hello'` | ✅ Default (recommended) |
+| Single quotes | `'hello'` | Default (recommended) |
 | Double quotes | `"hello"` | Use when the string contains a `'` inside |
 | Escape character | `\'`, `\"`, `\n`, `\t`, `\\` | Include special characters inside a string |
 | Template string | `` `hello` `` | Use for interpolation or multi-line strings |

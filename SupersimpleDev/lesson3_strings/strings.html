@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3 - Strings</title>
+</head>
+<body>
+
+    <h1>Lesson 3 — Strings</h1>
+
+    <h2>What is a String?</h2>
+
+    <p>
+        A <strong>string</strong> is text. Numbers and strings are different
+        types of values in JavaScript.
+    </p>
+
+    <pre>
+typeof 2;        // "number"
+typeof "hello";  // "string"
+    </pre>
+
+    <hr>
+
+    <h2>Order of Operations</h2>
+
+    <p>
+        String expressions follow the same operator precedence as numbers.
+    </p>
+
+    <ul>
+        <li>Parentheses <strong>( )</strong> are evaluated first.</li>
+        <li><code>*</code> and <code>/</code> have higher precedence than <code>+</code> and <code>-</code>.</li>
+        <li><code>*</code> and <code>/</code> are evaluated from left to right.</li>
+        <li><code>+</code> and <code>-</code> are evaluated from left to right.</li>
+    </ul>
+
+    <hr>
+
+    <h2>The 4 Ways to Create a String</h2>
+
+    <ul>
+        <li><strong>Single Quotes</strong> — <code>'Hello'</code></li>
+        <li><strong>Double Quotes</strong> — <code>"Hello"</code></li>
+        <li><strong>Escape Characters</strong> — <code>\'</code>, <code>\"</code>, <code>\n</code>, <code>\t</code>, <code>\\</code></li>
+        <li><strong>Template Strings</strong> — <code>`Hello`</code></li>
+    </ul>
+
+    <hr>
+
+   <h2>Concatenation and Type Coercion</h2>
+
+    <pre>
+'Hello' + 'World'   // "HelloWorld"
+'Hello' + 2         // "Hello2"
+    </pre>
+
+    <p>
+        When a string is combined with a number using the
+        <code>+</code> operator, JavaScript automatically converts the
+        number into a string.
+    </p>
+
+    <p>
+        This automatic conversion is called
+        <strong>Type Coercion</strong>.
+    </p>
+
+    <script src="strings.js"></script>
+
+</body>
+</html>

@@ -26,45 +26,122 @@ console.log("GOOD - Total Amount Due:", totalAmountDue.toFixed(2)); // Format to
 
 console.log( "//==============================================");
 
-// ELECTRONICS STORE - SHOPPING CART FLOW (GOOD EXAMPLE - CENTS-BASED SAFE MATH And using Math.round And Tofixed)
+// ==============================================
+// ELECTRONICS STORE - SHOPPING CART
+// Safe Money Calculations Using Cents
+// ==============================================
 
-const smartphone = 7.99; // price of smartphone in dollars
-const earbuds = 20.95; // price of earbuds in dollars
+// STEP 0: DEFINE PRODUCT PRICES (DOLLARS)
+const smartphone = 7.99;
+const earbuds = 20.95;
 
-const qtyEach = 2; // quantity for each product
+// Quantity of each product
+const qtyEach = 2;
 
-const electronicTaxRate = 0.1; // 10% electronics tax
+// Sales tax (10%)
+const SaletaxRate = 0.10;
 
-// STEP 1: CONVERT PRICES TO CENTS
-const smartphoneCents = Math.round(smartphone * 100); // convert smartphone price to cents
-const earbudsCents = Math.round(earbuds * 100); // convert earbuds price to cents
+// ==============================================
+// STEP 1: CONVERT DOLLARS TO CENTS
+// ----------------------------------------------
+// JavaScript uses floating-point numbers.
+// Converting to whole-number cents helps avoid
+// floating-point precision errors.
+//
+// Example:
+// $7.99 → 799 cents
+// $20.95 → 2095 cents
+// ==============================================
 
-// STEP 2: APPLY QUANTITY
-const smartphoneTotalCents = smartphoneCents * qtyEach; // total cost for smartphones in cents
-const earbudsTotalCents = earbudsCents * qtyEach; // total cost for earbuds in cents
+const smartphoneCents = Math.round(smartphone * 100);
+const earbudsCents = Math.round(earbuds * 100);
 
+console.log("Smartphone:", smartphoneCents, "cents");
+console.log("Earbuds:", earbudsCents, "cents");
+
+// ==============================================
+// STEP 2: CALCULATE ITEM TOTALS (CENTS)
+// ----------------------------------------------
+// Multiply each product price by its quantity.
+// Calculations are done using cents.
+// ==============================================
+
+const smartphoneTotalCents = smartphoneCents * qtyEach;
+const earbudsTotalCents = earbudsCents * qtyEach;
+
+console.log("Smartphone Total:", smartphoneTotalCents, "cents");
+console.log("Earbuds Total:", earbudsTotalCents, "cents");
+
+// ==============================================
 // STEP 3: CALCULATE SUBTOTAL (CENTS)
-const subtotalCents = smartphoneTotalCents + earbudsTotalCents; // add both items in cents
-const subtotalDollars = subtotalCents / 100; // convert subtotal to dollars for display only
+// ----------------------------------------------
+// Add the totals together.
+//
+// Still using cents.
+// ==============================================
 
-console.log("Subtotal (Cents):", subtotalCents); // log subtotal in cents
-console.log("Subtotal (Dollars):", subtotalDollars.toFixed(2)); // log subtotal in dollars
+const subtotalCents =
+  smartphoneTotalCents + earbudsTotalCents;
 
-// STEP 4: CALCULATE ELECTRONICS TAX
-const electronicTaxCents = Math.round(subtotalCents * electronicTaxRate); // compute tax in cents
+console.log("Subtotal:", subtotalCents, "cents");
 
-const electronicTaxDollars = electronicTaxCents / 100; // convert tax to dollars for display
+// Convert to dollars ONLY for display.
 
-console.log("Electronics Tax (Cents):", electronicTaxCents); // log tax in cents
-console.log("Electronics Tax (Dollars):", electronicTaxDollars.toFixed(2)); // log tax in dollars
+const subtotalDollars = subtotalCents / 100;
 
-// STEP 5: FINAL TOTAL
-const totalCents = subtotalCents + electronicTaxCents; // final total in cents
+console.log(
+  "Subtotal:",
+  subtotalDollars.toFixed(2),
+  "dollars"
+);
 
-const totalDollars = totalCents / 100; // convert final total to dollars
+// ==============================================
+// STEP 4: CALCULATE SALES TAX
+// ----------------------------------------------
+// Tax is calculated from the subtotal.
+//
+// Math.round() is used because tax can produce
+// fractional cents. Money must end as a whole
+// number of cents.
+// ==============================================
 
-console.log("TOTAL (Cents):", totalCents); // log final total in cents
-console.log("TOTAL (Dollars):", totalDollars.toFixed(2)); // log final total in dollars
+const taxCents = Math.round(subtotalCents * SaletaxRate);
 
-console.log( "//==============================================");
+console.log("Tax:", taxCents, "cents");
+
+// Convert to dollars for display.
+
+const taxDollars = taxCents / 100;
+
+console.log(
+  "Tax:",
+  taxDollars.toFixed(2),
+  "dollars"
+);
+
+// ==============================================
+// STEP 5: CALCULATE GRAND TOTAL
+// ----------------------------------------------
+// Add subtotal and tax.
+//
+// Still working in cents.
+// ==============================================
+
+const totalCents = subtotalCents + taxCents;
+
+console.log("Grand Total:", totalCents, "cents");
+
+// Convert to dollars ONLY when displaying.
+
+const totalDollars = totalCents / 100;
+
+console.log(
+  "Grand Total:",
+  totalDollars.toFixed(2),
+  "dollars"
+);
+
+// ==============================================
+// END OF PROGRAM
+// ==============================================
 
