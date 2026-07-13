@@ -49,3 +49,51 @@ console.log(correctResult);        // TOYOTA94.87
 console.log(typeof correctResult); // string
 
 console.log("//==============================================");
+
+// 1. Single Quotes
+// Create a normal string using single quotes.
+const singleQuote = 'Hello World SingleQuotes';
+
+console.log(singleQuote);
+// Output: Hello World
+
+
+// 2. Double Quotes
+// Create a normal string using double quotes.
+const doubleQuote = "Hello World DoubleQuote";
+
+console.log(doubleQuote);
+// Output: Hello World
+
+
+// 3. Escape Characters
+// Use backslash (\) to add special characters inside a string.
+// \' = single quote, \n = new line
+const escapeString = 'I\'m learning JavaScript\nNew Line EscapeString';
+
+console.log(escapeString);
+// Output:
+// I'm learning JavaScript
+// New Line
+
+console.log("//==============================================");
+
+// 4. Template String
+// Uses backticks (` `).
+// Interpolation is a feature inside template strings using ${}.
+const name = "Charles";
+const templateString = `Hello ${name} Template String With Interpolation Method`;
+console.log(templateString);
+// Output: Hello Charles
+
+
+// Multiple
+const surname = "Ignacio";
+const income = 18000;
+const expenses = 6000
+const multiLine = `My name is ${name}.
+                    My Surname is ${surname}.
+                    My total Income & Expenses  is ${income - expenses} `
+console.log(multiLine);
+
+console.log("//==============================================");
