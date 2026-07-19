@@ -41,5 +41,11 @@ ex:
 const value = 7.49;
 console.log(Math.round(value));
 
-### 
-7. 
+7. `;` END OF LINE CODES
+
+### Automatic Semicolon Insertion
+JavaScript will automatically add `;` at the end of lines if you forget.  
+> ⚠️ This doesn't always work correctly — **always write your own semicolons**.
+
+
+

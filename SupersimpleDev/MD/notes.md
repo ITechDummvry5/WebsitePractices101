@@ -129,26 +129,6 @@ const price = '$' + (20.95 + 7.99); // → '$28.94'      ✅ Correct
 
 ---
 
-## Lesson 4 — HTML, CSS & JS Interaction
-
-### Ways to Handle Click Events (from exercises)
-
-| Method | Description |
-|--------|-------------|
-| `No0` — Inline `onclick` | Event handler written directly in HTML |
-| `No01` — Separate JS function | Same result but cleaner; JS is separated from HTML *(commented out)* |
-| `No02` — `addEventListener` | ✅ **Most recommended** — best practice for modern JavaScript |
-
-**Best Practice:**
-```js
-// ✅ Recommended
-document.querySelector('#btn').addEventListener('click', function() {
-  // your code here
-});
-```
-
----
-
 ## Lesson 5 — Variables
 
 ### What is a Variable?
@@ -162,12 +142,12 @@ let v2 = 2;
 | Part | Meaning |
 |------|---------|
 | `let` | Creates a new variable (or use `const`) |
-| `v2` | The variable name |
+| `anyName` | The variable name |
 | `=` | Assigns a value |
 | `2` | The value being stored |
 | `;` | Ends the statement |
 
-### Variable Name Rules
+### Variable Naming Syntax Rules
 | Rule | Example |
 |------|---------|
 | ❌ Cannot use reserved words | `let let = 3;` |
@@ -175,25 +155,26 @@ let v2 = 2;
 | ❌ Cannot use special characters | `let !@# = 2;` |
 | ✅ `$` and `_` are allowed | `let $name = 'Charles';` / `let _age = 14;` |
 
+### Re-assignment Syntax Rules
+
+| Rule | Example |
+|------|---------|
+| ✅ Variable must be declared first | `let score = 50;` |
+| ✅ Re-assign using only the variable name | `score = 100;` |
+| ❌ Don't use `let` again | `let score = 100;` |
+| ❌ Don't use `const` again | `const score = 100;` |
+| ❌ Cannot re-assign an undeclared variable | `score = 100; // Error if score was never declared` |
+| ✅ The new value replaces the old value | `score = 100; // score is now 100` |
+
+### Re-assigning Multiple Times
+
+A variable declared with **`let`** can be re-assigned as many times as needed. Each time you assign a new value, the previous value is replaced. The new value can be a number, text, the result of a calculation, or a value created by combining (concatenating) strings. This allows variables to store the most up-to-date value throughout the program.
+
 ### Assigning vs Re-assigning
 ```js
 let score = 50;    // Assigning — giving the variable its first value
 score = 100;       // Re-assigning — changing the value
 ```
-
-**Re-assigning Rules:**
-```js
-// ✅ Correct re-assign
-let age = 10;
-age = 15;
-
-// ❌ Wrong — don't use 'let' again on the same variable
-let age = 15;
-
-// ❌ Wrong — variable must exist before you can re-assign
-score = 100;   // Error if score was never declared
-```
-
 ### `let` vs `const` vs `var`
 
 | Keyword | Can Re-assign? | Notes |
@@ -201,15 +182,6 @@ score = 100;   // Error if score was never declared
 | `let` | ✅ Yes | Preferred for values that change |
 | `const` | ❌ No | Use when the value never changes |
 | `var` | ✅ Yes | Old way — has function scope, can cause unexpected behavior |
-
-```js
-const pi = 3.14;
-pi = 3.1416;   // ❌ Error: const cannot be changed
-```
-
-### Automatic Semicolon Insertion
-JavaScript will automatically add `;` at the end of lines if you forget.  
-> ⚠️ This doesn't always work correctly — **always write your own semicolons**.
 
 ---
 
