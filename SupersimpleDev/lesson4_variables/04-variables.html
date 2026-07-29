@@ -234,19 +234,48 @@ score = 100;       // Re-assigning — changing the value
     <button
     onclick="
     Addtocart = Addtocart + 1;
-    console.log(`Cart Add  + ${Addtocart}`);">
+    console.log(`Cart Add  ${Addtocart}`);">
     Add To Cart </button>
 
     <button
     onclick="
     Addtocart = Addtocart - 1;
-    console.log(`Cart Cancelled  + ${Addtocart}`);">
+    console.log(`Cart Cancelled  ${Addtocart}`);">
     Cancel Cart</button>
 
     <button
     onclick="Addtocart = 0;
-    console.log(`Cart Remove + ${Addtocart}`);">
+    console.log(`Cart Remove  ${Addtocart}`);
+    console.log(`Cart Show After Remove: ${Addtocart}`);">
     Remove Cart</button>
+
+    
+    <p>ShortCut </p>
+
+    <button onclick="console.log(`Vehicles: ${vehicleCount}`);">
+    View Vehicles
+</button>
+
+<button onclick="
+    vehicleCount += 1;
+    console.log(`Vehicle Added: ${vehicleCount}`);
+">
+    Add Vehicle
+</button>
+
+<button onclick="
+    vehicleCount -= 1;
+    console.log(`Vehicle Removed: ${vehicleCount}`);
+">
+    Remove Vehicle
+</button>
+
+<button onclick="
+    vehicleCount = 0;
+    console.log(`All Vehicles Cleared: ${vehicleCount}`);
+">
+    Clear Vehicles
+</button>
 
     <script src="04-variables.js"></script>
 

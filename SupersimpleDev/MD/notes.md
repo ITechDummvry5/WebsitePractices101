@@ -129,7 +129,7 @@ const price = '$' + (20.95 + 7.99); // → '$28.94'      ✅ Correct
 
 ---
 
-## Lesson 5 — Variables
+## Lesson 4 — Variables
 
 ### What is a Variable?
 A **variable** is a container that stores a value (a number, string, etc.).  
@@ -185,7 +185,30 @@ score = 100;       // Re-assigning — changing the value
 
 ---
 
-## Lesson 6 — Logical Operators & Booleans
+## Lesson 5 — Logical Operators & Booleans
+
+### What is a Bolleans?
+
+Are another types of value 
+there are  only 2 types of values
+1. True 
+2. False 
+
+### What is purpose of bollean Values? 
+A bollean values represetns whether somethig True or False
+
+### Take notes 
+Key point: Anything inside a template literal (`${...}`) is converted to a string, regardless of whether it's a boolean, number, or another data type.
+
+console.log(typeof `${123}`);    // string
+console.log(typeof `${false}`);  // string
+console.log(typeof `${null}`);   // string
+console.log(typeof `${undefined}`); // string
+
+const name = "Charles";
+const templateString = `Hello ${name} Template String With Interpolation Method`;
+console.log(typeof templateString);
+
 
 ### Strategy for Writing JavaScript
 1. **Figure out the steps you need** → this is called an **Algorithm**
@@ -266,4 +289,4 @@ console.log(computerMove);   // ❌ Error — computerMove is not defined here
 
 
 
-*End of Notes — Lessons 1 through 7*
+

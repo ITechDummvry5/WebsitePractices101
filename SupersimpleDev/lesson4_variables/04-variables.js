@@ -24,7 +24,7 @@ console.log(stringname + 'World');
 
 console.log("//==============================================");
 
-// Reassign a new value to the existing variable. -> let firstNumber = 2;
+// Reassign a new value to the existing variable. -> let firstNumber = 2; --see the line 1
 // Do NOT use `let` or `const` again because the variable has already been declared.
 firstNumber = 3;
 console.log(firstNumber); // Output: 3
@@ -38,4 +38,6 @@ firstNumber = firstNumber + 3  // using concatenation we can reassign as much we
 console.log (firstNumber + ' Re-assigning Multiple Times') // Output : 6
 
 console.log("//==============================================");
-let = Addtocart = 0;
+let = Addtocart = 0; // add to cart Example 
+let vehicleCount = 0; // add vehicle Example
+console.log("//==============================================");

@@ -1,146 +1,182 @@
 // ============================================================
-//  BOOLEANS & CONDITIONAL LOGIC IN JAVASCRIPT
-//  Topics: Comparison Operators, Truthy/Falsy, Conditionals,
-//          Ternary, Logical Operators (&&, ||, !)
+// BOOLEANS & CONDITIONAL LOGIC IN JAVASCRIPT
+// Topics:
+// - Comparison Operators
+// - Equality Operators
+// - Truthy & Falsy Values
+// - Ternary Operator
+// - Logical Operators (&&, ||, !)
+// - Conditionals
 // ============================================================
 
+console.log('--- Template Literals Always Return a String ---');
+
+// Template literals always produce a string.
+console.log(typeof `${123}`);
+console.log(typeof `${false}`);
+console.log(typeof `${null}`);
+console.log(typeof `${undefined}`);
+
+console.log("//==============================================");
 
 // ─────────────────────────────────────────────
-//  SECTION 1 — COMPARISON OPERATORS
-//  All comparisons return a boolean: true or false
+// SECTION 1 — COMPARISON OPERATORS
+// Compare two values.
+// The result is always true or false.
 // ─────────────────────────────────────────────
 
 console.log('--- Comparison Operators ---');
 
-console.log(5 > 3);   // true  — greater than
-console.log(5 < 3);   // false — less than
-console.log(5 >= 3);  // true  — greater than or equal to
-console.log(5 <= 3);  // false — less than or equal to
-console.log(5 == 3);  // false — loose equality  (value only, ignores type)
-console.log(5 != 3);  // true  — loose inequality (value only, ignores type)
+console.log(5 > 3);    // Greater than
+console.log(5 < 3);    // Less than
+console.log(5 >= 3);   // Greater than or equal to
+console.log(5 <= 3);   // Less than or equal to
+console.log(5 == 3);   // Loose equality
+console.log(5 != 3);   // Loose inequality
 
-// ── Strict vs Loose Equality ──────────────────
-// == checks VALUE only  →  5 == '5' is TRUE  (type coercion happens)
-// === checks VALUE + TYPE → 5 === '5' is FALSE (number ≠ string)
-// Best practice: always use === and !== to avoid unexpected bugs
+// Equality Operators
+// ==  Compare values only.
+// === Compare value and data type.
 
-console.log(5 === 5);   // true  — same value, same type
-console.log(5 === '5'); // false — same value, different type (number vs string)
-console.log(5 !== '5'); // true  — strict not-equal: types differ
+console.log(5 === 5);     // Same value and type
+console.log(5 === '5');   // Different data types
+console.log(5 !== '5');   // Not equal (strict)
 
+// == (Loose Equality)
+// JavaScript changes the data type if needed.
+
+console.log(5 == '5');
+console.log(true == 1);
+console.log(false == 0);
+
+// != (Loose Inequality)
+
+console.log(5 != '5');
+console.log(5 != 10);
+
+// === (Strict Equality)
+// Values and data types must both match.
+
+console.log(5 === 5);
+console.log(5 === '5');
+console.log(true === 1);
+
+// !== (Strict Inequality)
+
+console.log(5 !== '5');
+console.log(5 !== 5);
+console.log(false !== 0);
+
+// Best practice:
+// Use === and !== to avoid unexpected results.
+
+console.log("//==============================================");
 
 // ─────────────────────────────────────────────
-//  SECTION 2 — TRUTHY & FALSY VALUES
-//  JavaScript treats every value as either truthy or falsy
-//  in a boolean context (e.g. inside an if statement)
+// SECTION 2 — TRUTHY & FALSY VALUES
+// Every value is either truthy or falsy.
 // ─────────────────────────────────────────────
 
 console.log('\n--- Truthy & Falsy ---');
 
-// Falsy values — these all evaluate to false:
-//   false | 0 | '' | null | undefined | NaN
+// Falsy values:
+// false, 0, "", null, undefined, NaN
 
-// Truthy values — everything else, including:
-//   true | 1 | 'hello' | [] | {} | -1
+// Everything else is truthy.
 
-// ── Falsy example ─────────────────────────────
 if (false) {
-    console.log('This will NOT run');
+    console.log('This will not run.');
 } else {
-    console.log('Falsy block: the else runs because the condition is false');
+    console.log('Else block runs because false is falsy.');
 }
 
-// ── Truthy example ────────────────────────────
 if (true) {
-    console.log('Truthy block: this runs because the condition is true');
+    console.log('This runs because true is truthy.');
 }
 
-// ── Real-world truthy/falsy usage ─────────────
-// Instead of writing: if (cartQty !== 0)
-// You can simply write: if (cartQty) — because 0 is falsy, any other number is truthy
-
+// 5 is truthy, so this runs.
 const cartQty = 5;
+
 if (cartQty) {
-    console.log('You have items in your cart');  // runs — 5 is truthy
+    console.log('You have items in your cart.');
 } else {
-    console.log('Your cart is empty');           // skipped — 0 would be falsy
+    console.log('Your cart is empty.');
 }
 
-// ── Special values to be aware of ────────────
-console.log(!0);              // true  — ! (NOT) flips false → true (0 is falsy)
-console.log('text' / 5);     // NaN   — Not a Number (falsy, result of invalid math)
-console.log(undefined);      // undefined (falsy, means a variable has no value)
+// ! reverses true and false.
 
+console.log(!0);          // true
+console.log('text' / 5);  // NaN
+console.log(undefined);
+
+console.log("//==============================================");
 
 // ─────────────────────────────────────────────
-//  SECTION 3 — TERNARY OPERATOR
-//  Shorthand for a simple if/else that returns a value.
-//  Syntax: condition ? valueIfTrue : valueIfFalse
+// SECTION 3 — TERNARY OPERATOR
+// Short way to write if...else.
+// condition ? trueValue : falseValue
 // ─────────────────────────────────────────────
 
 console.log('\n--- Ternary Operator ---');
 
-// ── Truthy condition ──────────────────────────
-const result = true ? 'truthy' : 'falsy'; // condition is true → returns 'truthy'
-console.log(result); // 'truthy'
+// ── Ternary Operator ──────────────────────────
+// A shorter way to write an if...else statement.
 
-// ── Falsy condition ───────────────────────────
-const result1 = 0 ? 'truthy' : 'falsy';  // 0 is falsy → returns 'falsy'
-console.log(result1); // 'falsy'
+const result = true ? 'truthy' : 'falsy';
+console.log(result);
 
-// ── Equivalent long-form (for comparison) ─────
-// let result2;
+const result1 = 0 ? 'truthy' : 'falsy';
+console.log(result1);
+
+// Traditional (Long Form) Equivalent:
+
+// let result;
 // if (true) {
-//     result2 = 'truthy';
+//     result = 'truthy';
 // } else {
-//     result2 = 'falsy';
+//     result = 'falsy';
 // }
 
+// let result1;
+// if (0) {
+//     result1 = 'truthy';
+// } else {
+//     result1 = 'falsy';
+// }
+
+console.log("//==============================================");
 
 // ─────────────────────────────────────────────
-//  SECTION 4 — LOGICAL OPERATORS: && || !
-//
-//  &&  (AND)  — both sides must be truthy to return truthy
-//  ||  (OR)   — at least one side must be truthy to return truthy
-//  !   (NOT)  — flips truthy ↔ falsy
+// SECTION 4 — LOGICAL OPERATORS
+// && AND
+// || OR
+// !  NOT
 // ─────────────────────────────────────────────
 
 console.log('\n--- Logical Operators ---');
 
-// ── AND (&&) — Short-circuit evaluation ───────
-// If the LEFT side is falsy, JS skips the right side entirely.
-// If the LEFT side is truthy, JS evaluates and returns the right side.
+// AND (&&)
+// Both conditions must be true.
 
-false && console.log('This will NOT run'); // left is false → right is skipped
+false && console.log('This will not run.');
 
 const message = false && 'Yellow';
-console.log(message); // false — left was falsy, so && returned it immediately
+console.log(message);
 
-// Truth table for &&:
-//   true  && true  → true
-//   true  && false → false
-//   false && true  → false   ← short-circuits here, right side ignored
-//   false && false → false
-
-// ── OR (||) — Default/Fallback values ─────────
-// Returns the FIRST truthy value it finds, or the LAST value if all are falsy.
-// Commonly used to set default/fallback values.
+// OR (||)
+// Returns the first truthy value.
 
 const currency = undefined || 'EUR' || 'GBP';
-// undefined is falsy → skip. 'EUR' is truthy → return it. 'GBP' never checked.
-console.log(currency); // 'EUR'
+console.log(currency);
 
-// Truth table for ||:
-//   true  || true  → true   ← short-circuits, right side ignored
-//   true  || false → true   ← short-circuits, right side ignored
-//   false || true  → true
-//   false || false → false
+// ! (NOT)
+// Reverses a boolean value.
 
+console.log("//==============================================");
 
 // ─────────────────────────────────────────────
-//  SECTION 5 — IF / ELSE IF / ELSE
-//  Combining comparison and logical operators
-//  in real conditional structures
+// SECTION 5 — CONDITIONAL STATEMENTS
+// if, else if, else
 // ─────────────────────────────────────────────
 
 console.log('\n--- Conditionals ---');
@@ -148,35 +184,35 @@ console.log('\n--- Conditionals ---');
 const age = 18;
 const isPermitted = true;
 
-// ── AND: both conditions must be met ──────────
+// Both conditions must be true.
 if (age >= 16 && isPermitted) {
-    console.log('You are old enough and have permission to drive.');
+    console.log('You are allowed to drive.');
 } else {
-    console.log('You do not meet the driving requirements.');
+    console.log('You cannot drive.');
 }
 
-// ── OR: only one condition needs to be met ────
+// Only one condition needs to be true.
 if (age <= 16 || isPermitted) {
-    console.log('You either meet the age requirement OR have special permission.');
+    console.log('At least one condition is true.');
 } else {
-    console.log('You meet neither the age nor the permission requirement.');
+    console.log('Both conditions are false.');
 }
 
+console.log("//==============================================");
 
 // ─────────────────────────────────────────────
-//  SECTION 6 — PRACTICAL EXAMPLE
-//  Using the built-in Date object to get the
-//  current hour and display a time-based greeting
+// SECTION 6 — PRACTICAL EXAMPLE
+// Display a greeting based on the current time.
 // ─────────────────────────────────────────────
 
 console.log('\n--- Time-based Greeting ---');
 
-const hours = new Date().getHours(); // returns 0–23
+const hours = new Date().getHours();
 
 if (hours >= 6 && hours < 12) {
-    console.log('Good morning!');       // 06:00 – 11:59
+    console.log('Good morning!');
 } else if (hours >= 12 && hours < 18) {
-    console.log('Good afternoon!');     // 12:00 – 17:59
+    console.log('Good afternoon!');
 } else {
-    console.log('Good evening!');       // 18:00 – 05:59
+    console.log('Good evening!');
 }

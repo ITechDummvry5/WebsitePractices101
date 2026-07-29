@@ -43,9 +43,10 @@ console.log(Math.round(value));
 
 7. `;` END OF LINE CODES
 
-### Automatic Semicolon Insertion
+### Automatic Semicolon Insertion in JavaScript
 JavaScript will automatically add `;` at the end of lines if you forget.  
 > ⚠️ This doesn't always work correctly — **always write your own semicolons**.
+
 
 
 
