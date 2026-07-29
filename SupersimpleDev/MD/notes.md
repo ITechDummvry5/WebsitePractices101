@@ -287,6 +287,19 @@ console.log(computerMove);   // ❌ Error — computerMove is not defined here
 
 ---
 
+# Lesson 8 — Objects
 
+## What is an Object?
+An **object** is a data structure that groups multiple values together.
 
+In JavaScript objects, **properties** are the names (keys) that describe the data, and **values** are the actual data stored inside those properties.
 
+Example:
+```javascript
+const anime = {
+  protagonist: "Luffy",
+  bounty: "3,000,000,000" 
+};
+
+PROPERTIES = {protagonist , bounty etc...} any labels
+VALUES = {lufffy , 3,000,000,000}  Note this is not number its a string because it have "" 
