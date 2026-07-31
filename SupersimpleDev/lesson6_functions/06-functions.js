@@ -67,6 +67,13 @@ function multiplePet(dog, cat, fish) {
 multiplePet("Pitbull", "Whiskers", "Nemo");
 // dog = "Pitbull" | cat = "Whiskers" | fish = "Nemo"
 
+// Another example 
+
+function introduce(firstName, age, city) {
+    console.log(firstName + " is " + age + " years old and lives in " + city);
+}
+introduce("Alice", 25, "Tokyo");
+
 /* ============================================================
    DEFAULT VALUE PARAMETER + MULTIPLE PARAMETERS
    ============================================================ */
