@@ -34,10 +34,10 @@ Example(20); // 20 = argument
    ============================================================
 
    DEFINED with a parameter Developer say → "This function takes a parameter."
-   function calculateTax(income) { }  → "income" is the parameter.
+   function calculateTax(income) { }  → "income" is the parameter. - NOTE This is LINE 15
 
-   CALLED with a value  Develeper say → "We are passing an argument."
-   calculateTax(4000);  → 4000 is the argument.
+   CALLED with a value  Developer say → "We are passing an argument."
+   altercalculateTax(4000);  → 4000 is the argument.
    ============================================================ */
 
 
