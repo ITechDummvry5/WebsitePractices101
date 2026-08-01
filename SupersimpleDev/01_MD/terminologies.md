@@ -1,102 +1,166 @@
-### toFixed()
-The `toFixed()` method is used to format a number to a fixed number of decimal places. It is commonly used when working with money or values that need consistent decimal formatting.
+### Javascript 
+` Javascript ` is giving instructions to a computer
 
-1. 
-```javascript
-console.log((7.7965).toFixed(2));
+### Syntax
+` Syntax ` is the set of rules that defines how JavaScript code must be written.
+
+### Operator Precedence
+`Operator Precedence` is the rules JavaScript uses to decide which operator is evaluated first. (is the recipe)
+
+### Order of Operations
+`Order of Operations` is the order JavaScript follows to evaluate an expression. (doing by following the recipe)
+
+=======================================================================================================================================================
+### Simple relationship: Variable(age) → stores → Value(25) → which has a → Data Type(Number) = All of these are part of Data(25).
+1. age → Variable
+2. 25 → Value
+3. 25 is Data
+4. Number → Data Type
+=======================================================================================================================================================
+### Data
+`Data` is any information that a program stores or processes.
+
+### Variable
+Variable is a container used to store a value that can be changed or reused in a program.
+
+### Value
+`Value` is a specific piece of data, such as `10`, `"Hello"`, or `true`.
+
+### Data Types
+
+`Data Types` are categories that describe the kind of value.
+
+### Primitive Data Types
+
+Primitive values are simple, single values.
+
+| Value            | Data Type     |
+|------------------|---------------|
+| `10`             | `Number`      |
+| `3.14`           | `Number`      |
+| `"Hello"`        | `String`      |
+| `true`           | `Boolean`     |
+| `null`           | `Null`        |
+| `undefined`      | `Undefined`   |
+| `123n`           | `BigInt`      |
+| `Symbol("id")`   | `Symbol`      |
+
+### Non-Primitive Data Type
+
+`Object` is a non-primitive data type because it can store multiple values as key-value pairs.
+
+| Value                         | Data Type |
+|-------------------------------|-----------|
+| `{ name: "John", age: 25 }`   | `Object`  |
+
+### Integers
+`Integers` are whole numbers without a decimal point. They can be positive, negative, or zero.
+
+### Floats
+`Floats` are numbers with a decimal point.
+
+### Strings
+`Strings` are text enclosed in single quotes (`' '`), double quotes (`" "`), or backticks (`` ` ` ``).
+
+### Booleans
+`Booleans` are values that can only be `true` or `false`.
+
+### Null
+`Null` represents an intentional empty value.
+
+### Undefined
+`Undefined` means a variable has been declared but has not been assigned a value.
+
+### BigInt
+`BigInt` is used to represent very large integers beyond the safe limit of the `Number` type.
+
+### Symbol
+`Symbol` is a unique and immutable value often used as an object property key.
+
+### Concatenation
+`Concatenation` is the process of joining two or more values together to create a single value.
+
+### Ways to Create a String
+`Single Quotes` use `' '` to create a string.
+`Double Quotes` use `" "` and are useful when the string contains a single quote (`'`) inside.
+`Escape Character` uses `\` to include special characters inside a string.
+`Template String` uses backticks (`` ` ` ``) for interpolation and multi-line strings.
+
+### Interpolation
+Interpolation is a feature of template strings that allows variables or expressions to be inserted directly inside a string using ${}.
+
+### Coercion
+`Coercion` is the process of converting a value from one type to another.
+
+### Type Coercion
+`Type Coercion` is when JavaScript converts one data type into another.
+
+### Character
+`Character` is a single letter, number, symbol, or space inside a string. JavaScript does not have a separate Character data type; characters are stored as Strings ( "A" or "hello" or ""  or "@"-  for example).
+
+### Assigning
+`Assigning` is giving a value to a variable for the first time.
+
+### Re-assigning
+`Re-assigning` is changing the value of an existing variable.
+
+### Algorithm
+`Algorithm` is a step-by-step set of instructions used to solve a problem.
+
+### Implementing an Algorithm
+`Implementing an Algorithm` is the process of converting the algorithm steps into code.
+
+### Truthy
+`Truthy` is a value that JavaScript treats as `true` when used in a Boolean context.
+
+### Falsy
+`Falsy` is a value that JavaScript treats as `false` when used in a Boolean context.
+
+JavaScript Condition Operators
+
+### If Statement (Traditional Way)
+`If Statement` is the traditional way to write conditions in JavaScript. It runs code based on whether a condition is true or false.
+
+### Conditional Operator (Ternary Operator)
+`Conditional Operator` is a shorter way to write a simple `if...else` statement using the `? :` operator.
+```
+    condition ? valueIfTrue : valueIfFalse
+    age >= 18 ? "Adult" : "Minor"
 ```
 
-### typeof
-The `typeof` operator is used to check the data type of a value in JavaScript. It helps you understand whether a value is a number, string, boolean, or another type.
+### Guard Operator `&&` (AND)
+`Guard Operator` stops early when the left side is falsy. It is used to run something only when a condition is true.
 
-2. 
-```javascript
-console.log(typeof 29.99);
-```
+### Default Operator `||` (OR)
+`Default Operator` stops early when the left side is truthy. It is used to provide a fallback value.
 
-### Math.random()
-`Math.random()` generates a random decimal number between `0` (inclusive) and `1` (exclusive).
+### Hoisting
+`Hoisting` is a JavaScript behavior where variable and function declarations are moved to the top of their scope before the code runs.
 
-3. 
-```javascript
-console.log(Math.random());
-```
+### Scope
+`Scope` is the area in a program where a variable can be accessed or used.
 
-### length
-`length` is used to get the number of items in an array or the number of characters in a string.
+### Block Scope
+`Block` Scope means a variable can only be accessed inside the block where it is declared, such as inside { }.
 
-4. 
-```javascript
-console.log(["apple", "banana", "orange"].length);
-```
+=======================================================================================================================================================
+### Simple relationship: Object(person) → contains → Properties(name, age) → which have → Values("John", 25) → with Data Types(String, Number).
+1. person → Object
+2. name, age → Properties
+3. "John", 25 → Property Values (the actual data stored inside Properties (name, age))
+4. String, Number → Data Types of the values
+=======================================================================================================================================================
+### Object
+`Object` is a data type and a collection of related data stored as key-value pairs.
 
-### Math.floor()
-`Math.floor()` rounds a number **down** to the nearest whole number.
+### Properties
+`Properties` are the keys inside an object that describe the data and store values.
 
-5. 
-```javascript
-console.log(Math.floor(7.99));
-```
+### Dot Notation
+`Dot Notation` is a way to access or change object properties using a dot (`.`) followed by the property name.
 
-### Math.round()
-`Math.round()` rounds a number to the nearest whole number (up or down depending on the decimal value).
 
-> Does it affect calculations?
 
-6. A. YES — if you use it inside math operations
 
-Example:
-```javascript
-const price = Math.round(7.49);
-const total = price * 2;
 
-console.log(total);
-```
 
-6. B. NO — if you only use it for display
-
-Example:
-```javascript
-const value = 7.49;
-
-console.log(Math.round(value));
-```
-
-### toUpperCase()
-The `toUpperCase()` method is used to convert all alphabetic characters in a string to uppercase letters.
-
-7. 
-```javascript
-console.log('hello'.toUpperCase());
-```
-
-### toLowerCase()
-The `toLowerCase()` method is used to convert all alphabetic characters in a string to lowercase letters.
-
-8. 
-```javascript
-console.log('HELLO'.toLowerCase());
-```
-
-### toString()
-The `toString()` method is used to convert a value (such as a number, boolean, or array) into a string.
-
-9. 
-```javascript
-console.log((123).toString());
-```
-
-### Accessing Entire Object
-The object name is used to access and display the complete object, including all properties and values.
-
-10. 
-```javascript
-console.log(anime);
-```
-
-### Accessing Object Property
-The property name is used to access a specific value inside an object using dot notation.
-
-11. 
-```javascript
-console.log(anime.protagonist);

@@ -304,4 +304,19 @@ const anime = {
 
 PROPERTIES = {protagonist , bounty etc...} any labels
 VALUES = {lufffy , 3,000,000,000}  Note this is not number its a string because it have "" 
+```
 
+### Changing Object Properties
+Object properties can be changed by assigning a new value to an existing property.
+
+Example:
+```javascript
+anime.bounty = "4,000,000,000";
+```
+
+### Adding Object Properties
+Object properties can be added by creating a new property and assigning a value to it.
+
+Example:
+```javascript
+anime.status = "Emperor";
