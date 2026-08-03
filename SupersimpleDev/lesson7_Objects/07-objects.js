@@ -56,3 +56,5 @@ console.log(touch.hasBrother); //undefined because we delete a Property from an 
    Checking  a Property from an Object - NON_PRIMITIVE DATA TYPE
    ============================================================ */
 console.log(typeof touch); //  Object 
+
+console.log("//======================");

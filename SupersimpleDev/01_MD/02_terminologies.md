@@ -11,7 +11,7 @@
 `Order of Operations` is the order JavaScript follows to evaluate an expression. (doing by following the recipe)
 
 =======================================================================================================================================================
-### Simple relationship: Variable(age) → stores → Value(25) → which has a → Data Type(Number) = All of these are part of Data(25).
+### Simple relationship: `Variable`(age) → stores → `Value`(25) → which has a → `Data Type`(Number) = All of these are part of `Data`(25).
 1. age → Variable
 2. 25 → Value
 3. 25 is Data
@@ -144,7 +144,7 @@ JavaScript Condition Operators
 `Block` Scope means a variable can only be accessed inside the block where it is declared, such as inside { }.
 
 =======================================================================================================================================================
-### Simple relationship: Object(person) → contains → Properties(name, age) → which have → Values("John", 25) → with Data Types(String, Number).
+### Simple relationship: `Object`(person) → contains → `Properties`(name, age) → which have → `Property Values`("John", 25) → with `Data Types`(String, Number).
 1. person → Object
 2. name, age → Properties
 3. "John", 25 → Property Values (the actual data stored inside Properties (name, age))
@@ -152,6 +152,7 @@ JavaScript Condition Operators
 =======================================================================================================================================================
 ### Object
 `Object` is a data type and a collection of related data stored as key-value pairs.
+1. Let us group and use multiple values together.
 
 ### Properties
 `Properties` are the keys inside an object that describe the data and store values.
