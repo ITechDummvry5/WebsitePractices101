@@ -275,38 +275,73 @@ console.log(computerMove);   // ❌ Error — not defined out here
 > **Key rule:** `let` and `const` variables are block-scoped — they live and die inside the `{ }` where they were created.
 
 ---
-
 ## Lesson 8 — Objects
 
 ### What Is an Object?
 An **object** groups multiple related values together.
 - **Properties** = the names (keys) that describe the data.
-- **Values** = the actual data stored inside those properties.
+- **Property Values** = the actual data stored inside those properties.
 
 ```js
 const anime = {
   protagonist: "Luffy",
-  bounty: "3,000,000,000"
+  bounty: 3000000000
 };
 
-// PROPERTIES = protagonist, bounty, etc. (the labels)
-// VALUES = "Luffy", "3,000,000,000" — note bounty is a STRING here because it's in quotes, not a number
+// PROPERTIES = protagonist, bounty
+// PROPERTY VALUES = "Luffy", 3000000000
 ```
 
-### Changing Object Properties
+### Changing or Reassign Property Values
 Assign a new value to an existing property:
+
 ```js
 anime.bounty = "4,000,000,000";
 ```
 
 ### Adding Object Properties
 Create a new property by assigning a value to it:
+
 ```js
 anime.status = "Emperor";
 ```
+
 ### Delete Object Properties
-The `delete` keyword is used to removes object properties. not Whole Object it delete only Specific Object Properties
+The `delete` keyword is used to remove a specific object property. It does not delete the whole object.
+
 ```js
 delete anime.status;
+```
+
+### Alternative Bracket Notation
+`Bracket Notation` is an alternative way to access or change object properties using brackets (`[]`) with the property name written as a string.
+
+### Access Property
+Access an object property using brackets:
+
+```js
+anime["protagonist"];
+```
+
+### Changing or Reassign Property Values
+Assign a new value to an existing property using brackets:
+
+```js
+anime["bounty"] = "4,000,000,000";
+```
+
+### Adding Object Properties
+Create a new property by assigning a value to it using brackets:
+
+```js
+anime["status"] = "Emperor";
+```
+
+### Delete Object Properties
+The `delete` keyword removes a specific object property using brackets. It does not delete the whole object.
+
+```js
+delete anime["status"];
+```
 
 

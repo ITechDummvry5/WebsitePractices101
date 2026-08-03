@@ -151,24 +151,29 @@ JavaScript Condition Operators
 4. String, Number → Data Types of the values
 =======================================================================================================================================================
 ### Object
-`Object` is a data type and a collection of related data stored as key-value pairs.
+`Object` is a data type and a collection of related data stored as key-value pairs or like a Container.
 1. Let us group and use multiple values together.
 
-### Object Property
-`Object Property` is a key-value pair inside an object that represents a specific piece of stored data. It consists of a **property name (key)** and a **property value**.
-
-| Object Property        | Property Name (Key) | Property Value |
-| ---------------------- | ------------------- | -------------- |
-| `protagonist: "Luffy"` | `protagonist`       | `"Luffy"`      |
-| `bounty: 3000000000`   | `bounty`            | `3000000000`   |
-
 ### Properties
-`Properties` are the keys inside an object that describe the data and store values.
+`Properties` or `Property Name (Key)` are the keys inside an object that describe the data and store values.
+
+### Property Values
+`Property Values` are the actual data stored inside an object's properties. They represent the information assigned to each property name (key).
+
+### Object Property
+`Object Property` or is a key-value pair inside an object that represents a specific piece of stored data. It consists of a **property name (key)** and a **property value**.
 
 ### Dot Notation
 `Dot Notation` is a way to access or change object properties using a dot (`.`) followed by the property name.
 
+### Bracket Notation
+`Bracket Notation` is a way to access or change object properties using brackets (`[]`) with the property name written as a string or stored in a variable.
 
+### Delete Object Properties
+`Delete Object Properties` uses the `delete` keyword to remove an object property (key-value pair) from an object.
+
+### Reassign Property Values
+`Reassign Property Values` is changing the value stored inside an existing object property by assigning a new value.
 
 
 
