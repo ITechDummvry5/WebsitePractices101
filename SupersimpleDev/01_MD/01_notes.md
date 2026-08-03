@@ -304,3 +304,9 @@ Create a new property by assigning a value to it:
 ```js
 anime.status = "Emperor";
 ```
+### Delete Object Properties
+The `delete` keyword is used to removes object properties. not Whole Object it delete only Specific Object Properties
+```js
+delete anime.status;
+
+

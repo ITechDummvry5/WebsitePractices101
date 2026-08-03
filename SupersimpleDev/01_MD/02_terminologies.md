@@ -146,13 +146,21 @@ JavaScript Condition Operators
 =======================================================================================================================================================
 ### Simple relationship: `Object`(person) → contains → `Properties`(name, age) → which have → `Property Values`("John", 25) → with `Data Types`(String, Number).
 1. person → Object
-2. name, age → Properties
+2. name, age → Properties / Property Name (Key)
 3. "John", 25 → Property Values (the actual data stored inside Properties (name, age))
 4. String, Number → Data Types of the values
 =======================================================================================================================================================
 ### Object
 `Object` is a data type and a collection of related data stored as key-value pairs.
 1. Let us group and use multiple values together.
+
+### Object Property
+`Object Property` is a key-value pair inside an object that represents a specific piece of stored data. It consists of a **property name (key)** and a **property value**.
+
+| Object Property        | Property Name (Key) | Property Value |
+| ---------------------- | ------------------- | -------------- |
+| `protagonist: "Luffy"` | `protagonist`       | `"Luffy"`      |
+| `bounty: 3000000000`   | `bounty`            | `3000000000`   |
 
 ### Properties
 `Properties` are the keys inside an object that describe the data and store values.

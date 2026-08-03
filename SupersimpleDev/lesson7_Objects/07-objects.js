@@ -2,59 +2,83 @@ const anime = {
   protagonist: 'Luffy',
   bounty: 3000000000
 };
-// Display the entire object in the console
 console.log(anime);
-// Access the 'protagonist' property using dot notation
 console.log(anime.protagonist);
-// Access the 'bounty' property using dot notation and display its data type
 console.log(typeof anime.bounty);
 
-console.log("//======================");
+
+/* ============================================================
+   Explanation
+============================================================ */
+// `anime` is an object.
+// `protagonist` and `bounty` are object properties.
+// Use dot notation (`.`) to access a property's value.
+// `typeof anime.bounty` returns `"number"` because the value is a number.
+
+console.log('======================');
+
 let touch = {
   maleLead: 'Tat-chan',
   femaleLead: 'Minami',
   relation: 'Love Interest'
 };
-// Display the entire object
+
 console.log(touch);
-// Access object properties using dot notation and combine them to create a sentence
 console.log(touch.maleLead, touch.relation, 'is', touch.femaleLead);
 
-console.log("//======================");
 /* ============================================================
-   Changing Object Properties
-   ============================================================ */
+   Explanation
+============================================================ */
+// Objects can store multiple related values.
+// Each value is accessed using dot notation.
+// You can combine object properties with strings when displaying them.
 
-// Change the value of an existing property
+console.log('======================');
+
 touch.maleLead = 'Kat-chan';
 
-// Display the updated object
 console.log(touch);
-// Access the updated property value
 console.log(touch.maleLead, touch.relation, 'is', touch.femaleLead);
 
-console.log("//======================");
 /* ============================================================
-   Adding a New Property to an Object
-   ============================================================ */
+   Explanation
+============================================================ */
+// Assigning a new value to an existing property updates the object.
+// The old value ('Tat-chan') is replaced with the new value ('Kat-chan').
+
+console.log('======================');
 
 touch.hasBrother = true;
-// Display the updated object
-console.log(touch);
-// Access the new property value = right now the current maleLead is Kat-chan not Tat-chan because we Change the Object Properties
-console.log('Tatchan Twin Brother is', touch.maleLead ,touch.hasBrother);
 
-console.log("//======================");
+console.log(touch);
+console.log('Kat-chan Twin Brother:', touch.hasBrother);
+
 /* ============================================================
-   Deleting a Property from an Object
-   ============================================================ */
+   Explanation
+============================================================ */
+// You can add a new property simply by assigning a value to a property name
+// that doesn't already exist.
+
+console.log('======================');
+
 delete touch.hasBrother;
-// Display the updated object
-console.log(touch);
-console.log(touch.hasBrother); //undefined because we delete a Property from an object
-/* ============================================================
-   Checking  a Property from an Object - NON_PRIMITIVE DATA TYPE
-   ============================================================ */
-console.log(typeof touch); //  Object 
 
-console.log("//======================");
+console.log(touch);
+console.log(touch.hasBrother);
+
+/* ============================================================
+   Explanation
+============================================================ */
+// The `delete` keyword removes a property from an object.
+// Accessing a deleted property returns `undefined`.
+
+console.log('======================');
+
+console.log(typeof touch);
+
+/* ============================================================
+   Explanation
+============================================================ */
+// `typeof` returns `"object"` because `touch` is an object.
+// Objects are a non-primitive data type.
+
