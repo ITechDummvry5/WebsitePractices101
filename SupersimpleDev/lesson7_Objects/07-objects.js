@@ -82,30 +82,168 @@ console.log(typeof touch);
 // `typeof` returns `"object"` because `touch` is an object.
 // Objects are a non-primitive data type.
 
-  const product2 = {
-        name: 'shirt',
-        'delivery-time': '1 day',
-        rating: {
-          stars: 4.5,
-          count: 87
-        },
-        fun: function function1() {
-          console.log('function inside object');
-        }
-      };
-      console.log(product2);
-      console.log(product2.name);
-      console.log(product2['name']);
-      console.log(product2['delivery-time']);
-      
-      console.log(product2.rating.count);
-      product2.fun();
+const manga = {
+   title: 'One Piece',
+  "Pre-serialized": 'March 2',
 
-      console.log(typeof console.log);
+};
+console.log(manga);
+console.log(manga.title);
+console.log(manga["Pre-serialized"]);
 
-      console.log(JSON.stringify(product2));
+console.log('======================');
 
-      const jsonString = JSON.stringify(product2);
-      console.log(JSON.parse(jsonString));
+manga.title = 'Naruto'; 
+manga["Pre-serialized"] = 'September 21';
 
-      
+console.log(manga);
+console.log(manga.title);
+console.log(manga["Pre-serialized"]);
+
+console.log('======================'); 
+manga["author-name"] = 'Masashi Kishimoto';
+console.log(manga);
+console.log(manga["author-name"]);
+
+console.log('======================'); 
+delete manga["author-name"];
+console.log(manga);
+console.log(manga["author-name"]);
+
+/* ============================================================
+   Explanation
+============================================================ */
+// 1. Existing properties can be updated:
+//    manga.title = 'Naruto';
+
+// 2. Bracket Notation can update properties with special characters:
+//    manga["Pre-serialized"] = 'September 21';
+
+// 3. New properties can be added:
+//    manga.author = 'Masashi Kishimoto';
+
+// 4. Properties can be deleted using the delete keyword:
+//    delete manga["author-name"]; will be undefined when accessed.
+
+console.log('======================');
+
+const mangafire = {
+   "@title_anime" : 'Kyou kara Ore wa',
+   Best_friend : 'Mitsuhashi And Itou',
+    lover : {
+      Mitsuhashi : 'Riko',
+      Itou : 'Kyoko'
+   }
+}
+console.log(mangafire);
+console.log(mangafire["@title_anime"]);
+console.log(mangafire.Best_friend);
+
+console.log(mangafire.lover.Mitsuhashi);
+console.log(mangafire["lover"].Mitsuhashi);
+console.log(mangafire.lover["Mitsuhashi"]);
+
+console.log(mangafire.lover.Itou);
+console.log(mangafire["lover"].Itou);
+console.log(mangafire.lover["Itou"]);
+
+/* ============================================================
+   Explanation
+============================================================ */
+// 1. An object can contain another object inside it.
+// 2. The object inside another object is called a nested object.
+// 3. Nested objects are useful for organizing related data into groups.
+//
+// 4. You can access nested properties using dot notation,
+//    bracket notation, or a combination of both.
+
+console.log('======== Without Fun : =============');
+
+const conanCase = {
+   title: 'Detective Conan',
+   detective: 'Shinichi Kudo',
+
+   investigate() {
+      console.log('Investigating the mystery...');
+   }
+};
+
+console.log(conanCase);
+console.log(conanCase.title);
+console.log(conanCase.detective);
+conanCase.investigate();
+
+// ============================================================
+// Explanation: Without Fun
+// ============================================================
+// 1. `investigate()` uses method shorthand.
+// 2. It is the modern and cleaner way to create object methods.
+//
+// Example:
+// conanCase.investigate()
+
+
+console.log('======== With Fun : =============');
+
+const conanMystery = {
+   title: 'Detective Conan',
+   detective: 'Shinichi Kudo',
+
+   investigate: function() {
+      console.log('Investigating the mystery...');
+   }
+};
+
+console.log(conanMystery);
+console.log(conanMystery.title);
+console.log(conanMystery.detective);
+
+conanMystery.investigate();
+
+// ============================================================
+// Explanation: With investigate function
+// ============================================================
+// 1. `investigate` is a property that stores an anonymous function.
+// 2. The function is called using the property name.
+//
+// Example:
+// conanMystery.investigate()
+
+
+console.log('======== With Fun And Function Name : =============');
+
+const DetectiveConan = {
+   title: 'Detective Conan',
+   detective: 'Shinichi Kudo',
+
+   fun: function DetectiveFunction() {
+      console.log('Investigating the mystery...');
+   }
+};
+
+console.log(DetectiveConan);
+console.log(DetectiveConan.title);
+console.log(DetectiveConan.detective);
+
+DetectiveConan.fun();
+
+// ============================================================
+// Explanation: With Fun And Function Name
+// ============================================================
+// 1. `fun` is a property that stores a named function.
+// 2. `DetectiveFunction` is the function's internal name.
+// 3. The function is still called using `fun`.
+//
+// Example:
+// DetectiveConan.fun()
+
+console.log('======================');
+
+console.log(typeof console);
+console.log(typeof console.log);
+// ============================================================
+// Explanation: Type of console and console.log
+// ============================================================
+// `console` is an object.
+// `console.log` is a function that is a property of the `console` object.
+// It is provided by the JavaScript environment (like browsers or Node.js) and is used for logging messages to the console.

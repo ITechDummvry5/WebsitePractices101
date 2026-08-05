@@ -168,3 +168,18 @@ console.log(parseFloat('3.14'));
 // 3.14
 ```
 
+### JSON.stringify()
+`JSON.stringify()` converts a value into a JSON string.
+22. 
+```javascript
+console.log(JSON.stringify({ name: 'Charles' }));
+// '{"name":"Charles"}'
+```
+
+### JSON.parse()
+`JSON.parse()` converts a JSON string into a JavaScript value.
+23. 
+```javascript
+console.log(JSON.parse('{"name":"Charles"}'));
+// { name: 'Charles' }
+```

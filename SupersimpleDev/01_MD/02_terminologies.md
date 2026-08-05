@@ -47,11 +47,19 @@ Primitive values are simple, single values.
 
 ### Non-Primitive Data Type
 
+Non-primitive values can store multiple values or more complex data structures.
+
 `Object` is a non-primitive data type because it can store multiple values as key-value pairs.
+
+`Array` is a non-primitive data type because it can store multiple values in an ordered list using indexes.
+
+`Function` is a non-primitive data type because it stores reusable blocks of code that can be executed.
 
 | Value                         | Data Type |
 |-------------------------------|-----------|
 | `{ name: "John", age: 25 }`   | `Object`  |
+| `[1, 2, 3]`                   | `Array`   |
+| `function greet() {}`         | `Function` |
 
 ### Integers
 `Integers` are whole numbers without a decimal point. They can be positive, negative, or zero.
@@ -161,7 +169,7 @@ JavaScript Condition Operators
 `Property Values` are the actual data stored inside an object's properties. They represent the information assigned to each property name (key).
 
 ### Object Property
-`Object Property` or is a key-value pair inside an object that represents a specific piece of stored data. It consists of a **property name (key)** and a **property value**.
+`Object Property` or is a key-value pair inside an object that represents a specific piece of stored data. It consists of a `property name (key)` and a `property value`.
 
 ### Dot Notation
 `Dot Notation` is a way to access or change object properties using a dot (`.`) followed by the property name.
@@ -175,6 +183,27 @@ JavaScript Condition Operators
 ### Reassign Property Values
 `Reassign Property Values` is changing the value stored inside an existing object property by assigning a new value.
 
+### Nested Object
+A `Nested Object` is an object inside another object. It helps organize related data into groups.
 
+### Method
+A `method` is a function that lives inside an `object`. It defines the actions or behaviors that an object can perform.
+A method is called by using the object's name, followed by the method name and parentheses.
 
+### Method Shorthand
+`Method shorthand` is a shorter way to write a function inside an object. It removes the need to use the `function` keyword when creating a method.
+It is the common and cleaner way to define methods in modern JavaScript.
 
+### Console.log
+`console` is an `object`.  
+`.log` is a `method` (function inside an object). 
+
+### JSON Built-in Object
+`Convert`: JavaScript Object into JSON
+
+### JSON (JavaScript Object Notation)
+`JSON` or **JavaScript Object Notation** is a **built-in JavaScript object** that helps us work with JSON data.
+
+1. JSON is similar to JavaScript objects but has fewer features.
+2. JavaScript objects are mainly used within JavaScript applications.
+3. JSON is a universal data format that can be used by many programming languages, including Python, Java, PHP, C#, and more.
