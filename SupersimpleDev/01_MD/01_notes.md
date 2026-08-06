@@ -689,3 +689,14 @@ const employee = {
   ],
   "active": true
 }
+```
+
+### Recursion
+Instead of using a loop, the function repeats itself until it reaches a base case (the stopping condition).
+
+function recursiveFunction() {
+    // Base case (stop)
+    
+    // Recursive call (call itself)
+    recursiveFunction();
+}

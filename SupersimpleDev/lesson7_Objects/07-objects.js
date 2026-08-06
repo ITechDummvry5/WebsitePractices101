@@ -151,13 +151,13 @@ console.log(mangafire.lover["Itou"]);
    Explanation
 ============================================================ */
 // 1. An object can contain another object inside it.
-// 2. The object inside another object is called a nested object.
+// 2. The object inside another object is called a nested object. lover : {}
 // 3. Nested objects are useful for organizing related data into groups.
 //
 // 4. You can access nested properties using dot notation,
 //    bracket notation, or a combination of both.
 
-console.log('======== Without Fun : =============');
+console.log('======== Method Shorthand (ES6) ========');
 
 const conanCase = {
    title: 'Detective Conan',
@@ -171,25 +171,26 @@ const conanCase = {
 console.log(conanCase);
 console.log(conanCase.title);
 console.log(conanCase.detective);
+
 conanCase.investigate();
 
 // ============================================================
-// Explanation: Without Fun
+// Method Shorthand (ES6)
 // ============================================================
-// 1. `investigate()` uses method shorthand.
-// 2. It is the modern and cleaner way to create object methods.
+// 1. `investigate()` is an object method using ES6 method shorthand.
+// 2. This is the modern and concise syntax.
 //
-// Example:
+// Call:
 // conanCase.investigate()
 
 
-console.log('======== With Fun : =============');
+console.log('\n======== Anonymous Function Expression ========');
 
 const conanMystery = {
    title: 'Detective Conan',
    detective: 'Shinichi Kudo',
 
-   investigate: function() {
+   investigate: function () {
       console.log('Investigating the mystery...');
    }
 };
@@ -201,16 +202,16 @@ console.log(conanMystery.detective);
 conanMystery.investigate();
 
 // ============================================================
-// Explanation: With investigate function
+// Anonymous Function Expression
 // ============================================================
 // 1. `investigate` is a property that stores an anonymous function.
-// 2. The function is called using the property name.
+// 2. The method is called through the property name.
 //
-// Example:
+// Call:
 // conanMystery.investigate()
 
 
-console.log('======== With Fun And Function Name : =============');
+console.log('\n======== Named Function Expression ========');
 
 const DetectiveConan = {
    title: 'Detective Conan',
@@ -228,13 +229,13 @@ console.log(DetectiveConan.detective);
 DetectiveConan.fun();
 
 // ============================================================
-// Explanation: With Fun And Function Name
+// Named Function Expression
 // ============================================================
 // 1. `fun` is a property that stores a named function.
 // 2. `DetectiveFunction` is the function's internal name.
-// 3. The function is still called using `fun`.
+// 3. The method is called through the property name.
 //
-// Example:
+// Call:
 // DetectiveConan.fun()
 
 console.log('======================');

@@ -194,6 +194,16 @@ A method is called by using the object's name, followed by the method name and p
 `Method shorthand` is a shorter way to write a function inside an object. It removes the need to use the `function` keyword when creating a method.
 It is the common and cleaner way to define methods in modern JavaScript.
 
+### The 3 Parts of a Method Definition
+| Syntax                            | Name                       | Example                                |
+| --------------------------------- | -------------------------- | -------------------------------------- |
+| **Method Shorthand (ES6)**        | Object method              | `methodName() {}`                      |
+| **Anonymous Function Expression** | Function without a name    | `methodName: function() {}`            |
+| **Named Function Expression**     | Function with its own name | `methodName: function methodName() {}` |
+
+### Recursion
+is a programming technique where a function `calls itself` to solve a problem.
+
 ### Console.log
 `console` is an `object`.  
 `.log` is a `method` (function inside an object). 
