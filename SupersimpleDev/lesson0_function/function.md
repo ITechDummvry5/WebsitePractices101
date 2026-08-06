@@ -168,11 +168,13 @@ console.log(parseFloat('3.14'));
 // 3.14
 ```
 
-### JSON.stringify()
-`JSON.stringify()` converts a value into a JSON string.
+### `JSON.stringify()`
+`JSON.stringify()` converts a JavaScript value into a JSON string.
 22. 
 ```javascript
 console.log(JSON.stringify({ name: 'Charles' }));
+// or
+console.log(JSON.stringify(mangafire)); -> when it passed it called argument
 // '{"name":"Charles"}'
 ```
 

@@ -217,3 +217,29 @@ is a programming technique where a function `calls itself` to solve a problem.
 1. JSON is similar to JavaScript objects but has fewer features.
 2. JavaScript objects are mainly used within JavaScript applications.
 3. JSON is a universal data format that can be used by many programming languages, including Python, Java, PHP, C#, and more.
+
+### Argument
+An argument is a value passed into a function or method when it is called.
+
+Arguments can be:
+- Variable reference → `mangafire`
+- Object literal → `{ name: 'Charles' }`
+- Array → `[1, 2, 3]`
+- String → `"Hello"`
+- Number → `100`
+
+### JavaScript Value → JSON String
+`JSON.stringify()` converts a JavaScript value into a JSON string.
+JavaScript Value
+↓
+JSON.stringify()
+↓
+JSON String
+### JSON String → JavaScript Value
+`JSON.parse()` converts a JSON string back into a JavaScript value.
+JSON String
+↓
+JSON.parse()
+↓
+JavaScript Value
+

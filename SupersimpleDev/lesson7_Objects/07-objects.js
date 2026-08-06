@@ -248,3 +248,34 @@ console.log(typeof console.log);
 // `console` is an object.
 // `console.log` is a function that is a property of the `console` object.
 // It is provided by the JavaScript environment (like browsers or Node.js) and is used for logging messages to the console.
+
+console.log('======================');
+
+console.log(JSON.stringify(mangafire));
+console.log(typeof JSON.stringify(mangafire));
+
+// ============================================================
+// Explanation : JSON.stringify() Convert Javascript Value to JSON String
+// ============================================================
+// Flow:
+// JavaScript Value
+// ↓
+// JSON.stringify()
+// ↓
+// JSON String
+
+const jsonString = JSON.stringify(mangafire);
+const javascriptObject = JSON.parse(jsonString);
+
+console.log(javascriptObject);   
+console.log(typeof javascriptObject); // Output: "object"
+
+// ============================================================
+// Explanation : JSON.parse() Convert JSON String to Javascript Value
+// ============================================================
+// Flow:
+// JSON String
+// ↓
+// JSON.parse()
+// ↓
+// JavaScript Value

@@ -647,7 +647,7 @@ detective.fun(); // ✅ Called using the property name
 
 ---
 
-### JSON  or  JAVASCRIPT OBJECT NOTATION
+### JSON 
 - a Synax 
 - similar to Javascript Object
 - but has less features 
@@ -691,12 +691,53 @@ const employee = {
 }
 ```
 
+### Converting JavaScript Value to JSON String
+`JSON.stringify()` converts a JavaScript value into a JSON string.
+// Flow:
+// JavaScript Object
+//        ↓
+// JSON.stringify()
+//        ↓
+// JSON String
+
+```javascript
+const mangafire = {
+   name: 'Charles',
+   age: 25
+};
+const jsonString = JSON.stringify(mangafire);
+console.log(jsonString);
+// '{"name":"Charles","age":25}'
+console.log(typeof jsonString);
+// "string"
+```
+
+### Converting JSON String Back to JavaScript
+`JSON.parse()` converts a JSON string back into a JavaScript value.
+// Flow:
+// JSON String
+//      ↓
+// JSON.parse()
+//      ↓
+// JavaScript Object
+
+```javascript
+const jsonData = '{"name":"Charles","age":25}';
+const javascriptObject = JSON.parse(jsonData);
+console.log(javascriptObject);
+// { name: 'Charles', age: 25 }
+console.log(typeof javascriptObject);
+// "object"
+```
+
 ### Recursion
 Instead of using a loop, the function repeats itself until it reaches a base case (the stopping condition).
-
+```javascript
 function recursiveFunction() {
     // Base case (stop)
     
     // Recursive call (call itself)
     recursiveFunction();
 }
+```
+
