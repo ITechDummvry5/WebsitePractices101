@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anime Local Storage</title>
+</head>
+<body>
+
+  <h1 id="display"></h1>
+
+  <input id="animeInput" placeholder="Anime name">
+  <input id="characterInput" placeholder="Favorite character">
+
+  <button onclick="saveAnime()">Save</button>
+
+  <script>
+
+    const display = document.getElementById("display");
+
+    // Load saved data when page opens
+    const savedAnime = JSON.parse(localStorage.getItem("anime"));
+
+    if (savedAnime) {
+      alert(`${savedAnime.anime} - ${savedAnime.character}`);
+
+      display.textContent =
+        `${savedAnime.anime} - ${savedAnime.character}`;
+    }
+
+
+    function saveAnime() {
+
+      const animeData = {
+        anime: document.getElementById("animeInput").value,
+        character: document.getElementById("characterInput").value
+      };
+
+
+      // Store object
+      localStorage.setItem(
+        "anime",
+        JSON.stringify(animeData)
+      );
+
+      alert(`${animeData.anime} - ${animeData.character}`);
+
+      display.textContent =
+        `${animeData.anime} - ${animeData.character}`;
+    }
+
+  </script>
+
+</body>
+</html>

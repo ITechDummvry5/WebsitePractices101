@@ -185,3 +185,12 @@ console.log(JSON.stringify(mangafire)); -> when it passed it called argument
 console.log(JSON.parse('{"name":"Charles"}'));
 // { name: 'Charles' }
 ```
+
+### Local Storage
+`localStorage` stores data in the browser. It only supports strings.
+24. 
+```javascript
+localStorage.setItem('name', 'Charles');
+console.log(localStorage.getItem('name'));
+// Charles
+

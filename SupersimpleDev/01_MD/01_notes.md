@@ -16,7 +16,7 @@
 ## Lesson 2 — Numbers & Math
 
 ### Basic Math
-```js
+```javascript
 console.log(10.90 * 2 + 20.95);   // Basic math expression
 console.log(jsTotal + 4.99);      // Adding a shipping fee
 ```
@@ -29,17 +29,17 @@ JavaScript always follows the same order — multiply/divide first, then add/sub
 | 1st      | `*` `/`   | Left → Right |
 | 2nd      | `+` `-`   | Left → Right |
 
-```js
+```javascript
 2 * 3 / 5   // (2 * 3) / 5 = 1.2
 2 + 4 - 5   // (2 + 4) - 5 = 1
 ```
 
 `⚠️ Common mistake:`
-```js
+```javascript
 20.95 + 7.99 * 2   // multiplication runs first → 20.95 + 15.98 = 36.93
 ```
 `Fix:` use `()` when you want addition to happen first:
-```js
+```javascript
 (20.95 + 7.99) * 2  // 28.94 * 2 = 57.88 ✅
 ```
 
@@ -53,13 +53,13 @@ JavaScript always follows the same order — multiply/divide first, then add/sub
 > `Computers can't store floats perfectly.` This can cause tiny calculation errors.
 
 `Fix:` count in the smallest unit (e.g. `cents` instead of dollars):
-```js
+```javascript
 // Risky:  0.1 + 0.2  → 0.30000000000000004
 // Safe:   10 + 20    → 30  (then divide by 100 to display it)
 ```
 
 ### Rounding
-```js
+```javascript
 Math.round(2.2);  // → 2
 Math.round(2.8);  // → 3
 ```
@@ -68,9 +68,7 @@ Math.round(2.8);  // → 3
 
 ## Lesson 3 — Strings
 
-### What Is a String?
-A string is just `text`. It's a different type of value than a number.
-```js
+```javascript
 typeof 2        // 'number'
 typeof 'hello'  // 'string'
 ```
@@ -85,14 +83,14 @@ typeof 'hello'  // 'string'
 | Template string   | `` `hello` ``                 | For interpolation or multi-line text |
 
 ### Concatenation — Joining Strings
-```js
+```javascript
 'Hello' + 'World'   // 'HelloWorld'
 'Hello' + 2         // 'Hello2'  (the number auto-converts to text)
 ```
 > This automatic switch is called `Type Coercion`.
 
 ### Interpolation — Inserting Values Into a String
-```js
+```javascript
 const name = 'Charles';
 const age = 14;
 `My name is ${name} and I am ${age} years old.`
@@ -101,7 +99,7 @@ const age = 14;
 Template strings (backticks + `${}`) let you drop any value or expression straight into text.
 
 ### Multi-line Strings
-```js
+```javascript
 const message = `Line 1
 Line 2
 Line 3`;
@@ -109,7 +107,7 @@ Line 3`;
 > ⚠️ HTML ignores line breaks by default.
 
 ### Common Pitfall
-```js
+```javascript
 const price = '$' + 20.95 + 7.99;   // '$20.957.99'  ❌ Wrong
 const price = '$' + (20.95 + 7.99); // '$28.94'      ✅ Correct
 ```
@@ -117,8 +115,8 @@ const price = '$' + (20.95 + 7.99); // '$28.94'      ✅ Correct
 
 ### Key Terminology
 
-| Term               | Meaning                                               |
-|--------------------|-------------------------------------------------------|
+| Term             | Meaning                                               |
+|------------------|-------------------------------------------------------|
 | `String`         | Text value                                            |
 | `Concatenation`  | Joining strings with `+`                              |
 | `Type Coercion`  | Automatic conversion between types                    |
@@ -129,12 +127,8 @@ const price = '$' + (20.95 + 7.99); // '$28.94'      ✅ Correct
 
 # Lesson 4 — Variables
 
-## What Is a Variable?
-A `variable` is a container that stores a value (a number, a string, etc.). You can use it anywhere a plain value would go.
-
-## Creating a Variable
-
-```js
+Creating a Variable
+```javascript
 let v2 = 2;
 ```
 
@@ -183,7 +177,7 @@ let v2 = 2;
 
 A `let` variable can be re-assigned as many times as needed. Each new assignment replaces the previous value—it can be a number, text, the result of a calculation, or a combined string. This lets a variable always hold the latest value as your program runs.
 
-```js
+```javascript
 let score = 50;
 
 score = 75;
@@ -197,7 +191,7 @@ console.log(score); // Winner
 
 ## Assigning vs Re-assigning
 
-```js
+```javascript
 let score = 50; // Assigning — the first value
 
 score = 100;    // Re-assigning — changing the value
@@ -219,7 +213,7 @@ When re-assigning a variable based on its current value, JavaScript provides `as
 
 ### Examples
 
-```js
+```javascript
 let score = 50;
 
 score += 10; // 60
@@ -233,14 +227,14 @@ console.log(score);
 
 ### Before vs Shortcut
 
-```js
+```javascript
 let coins = 5;
 
 coins = coins + 1; // Long way
 coins += 1;        // Shortcut
 ```
 
-```js
+```javascript
 let health = 100;
 
 health = health - 20; // Long way
@@ -260,7 +254,7 @@ When adding or subtracting `1`, JavaScript provides even shorter operators.
 
 ### Example
 
-```js
+```javascript
 let count = 0;
 
 count++;
@@ -294,17 +288,12 @@ console.log(count); // 1
 
 ## Lesson 5 — Logical Operators & Booleans
 
-### What Is a Boolean?
-A Boolean is a value with only `two possible states`:
-1. `true`
-2. `false`
-
-### What's the Point of Booleans?
+What's the Point of Booleans?
 A Boolean value represents whether something `is` or `isn't` true.
 
 ### Template Literals Always Produce Strings
 Anything inside a template literal `${...}` is converted to a string — no matter what type it originally was.
-```js
+```javascript
 console.log(typeof `${123}`);        // string
 console.log(typeof `${false}`);      // string
 console.log(typeof `${null}`);       // string
@@ -326,7 +315,7 @@ console.log(typeof templateString);  // string
 | `Truthy`   | `1`, `'hello'`, `[]`, `{}`, any non-zero number      |
 | `Falsy`    | `0`, `''`, `null`, `undefined`, `NaN`                |
 
-```js
+```javascript
 cartQty = 5;
 cartQty > 0    // true (truthy)
 
@@ -337,21 +326,21 @@ cartQty > 0    // false (falsy)
 ### 3 Shortcut Operators for `if` Statements
 
 `1. Ternary Operator `?`` — shortcut for `if / else`:
-```js
+```javascript
 condition ? valueIfTrue : valueIfFalse;
 
 const label = age >= 18 ? 'Adult' : 'Minor';
 ```
 
 `2. Guard Operator `&&` (AND)` — stops early if the left side is falsy:
-```js
+```javascript
 false && value2   // stops immediately, returns false
 
 isLoggedIn && showDashboard();  // only runs if isLoggedIn is truthy
 ```
 
 `3. Default Operator `||` (OR)` — stops early if the left side is truthy:
-```js
+```javascript
 true || value3    // stops immediately, returns true
 
 const name = userInput || 'Guest';  // fallback if userInput is falsy
@@ -374,7 +363,7 @@ const name = userInput || 'Guest';  // fallback if userInput is falsy
 
 ### Block Scope
 Anything created inside `{ }` only exists `within` those braces:
-```js
+```javascript
 if (num > 0 && num <= 1/3) {
   const computerMove = 'rock';   // Only exists inside this block
 }
@@ -507,8 +496,7 @@ detective.fun(); // ✅ Called using the property name
 | Data types     | Supports more types (`undefined`, `function`, `Symbol`)       | Supports only `string`, `number`, `boolean`, `object`, `array`, `null` |
 | Purpose        | Programming language for creating logic and applications      | Data format for storing and exchanging data                            |
 
-### COMPARISON 
-
+### COMPARISON  BETWEEN JAVASCRIPT AND JSON DATA
 ```javascript
 const employee = {
   id: 101,
@@ -532,8 +520,21 @@ const employee = {
   "active": true
 }
 ```
-### Local Storage
-`localStorage` stores data in the browser so it remains available even after the page is closed or refreshed.
 
+### Local Storage
+Only supports `strings`.
+Use `JSON.stringify()` to store objects and `JSON.parse()` to retrieve them.
+
+```javascript
+const user = {
+  name: "Charles",
+  age: 14
+};
+// Store data
+localStorage.setItem("user", JSON.stringify(user));
+// Get data
+const savedUser = JSON.parse(localStorage.getItem("user"));
+//Call
+console.log(savedUser);
 
 

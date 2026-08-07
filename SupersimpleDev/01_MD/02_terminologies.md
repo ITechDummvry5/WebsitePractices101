@@ -17,6 +17,7 @@
 3. 25 is Data
 4. Number → Data Type
 =======================================================================================================================================================
+
 ### Data
 `Data` is any information that a program stores or processes.
 
@@ -59,7 +60,7 @@ Non-primitive values can store multiple values or more complex data structures.
 |-------------------------------|-----------|
 | `{ name: "John", age: 25 }`   | `Object`  |
 | `[1, 2, 3]`                   | `Array`   |
-| `function greet() {}`         | `Function` |
+| `function greet() {}`         | `Function`|
 
 ### Integers
 `Integers` are whole numbers without a decimal point. They can be positive, negative, or zero.
@@ -198,7 +199,6 @@ A function without a name. It is usually assigned directly to a variable or obje
 ### Named Function
 A function with its own name. The name helps with debugging or calling the function itself (recursion).
 
-
 ### Recursion
 is a programming technique where a function `calls itself` to solve a problem.
 
@@ -215,8 +215,6 @@ is a programming technique where a function `calls itself` to solve a problem.
 ### Argument
 An `argument` is a value passed to a function when it is called.
 
-### Convert JS to JSON
-`JSON.stringify()` converts a `JavaScript value` → `JSON string`.
+### Local Storage
+`localStorage` stores data in the browser so it remains available even after the page is closed or refreshed. 
 
-### Convert JSON to JS
-`JSON.parse()` converts a `JSON string` → `JavaScript value`.

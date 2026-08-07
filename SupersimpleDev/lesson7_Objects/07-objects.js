@@ -267,7 +267,7 @@ console.log(typeof JSON.stringify(mangafire));
 // ↓
 // JSON.stringify()
 // ↓
-// JSON String
+// JSON String -typeof JSON.stringify(mangafire) returns "string"
 
 console.log('==========JSON String to Javascript Value============');
 
@@ -275,7 +275,7 @@ const jsonString = JSON.stringify(mangafire);
 const javascriptObject = JSON.parse(jsonString);
 
 console.log(javascriptObject);   
-console.log(typeof javascriptObject); // Output: "object"
+console.log(typeof javascriptObject);
 
 // ============================================================
 // Explanation : JSON.parse() Convert JSON String to Javascript Value
@@ -285,4 +285,21 @@ console.log(typeof javascriptObject); // Output: "object"
 // ↓
 // JSON.parse()
 // ↓
-// JavaScript Value
+// JavaScript Value - typeof javascriptObject returns "object"
+
+console.log('==========Local Storage============');
+
+const localAnimeStorage = {
+   myAnime : 'My Hero Academia',
+   myFavoriteCharacter : 'Deku',
+   'myFavorite FemaleCharacter' : 'Ochako Uraraka',
+   characterPower : {
+      Deku : 'One For All',
+      Ochako : 'Zero Gravity'
+   }
+}
+ localStorage.setItem("localAnimeStorage", JSON.stringify(localAnimeStorage));
+
+ const savedLocalStorage = JSON.parse(localStorage.getItem("localAnimeStorage"));
+console.log(savedLocalStorage);
+
