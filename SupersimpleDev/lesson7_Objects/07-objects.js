@@ -249,10 +249,15 @@ console.log(typeof console.log);
 // `console.log` is a function that is a property of the `console` object.
 // It is provided by the JavaScript environment (like browsers or Node.js) and is used for logging messages to the console.
 
-console.log('======================');
+console.log('==========JAVASCRIPT VALUES to JSON String============');
 
 console.log(JSON.stringify(mangafire));
 console.log(typeof JSON.stringify(mangafire));
+
+// or
+// const JavascriptInJson = JSON.stringify(mangafire);
+// console.log(JavascriptInJson);
+// console.log(typeof JavascriptInJson);
 
 // ============================================================
 // Explanation : JSON.stringify() Convert Javascript Value to JSON String
@@ -263,6 +268,8 @@ console.log(typeof JSON.stringify(mangafire));
 // JSON.stringify()
 // ↓
 // JSON String
+
+console.log('==========JSON String to Javascript Value============');
 
 const jsonString = JSON.stringify(mangafire);
 const javascriptObject = JSON.parse(jsonString);

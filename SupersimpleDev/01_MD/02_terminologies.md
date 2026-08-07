@@ -188,18 +188,16 @@ A `Nested Object` is an object inside another object. It helps organize related 
 
 ### Method
 A `method` is a function that lives inside an `object`. It defines the actions or behaviors that an object can perform.
-A method is called by using the object's name, followed by the method name and parentheses.
 
 ### Method Shorthand
-`Method shorthand` is a shorter way to write a function inside an object. It removes the need to use the `function` keyword when creating a method.
-It is the common and cleaner way to define methods in modern JavaScript.
+A shorter way to define a function inside an object without using the `function` keyword.
 
-### The 3 Parts of a Method Definition
-| Syntax                            | Name                       | Example                                |
-| --------------------------------- | -------------------------- | -------------------------------------- |
-| **Method Shorthand (ES6)**        | Object method              | `methodName() {}`                      |
-| **Anonymous Function Expression** | Function without a name    | `methodName: function() {}`            |
-| **Named Function Expression**     | Function with its own name | `methodName: function methodName() {}` |
+### Anonymous Function
+A function without a name. It is usually assigned directly to a variable or object property.
+
+### Named Function
+A function with its own name. The name helps with debugging or calling the function itself (recursion).
+
 
 ### Recursion
 is a programming technique where a function `calls itself` to solve a problem.
@@ -208,38 +206,17 @@ is a programming technique where a function `calls itself` to solve a problem.
 `console` is an `object`.  
 `.log` is a `method` (function inside an object). 
 
-### JSON Built-in Object
-`Convert`: JavaScript Object into JSON
-
 ### JSON (JavaScript Object Notation)
-`JSON` or **JavaScript Object Notation** is a **built-in JavaScript object** that helps us work with JSON data.
+`JSON` is a text format for storing and exchanging data.
 
-1. JSON is similar to JavaScript objects but has fewer features.
-2. JavaScript objects are mainly used within JavaScript applications.
-3. JSON is a universal data format that can be used by many programming languages, including Python, Java, PHP, C#, and more.
+### JSON Built-in Object
+`Purpose` Convert between JavaScript values and JSON strings.
 
 ### Argument
-An argument is a value passed into a function or method when it is called.
+An `argument` is a value passed to a function when it is called.
 
-Arguments can be:
-- Variable reference → `mangafire`
-- Object literal → `{ name: 'Charles' }`
-- Array → `[1, 2, 3]`
-- String → `"Hello"`
-- Number → `100`
+### Convert JS to JSON
+`JSON.stringify()` converts a `JavaScript value` → `JSON string`.
 
-### JavaScript Value → JSON String
-`JSON.stringify()` converts a JavaScript value into a JSON string.
-JavaScript Value
-↓
-JSON.stringify()
-↓
-JSON String
-### JSON String → JavaScript Value
-`JSON.parse()` converts a JSON string back into a JavaScript value.
-JSON String
-↓
-JSON.parse()
-↓
-JavaScript Value
-
+### Convert JSON to JS
+`JSON.parse()` converts a `JSON string` → `JavaScript value`.
