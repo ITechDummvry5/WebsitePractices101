@@ -1,3 +1,5 @@
+This File - **function.md** — Reference for functions used in the project: name, `Purpose` line, code example.
+
 ### toFixed()
 The `toFixed()` method formats a number to a fixed number of decimal places.
 1. 

@@ -1,3 +1,5 @@
+This File - `notes.md` — Longer explanations, code examples, comparisons, and gotchas.
+
 # SuperSimpleDev — JavaScript Notes (Rewritten)
 > Lessons rewritten to be clearer and easier to follow.
 
@@ -9,7 +11,6 @@
 - You write code, and the computer follows it step by step.
 - You can run and test your code instantly using the browser `Console`.
 - `Syntax` = the grammar rules for how JavaScript must be written.
-
 
 ---
 
@@ -356,10 +357,47 @@ const name = userInput || 'Guest';  // fallback if userInput is falsy
 
 ---
 
-## Lesson 7 — Scope (Review)
+## Lesson 7 — Function
+| Term                     | Easy meaning           | Example                   |
+| ------------------------ | ---------------------- | ------------------------- |
+| `Function declaration` | Create a function      | `function greet() {}`     |
+| `Function name`        | Function's name        | `greet`                   |
+| `Parameter`            | Input placeholder      | `function greet(name) {}` |
+| `Argument`             | Actual input value     | `greet("Conan")`          |
+| `Function body`        | Code the function runs | `{ return "Hello"; }`     |
+| `Return`               | Output from function   | `return "Hello";`         |
+| `Function call`        | Run the function       | `greet("Conan")`          |
 
-### What Is Scope?
-`Scope` controls where in your code a variable exists and can be used.
+```javascript
+function greet(name) {
+    return `Hello ${name}`;
+}
+console.log(greet("Conan"));
+
+// Overview 
+function greet(name) { return `Hello ${name}`; }
+└──────────┬───────┘        │      │
+   function declaration     │      └── parameter
+                            │
+                        (whole { ... } is the) function body
+
+function greet(name) {
+         │      │
+         │      └── parameter
+         └── function name
+
+greet("Conan")
+       │
+       └── argument
+
+return `Hello ${name}`;
+       │
+       └── return value
+
+greet("Conan")
+│
+└── function call
+```
 
 ### Block Scope
 Anything created inside `{ }` only exists `within` those braces:
@@ -373,12 +411,11 @@ console.log(computerMove);   // ❌ Error — not defined out here
 > `Key rule:` `let` and `const` variables are block-scoped — they live and die inside the `{ }` where they were created.
 
 ---
-Here is a shorter version that keeps the important concepts:
-
 
 ## Lesson 8 — Objects
 
 ### Object
+<!-- Important Note : Objects are References -->
 An `object` stores related data using 
 `properties` (keys) =  [protagonist, bounty]
 `values`            =  ["Luffy", 3000000000].
@@ -496,31 +533,6 @@ detective.fun(); // ✅ Called using the property name
 | Data types     | Supports more types (`undefined`, `function`, `Symbol`)       | Supports only `string`, `number`, `boolean`, `object`, `array`, `null` |
 | Purpose        | Programming language for creating logic and applications      | Data format for storing and exchanging data                            |
 
-### COMPARISON  BETWEEN JAVASCRIPT AND JSON DATA
-```javascript
-const employee = {
-  id: 101,
-  name: "John Smith",
-  skills: ["JavaScript", "JSON"],
-  active: true,
-  salary: 10000,
-  greet() {
-    return "Welcome!";
-  }
-};
-
-// Json data
-{
-  "id": 101,
-  "name": "John Smith",
-  "skills": [
-    "JavaScript",
-    "JSON"
-  ],
-  "active": true
-}
-```
-
 ### Local Storage
 Only supports `strings`.
 Use `JSON.stringify()` to store objects and `JSON.parse()` to retrieve them.
@@ -536,5 +548,40 @@ localStorage.setItem("user", JSON.stringify(user));
 const savedUser = JSON.parse(localStorage.getItem("user"));
 //Call
 console.log(savedUser);
+
+```
+
+### Auto Boxing 
+Primitive Values
+`Primitive values` do not actually have properties or methods, but JavaScript auto-boxes them temporarily so you can use methods.
+
+```js
+"hello".length
+(123).toString()
+true.toString()
+```
+
+`Objects` can have their own properties and methods.
+```js
+const person = {
+  name: "John",
+  greet() {}
+};
+```
+// Take Note : Auto Boxing Does not Work In null property or undefined method
+
+### key Difference: Function vs Object
+`Object` = stores data
+`Function` = performs actions
+`Class` = creates objects with shared data and methods
+`Method` = a function inside an object or class
+
+**Simple relationship:**
+`Class` → creates → `Object` → has → `Method` → performs → `Action`
+
+### key Difference : Primitive Difference And Non-Primitive (Object)
+Primitive → stores the value
+Non-Primitive (Object) → stores a reference to the value
+
 
 

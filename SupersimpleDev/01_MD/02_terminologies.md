@@ -1,3 +1,5 @@
+This File - **terminologies.md** — Glossary of terms, short one-line definitions
+
 ### Javascript 
 ` Javascript ` is giving instructions to a computer
 
@@ -152,6 +154,27 @@ JavaScript Condition Operators
 ### Block Scope
 `Block` Scope means a variable can only be accessed inside the block where it is declared, such as inside { }.
 
+### Function
+A function is a reusable block of code that performs a specific task when called.
+
+### Function Declaration
+A function declaration defines a function by specifying its name, parameters, return type, and the code it will execute.
+
+### Return Type
+The return type specifies the kind of value a function returns.
+
+### Function Name
+The function name identifies the function and is used to call it.
+
+### Parameters
+Parameters are the values or inputs a function receives.
+
+### Function Body
+The function body contains the statements or instructions executed by the function.
+
+### Return Statement
+The return statement sends a value back to the code that called the function.
+
 =======================================================================================================================================================
 ### Simple relationship: `Object`(person) → contains → `Properties`(name, age) → which have → `Property Values`("John", 25) → with `Data Types`(String, Number).
 1. person → Object
@@ -161,6 +184,7 @@ JavaScript Condition Operators
 =======================================================================================================================================================
 ### Object
 `Object` is a data type and a collection of related data stored as key-value pairs or like a Container.
+`Object` a reference to a location in memory where the object is stored.
 1. Let us group and use multiple values together.
 
 ### Properties
@@ -218,3 +242,8 @@ An `argument` is a value passed to a function when it is called.
 ### Local Storage
 `localStorage` stores data in the browser so it remains available even after the page is closed or refreshed. 
 
+### Auto Boxing
+`Auto Boxing` javaScript temporarily converts primitive values into objects so you can use object methods on them.
+
+### Class
+`Class` a blueprint or template used to create objects with shared properties and methods.
