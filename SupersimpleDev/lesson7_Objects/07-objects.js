@@ -303,3 +303,12 @@ const localAnimeStorage = {
  const savedLocalStorage = JSON.parse(localStorage.getItem("localAnimeStorage"));
 console.log(savedLocalStorage);
 
+console.log('==========Primitive Values autoboxing============');
+
+const primitiveString = 'Hello, World!';
+console.log(primitiveString.length); // Accessing the length property of a string
+console.log(primitiveString.toUpperCase()); // Calling the toUpperCase() method on a string
+console.log(primitiveString.toLowerCase()); // Calling the toLowerCase() method on a string
+console.log((primitiveString.toLowerCase()).charAt(0)); // combining methods to get the first character in lowercase
+
+
