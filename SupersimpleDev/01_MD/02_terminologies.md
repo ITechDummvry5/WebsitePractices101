@@ -247,3 +247,10 @@ An `argument` is a value passed to a function when it is called.
 
 ### Class
 `Class` a blueprint or template used to create objects with shared properties and methods.
+
+### DOM
+DOM (Document Object Model) → a model of the webpage where 
+* `document` represents the HTML document,
+* `body` represents the `<body>` element, and 
+* `innerHTML` gets or sets its HTML content.
+

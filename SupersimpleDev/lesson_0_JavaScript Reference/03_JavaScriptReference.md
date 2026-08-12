@@ -572,3 +572,41 @@ console.log(decodeURIComponent("hello%20world%2Ftest"));
 console.log(["apple", "banana", "orange"].at(-1));
 // 'orange'
 ```
+
+### querySelector()
+`querySelector()` returns the **first element** that matches a CSS selector.
+81. 
+```javascript
+document.querySelector("button");   // tag
+document.querySelector("#btn");     // ID
+document.querySelector(".button");  // class
+```
+
+### querySelectorAll()
+`querySelectorAll()` returns **all elements** that match a CSS selector.
+82. 
+```javascript
+document.querySelectorAll("button");
+document.querySelectorAll(".button");
+```
+
+### getElementById()
+`getElementById()` finds an element by its **ID**.
+83. 
+```javascript
+document.getElementById("btn");
+```
+
+### getElementsByClassName()
+`getElementsByClassName()` finds elements by their **class name**.
+84. 
+```javascript
+document.getElementsByClassName("button");
+```
+
+### getElementsByTagName()
+`getElementsByTagName()` finds elements by their **HTML tag name**.
+85. 
+```javascript
+document.getElementsByTagName("button");
+```

@@ -357,7 +357,7 @@ const name = userInput || 'Guest';  // fallback if userInput is falsy
 
 ---
 
-## Lesson 7 — Function
+## Lesson 6 — Function
 | Term                     | Easy meaning           | Example                   |
 | ------------------------ | ---------------------- | ------------------------- |
 | `Function declaration` | Create a function      | `function greet() {}`     |
@@ -412,96 +412,69 @@ console.log(computerMove);   // ❌ Error — not defined out here
 
 ---
 
-## Lesson 8 — Objects
+## Lesson 7 — Objects
 
 ### Object
-<!-- Important Note : Objects are References -->
-An `object` stores related data using 
-`properties` (keys) =  [protagonist, bounty]
-`values`            =  ["Luffy", 3000000000].
+<!-- Important Note: Objects are References -->
+An `object` stores related data using `properties` (keys) and `values`.
 
 ```javascript
 const anime = {
   name: "Luffy",
-  bounty: 3000000000
-  character : {  
-   name : Nami
+  bounty: 3000000000,
+  character: {
+    name: "Nami"
   }
 };
 ```
 
-### Property Access
+### Property Access & Actions
 
-| Type             | Syntax          | Use                                   |
-| ---------------- | --------------- | ------------------------------------- |
-| Dot Notation     | `anime.name`    | Normal property names                 |
-| Bracket Notation | `anime["name"]` | Spaces, special characters, variables |
-
-### Object Actions
-
-| Action | Dot                      | Bracket                     |
-| ------ | ------------------------ | --------------------------- |
-| Access | `anime.name`             | `anime["name"]`             |
-| Change | `anime.name = "Zoro"`    | `anime["name"] = "Zoro"`    |
-| Add    | `anime.status = "Yonko"` | `anime["status"] = "Yonko"` |
-| Delete | `delete anime.status`    | `delete anime["status"]`    |
-
+| Action | Dot Notation              | Bracket Notation                | Use                                   |
+| ------ | -------------------------- | ------------------------------ | --------------------------------------|
+| Access | `anime.name`               | `anime["name"]`                | Normal property names                 |
+| Change | `anime.name = "Zoro"`      | `anime["name"] = "Zoro"`       | Spaces, special characters, variables |
+| Add    | `anime.status = "Yonko"`   | `anime["status"] = "Yonko"`    | (same as above)                       |
+| Delete | `delete anime.status`      | `delete anime["status"]`       | (same as above)                       |
 
 ### Nested Object
-An object inside another object.
+An object inside another object. Access using dot, bracket, or a combination:
 
-Access using:
-
-* Dot →      `anime.character.name`
-* Bracket →  `anime["character"]["name"]`
-* Combined → `anime.character["name"]`
-```
+```javascript
+anime.character.name;         // dot
+anime["character"]["name"];   // bracket
+anime.character["name"];      // combined
 ```
 
-## Three Ways to Define a Method Object
+---
 
-### 1. Method Shorthand
-`When to use:` Preferred in modern JavaScript for clean, readable code.
+### Defining Methods (3 ways)
 
-### 2. Traditional Method — Anonymous Function
-`When to use:` Common in older JavaScript code (pre-ES6). Still valid and works identically to method shorthand.
-
-### 3. Traditional Method — Named Function
-`When to use:` Useful when you need the function to call itself (recursion) or when you want a meaningful name to appear in stack traces during debugging.
+| Style | Syntax | When to use |
+| ----- | ------ | ------------ |
+| Method Shorthand (ES6) | `solve() {}` | Preferred in modern JS — clean and readable |
+| Anonymous Function Expression | `investigate: function() {}` | Common in pre-ES6 code; still valid |
+| Named Function Expression | `report: function DetectiveReport() {}` | Useful for recursion or clearer stack traces during debugging |
 
 ```javascript
 const detective = {
-  // 1.
-  solve() {
+  solve() {                              // 1. Method Shorthand
     console.log("Solving the case!");
   },
-
-  // 2.
-  investigate: function() {
+  investigate: function() {              // 2. Anonymous Function
     console.log("Investigating clues!");
   },
-
-  // 3.
-  report: function DetectiveReport() {
+  report: function DetectiveReport() {   // 3. Named Function
     console.log("Case report completed!");
   }
 };
 
-// Calling methods
-detective.solve();         // 1. Method Shorthand
-detective.investigate();   // 2. Anonymous Function
-detective.report();        // 3. Named Function
-
+detective.solve();
+detective.investigate();
+detective.report();
 ```
-## The 3 Parts of a Method Definition
-| Syntax                          | Name                       | Example                                |
-| --------------------------------| -------------------------- | -------------------------------------- |
-| `Method Shorthand (ES6)`        | Object method              | `methodName() {}`                      |
-| `Anonymous Function Expression` | Function without a name    | `methodName: function() {}`            |
-| `Named Function Expression`     | Function with its own name | `methodName: function methodName() {}` |
 
-`Full example showing all 3 parts:`
-
+The 3 parts of a named function expression:
 ```javascript
 const detective = {
 //  ┌── 1. Property Name
@@ -511,77 +484,148 @@ const detective = {
       console.log('Detective is on the case!');
    }
 };
-
-detective.fun(); // ✅ Called using the property name
 ```
 
-### JSON 
-- a Synax 
-- similar to Javascript Object
-- but has less features 
-- use to Store data 
-- use to send  data between computers
+---
 
-### JAVASCRIPT VS JSON 
-| Feature        | JavaScript                                                    | JSON                                                                   |
-|----------------|---------------------------------------------------------------|------------------------------------------------------------------------|
-| String         | `'single'` or `"double"` quotes allowed                       | `"double"` quotes only                                                 |
-| Keys           | `{ name: "John" }` (quotes optional for valid identifiers)    | `{ "name": "John" }` (quotes required)                                 |
-| Trailing comma | Allowed                                                       | Not allowed                                                            |
-| Functions      | Allowed                                                       | Not allowed                                                            |
-| Comments       | Allowed (`//` or `/* */`)                                     | Not allowed                                                            |
-| Data types     | Supports more types (`undefined`, `function`, `Symbol`)       | Supports only `string`, `number`, `boolean`, `object`, `array`, `null` |
-| Purpose        | Programming language for creating logic and applications      | Data format for storing and exchanging data                            |
+### JSON
+A text-based data format (similar to but simpler than a JS object) used to store and send data between computers.
 
-### Local Storage
-Only supports `strings`.
-Use `JSON.stringify()` to store objects and `JSON.parse()` to retrieve them.
+| Feature        | JavaScript                                                 | JSON                                                                   |
+| --------------- | ------------------------------------------------------------ | -------------------------------------------------------------------- |
+| Strings        | `'single'` or `"double"` quotes                              | `"double"` quotes only                                                |
+| Keys           | Quotes optional for valid identifiers                        | Quotes required                                                       |
+| Trailing comma | Allowed                                                       | Not allowed                                                           |
+| Functions      | Allowed                                                       | Not allowed                                                           |
+| Comments       | Allowed (`//`, `/* */`)                                       | Not allowed                                                           |
+| Data types     | Supports `undefined`, `function`, `Symbol`, etc.              | Only `string`, `number`, `boolean`, `object`, `array`, `null`        |
+| Purpose        | Programming language for logic and applications               | Data format for storing/exchanging data                              |
+
+**Local Storage only supports strings** — use `JSON.stringify()` to store an object and `JSON.parse()` to retrieve it:
 
 ```javascript
-const user = {
-  name: "Charles",
-  age: 14
-};
-// Store data
-localStorage.setItem("user", JSON.stringify(user));
-// Get data
-const savedUser = JSON.parse(localStorage.getItem("user"));
-//Call
+const user = { name: "Charles", age: 14 };
+
+localStorage.setItem("user", JSON.stringify(user));      // store
+const savedUser = JSON.parse(localStorage.getItem("user")); // retrieve
+
 console.log(savedUser);
-
 ```
 
-### Auto Boxing 
-Primitive Values
-`Primitive values` do not actually have properties or methods, but JavaScript auto-boxes them temporarily so you can use methods.
+---
 
-```js
-"hello".length
-(123).toString()
-true.toString()
+### Auto-Boxing
+Primitive values have no properties or methods of their own. When you access a property/method on one, JS temporarily wraps it in its corresponding wrapper object, then discards the wrapper.
+
+```javascript
+"hello".length;    // temporarily wrapped as a String object
+(123).toString();  // temporarily wrapped as a Number object
+true.toString();   // temporarily wrapped as a Boolean object
 ```
 
-`Objects` can have their own properties and methods.
-```js
-const person = {
-  name: "John",
-  greet() {}
-};
+| Primitive | Wrapper Object | Example                   | What Happens                                                    |
+| :-------- | :------------- | :------------------------ | :-------------------------------------------------------------- |
+| `string`  | `String`       | `"hi".length`             | Temporarily wrapped in a `String` object to access `.length`    |
+| `number`  | `Number`       | `(123).toString()`        | Temporarily wrapped in a `Number` object to call `.toString()`  |
+| `boolean` | `Boolean`      | `true.toString()`         | Temporarily wrapped in a `Boolean` object to call `.toString()` |
+| `bigint`  | `BigInt`       | `(10n).toString()`        | Temporarily wrapped in a `BigInt` object to call `.toString()`  |
+| `symbol`  | `Symbol`       | `Symbol("id").toString()` | Temporarily wrapped in a `Symbol` object to call `.toString()`  |
+
+
+> `null` and `undefined` can't be auto-boxed — accessing a property on them throws a `TypeError`.
+
+---
+
+### Class vs Object vs Method vs Function
+
+```text
+Class → creates → Object → has → Method → performs → Action
 ```
-// Take Note : Auto Boxing Does not Work In null property or undefined method
 
-### key Difference: Function vs Object vs Class vs Method
-`Class` = creates objects with shared data and methods
-`Object` = stores data
-`Function` = performs actions
-`Method` = a function inside an object or class
+- **Class** — blueprint for creating objects with shared data/methods
+- **Object** — stores related data and behavior
+- **Method** — a function that belongs to an object or class
+- **Function** — performs an action or task
 
-**Simple relationship:**
-`Class` → creates → `Object` → has → `Method` → performs → `Action`
+```javascript
+class Person {
+  greet() {
+    console.log("Hello!");
+  }
+}
 
-### key Difference : Primitive Difference And Non-Primitive (Object)
-Primitive → stores the value
-Non-Primitive (Object) → stores a reference to the value
+const person = new Person();
+person.greet();
+// Person = class, person = object, greet() = method, console.log(...) = action
+```
 
+---
+
+### Primitive vs Non-Primitive
+- **Primitive** — the variable holds the value directly.
+- **Non-Primitive (Object)** — the variable holds a *reference* to the object.
+
+```javascript
+// Primitive: copying makes an independent value
+let a = 10;
+let b = a;
+b = 20;
+console.log(a, b); // 10 20
+
+// Object: copying copies the reference, not the object
+let person1 = { name: "John" };
+let person2 = person1;
+person2.name = "Mike";
+console.log(person1.name, person2.name); // "Mike" "Mike"
+```
+
+## Lesson 8 – DOM
+
+The `document` object represents/models the webpage.
+DOM = **Document Object Model**
+
+### Syntax Rules in DOM — Same as Objects
+
+* DOM uses **object.property** syntax.
+* Use a **dot (`.`)** to access a property.
+* Example: `document.body` → `object.property`
+
+### DOM Methods
+The `document` object also has **methods**.
+`document.querySelector('button')` → Finds the first `<button>` element.
+
+Yes. I’d add a **DOM Access** section to your notes, because these are important ways to access DOM elements.
+
+### DOM Access Methods
+These methods are used to **find/access HTML elements** in the DOM.
+
+### Quick Reference
+| Method                     | Access By    | Example                                   |
+| -------------------------- | ------------ | ----------------------------------------- |
+| `querySelector()`          | CSS selector | `document.querySelector(".btn")`          |
+| `querySelectorAll()`       | CSS selector | `document.querySelectorAll(".btn")`       |
+| `getElementById()`         | ID           | `document.getElementById("btn")`          |
+| `getElementsByClassName()` | Class        | `document.getElementsByClassName("btn")`  |
+| `getElementsByTagName()`   | Tag          | `document.getElementsByTagName("button")` |
+
+**Easy way to remember:**
+* `#btn` → **ID**
+* `.btn` → **Class**
+* `button` → **Tag**
+* `querySelector()` → **first match**
+* `querySelectorAll()` → **all matches**
+
+### Object Method vs DOM Method
+
+| Type          | Example                            | Purpose                         |
+| ------------- | ---------------------------------- | ------------------------------- |
+| Object Method | `user.login()`                     | Performs an action on an object |
+| DOM Method    | `document.querySelector('button')` | Finds an element in the webpage |
+
+**Basic idea:**
+`object.method()` → performs an action
+`document.method()` → performs an action on the webpage
+
+### DOM Properties And Method
 
 
