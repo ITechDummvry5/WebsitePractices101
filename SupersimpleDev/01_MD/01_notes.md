@@ -570,10 +570,10 @@ const person = {
 ```
 // Take Note : Auto Boxing Does not Work In null property or undefined method
 
-### key Difference: Function vs Object
+### key Difference: Function vs Object vs Class vs Method
+`Class` = creates objects with shared data and methods
 `Object` = stores data
 `Function` = performs actions
-`Class` = creates objects with shared data and methods
 `Method` = a function inside an object or class
 
 **Simple relationship:**
