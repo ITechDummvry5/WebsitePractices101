@@ -596,15 +596,30 @@ JSON.stringify(value);
 element.addEventListener("event", functionName);
 ```
 ### DOM Query:
-
 ```js
 document.querySelector(selector);
 ```
-### DOM Query All:
 
+### DOM Query All:
 ```js
 document.querySelectorAll(selector);
 ```
+
+### DOM Query by ID:
+```js
+document.getElementById(id);
+```
+
+### DOM Query by Tag:
+```js
+document.getElementsByTagName(tag);
+```
+
+### DOM Query by Class:
+```js
+document.getElementsByClassName(class);
+```
+
 ### Create Element:
 
 ```js

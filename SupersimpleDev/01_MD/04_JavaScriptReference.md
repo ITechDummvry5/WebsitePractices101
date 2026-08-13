@@ -580,6 +580,7 @@ console.log(["apple", "banana", "orange"].at(-1));
 document.querySelector("button");   // tag
 document.querySelector("#btn");     // ID
 document.querySelector(".button");  // class
+document.querySelector("[type='button']"); // attribute
 ```
 
 ### querySelectorAll()
@@ -605,7 +606,7 @@ document.getElementsByClassName("button");
 ```
 
 ### getElementsByTagName()
-`getElementsByTagName()` finds elements by their **HTML tag name**.
+`getElementsByTagName()` finds **all elements** with the specified HTML tag name.
 85. 
 ```javascript
 document.getElementsByTagName("button");

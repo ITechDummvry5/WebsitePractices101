@@ -245,12 +245,25 @@ An `argument` is a value passed to a function when it is called.
 ### Auto Boxing
 `Auto Boxing` javaScript temporarily converts primitive values into objects so you can use object methods on them.
 
-### Class
+### Class (JavaScript)
 `Class` a blueprint or template used to create objects with shared properties and methods.
 
 ### DOM
-DOM (Document Object Model) → a model of the webpage where 
-* `document` represents the HTML document,
-* `body` represents the `<body>` element, and 
-* `innerHTML` gets or sets its HTML content.
+DOM (Document Object Model) → a model of the webpage where
+
+### CSS Selector
+A `CSS selector` → a pattern used to select HTML elements based on their tag, ID, class, attributes, or other characteristics.
+
+### Tag
+A `tag` → the HTML name that identifies an element, such as `div`, `p`, or `button`.
+
+### ID
+An `ID` → a unique name used to identify a specific HTML element.
+
+### Class (HTML/CSS)
+A `class` → a name used to group HTML elements that share the same styling or purpose.
+
+### Attribute
+An `attribute` → additional information about an HTML element, such as `id`, `class`, `href`, or `type`.
+
 

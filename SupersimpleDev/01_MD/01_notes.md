@@ -582,13 +582,15 @@ console.log(person1.name, person2.name); // "Mike" "Mike"
 ## Lesson 8 – DOM
 
 The `document` object represents/models the webpage.
-DOM = **Document Object Model**
+DOM = `Document Object Model`
 
 ### Syntax Rules in DOM — Same as Objects
+* DOM uses **object.property** and **bracket notation** to access properties.
+* Examples:
 
-* DOM uses **object.property** syntax.
-* Use a **dot (`.`)** to access a property.
-* Example: `document.body` → `object.property`
+  * `document.body` → `object.property`
+  * `document["body"]` → `object["property"]`
+  * `document[propertyName]` → property name stored in a variable
 
 ### DOM Methods
 The `document` object also has **methods**.
