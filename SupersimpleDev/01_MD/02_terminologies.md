@@ -261,9 +261,16 @@ A `tag` → the HTML name that identifies an element, such as `div`, `p`, or `bu
 An `ID` → a unique name used to identify a specific HTML element.
 
 ### Class (HTML/CSS)
-A `class` → a name used to group HTML elements that share the same styling or purpose.
+A `class` → a name used to group HTML elements that share the same styling or purpose, such as `"button"` or `"primary"`.
 
 ### Attribute
 An `attribute` → additional information about an HTML element, such as `id`, `class`, `href`, or `type`.
+
+### Class Attribute
+A `class` attribute → adds a class name to an HTML element, allowing it to be grouped, styled, or selected, such as `class="button"`.
+
+### ID Attribute
+An `id` attribute → gives a unique name to an HTML element, allowing it to be specifically identified or selected, such as `id="header"`.
+
 
 

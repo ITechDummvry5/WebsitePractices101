@@ -628,6 +628,7 @@ These methods are used to **find/access HTML elements** in the DOM.
 `object.method()` → performs an action
 `document.method()` → performs an action on the webpage
 
-### DOM Properties And Method
+### InnerHtml 
+every Html elements has a Property .innerHtml
 
 

@@ -57,7 +57,13 @@ console.log(domAccessMethod3); // Output: HTMLCollection(4) [button#myButton, b
 const domAccessMethod4 = document.getElementById('domIdButton');
 console.log(domAccessMethod4); // Output: <button id="domIdButton">DOM ID</button>
 
-
 /* ============================================================
    Explanation
 ============================================================ */
+// 1. The code demonstrates different DOM access methods in JavaScript.
+
+console.log('===========DOM Change InnerHTML===========');
+
+console.log(document.querySelector('h3').innerHTML);
+document.querySelector('h3')
+    .innerHTML = 'Changed heading inside the h3 element.';
