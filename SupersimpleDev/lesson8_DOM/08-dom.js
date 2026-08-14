@@ -52,7 +52,7 @@ const domAccessMethod2 = document.getElementsByClassName('domClassButton');
 console.log(domAccessMethod2); // Output: HTMLCollection(1) [button.domClassButton]
 
 const domAccessMethod3 = document.getElementsByTagName('button');
-console.log(domAccessMethod3); // Output: HTMLCollection(4) [button#myButton, button#domButton, button.domClassButton, button#domIdButton]
+console.log(domAccessMethod3); // Output: HTMLCollection(3) [button#domButton, button.domClassButton, button#domIdButton]
 
 const domAccessMethod4 = document.getElementById('domIdButton');
 console.log(domAccessMethod4); // Output: <button id="domIdButton">DOM ID</button>
@@ -67,3 +67,5 @@ console.log('===========DOM Change InnerHTML===========');
 console.log(document.querySelector('h3').innerHTML);
 document.querySelector('h3')
     .innerHTML = 'Changed heading inside the h3 element.';
+
+console.log(document.querySelector('.js-button'));

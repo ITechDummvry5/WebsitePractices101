@@ -252,7 +252,7 @@ An `argument` is a value passed to a function when it is called.
 DOM (Document Object Model) → a model of the webpage where
 
 ### CSS Selector
-A `CSS selector` → a pattern used to select HTML elements based on their tag, ID, class, attributes, or other characteristics.
+A `CSS selector` → a pattern used to select HTML elements based on their tag, ID, class, attributes, descendant selector or other characteristics.
 
 ### Tag
 A `tag` → the HTML name that identifies an element, such as `div`, `p`, or `button`.
@@ -267,10 +267,11 @@ A `class` → a name used to group HTML elements that share the same styling or 
 An `attribute` → additional information about an HTML element, such as `id`, `class`, `href`, or `type`.
 
 ### Class Attribute
-A `class` attribute → adds a class name to an HTML element, allowing it to be grouped, styled, or selected, such as `class="button"`.
+A `class` attribute → adds a class name to an HTML element, allowing it to be grouped, styled, or selected, such as `class="button"` or `class="primary"`.
 
 ### ID Attribute
 An `id` attribute → gives a unique name to an HTML element, allowing it to be specifically identified or selected, such as `id="header"`.
+
 
 
 

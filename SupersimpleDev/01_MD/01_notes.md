@@ -152,6 +152,14 @@ let v2 = 2;
 | ❌ Can't use special characters | `let !@# = 2;` |
 | ✅ `$` and `_` are allowed | `let $name = 'Charles';` / `let _age = 14;` |
 
+### Class Naming Rule 
+| Purpose                      | Convention | Example       |
+| ---------------------------- | ---------- | ------------- |
+| HTML/CSS `class`             | kebab-case | `user-card`   |
+| HTML `id`                    | kebab-case | `main-header` |
+| JavaScript `class`           | PascalCase | `UserCard`    |
+| JavaScript variable/function | camelCase  | `userCard`    |
+
 ### variable names (identifiers)
 | Character          | Valid?    | Example         |
 | ------------------ | --------- | --------------- |

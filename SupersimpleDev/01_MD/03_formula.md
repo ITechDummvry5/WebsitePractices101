@@ -24,6 +24,18 @@ const objectName = {
 // Call:
 objectName.method();
 ```
+
+### Nested Object : 
+
+```js
+const objectName = {
+    property: value,
+    nestedObject: {
+        name: "John"
+    }
+};
+```
+
 ### Array:
 
 ```js
