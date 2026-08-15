@@ -29,9 +29,27 @@
             <button id="planBtn">Basic</button>
         </section>
 
+             <!-- Card 4: SuperSimpleDev  Call Function and  getElementsByClassName() can find more than one element. so need to have [0]-->
+        <section>
+            <h3>Akatsuki No Yona</h3>
+            <button onclick="main()" class="akatsuki-btn">      Hak</button>
+        </section>
+
     </main>
 
     <script>
+        function main() {
+            const AkatsukiBtn = document.getElementsByClassName('akatsuki-btn')[0];
+            if (AkatsukiBtn.innerHTML.trim() === 'Hak') {
+                AkatsukiBtn.innerHTML = 'Yona';
+            }
+            else{
+                AkatsukiBtn.innerHTML = 'Hak';
+            }
+        }
+
+
+
         // ============================================================
         // Method 1: toggleNewsletter — inline onclick + if/else
         // trim() removes extra spaces/line breaks so the text matches 'Subscribe' exactly in The Webpage
@@ -63,8 +81,6 @@
 
         const notificationBtn = document.getElementById('notificationBtn');
         notificationBtn.addEventListener('click', toggleNotifications);
-
-
 
         // ============================================================
         // Method 3: togglePlan — addEventListener + ternary operator
