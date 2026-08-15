@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Buttons Demo</title>
+</head>
+<body>
+
+    <main>
+
+        <!-- Card 1: inline onclick, if/else -->
+        <section>
+            <h3>Newsletter</h3>
+            <button
+                id="newsletterBtn"
+                onclick="toggleNewsletter()">   Subscribe</button>
+        </section>
+
+        <!-- Card 2: addEventListener, if/else -->
+        <section>
+            <h3>Notifications</h3>
+            <button id="notificationBtn">   Subscribe</button>
+        </section>
+
+        <!-- Card 3: addEventListener, ternary -->
+        <section>
+            <h3>Plan</h3>
+            <button id="planBtn">Basic</button>
+        </section>
+
+    </main>
+
+    <script>
+        // ============================================================
+        // Method 1: toggleNewsletter — inline onclick + if/else
+        // trim() removes extra spaces/line breaks so the text matches 'Subscribe' exactly in The Webpage
+        // ============================================================
+        function toggleNewsletter() {
+            const newsletterBtn = document.getElementById('newsletterBtn');
+            if (newsletterBtn.innerHTML.trim() === 'Subscribe') {
+                newsletterBtn.innerHTML = 'Unsubscribe';
+            } else {
+                newsletterBtn.innerHTML = 'Subscribe';
+            }
+        }
+
+
+// ============================================================
+// Method 2 : toggleNotifications — addEventListener + if/else
+// Method 2-a Using trim() needed: innerHTML keeps raw whitespace, so compare with .trim()
+// Method 2-b Alternative : textContent also needs trim() — raw text, whitespace included
+// Method 2-c Alternative : innerText usually doesn't — it reflects the rendered, whitespace-collapsed page
+// ============================================================
+        function toggleNotifications() {
+            // if (notificationBtn.innerHTML === 'Subscribe') { 
+            if (notificationBtn.innerHTML.trim() === 'Subscribe') { 
+                notificationBtn.innerHTML = 'Subscribed';
+            } else {
+                notificationBtn.innerHTML = 'Subscribe';
+            }
+        }
+
+        const notificationBtn = document.getElementById('notificationBtn');
+        notificationBtn.addEventListener('click', toggleNotifications);
+
+
+
+        // ============================================================
+        // Method 3: togglePlan — addEventListener + ternary operator
+        // ============================================================
+        function togglePlan() {
+            planBtn.innerHTML = planBtn.innerHTML === 'Basic' ? 'Pro' : 'Basic';
+        }
+
+        const planBtn = document.getElementById('planBtn');
+        planBtn.addEventListener('click', togglePlan);
+    </script>
+
+</body>
+</html>

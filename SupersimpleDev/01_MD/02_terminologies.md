@@ -272,6 +272,7 @@ A `class` attribute → adds a class name to an HTML element, allowing it to be 
 ### ID Attribute
 An `id` attribute → gives a unique name to an HTML element, allowing it to be specifically identified or selected, such as `id="header"`.
 
-
+### Collection
+A `collection` → a list-like group of HTML elements returned by methods like `getElementsByClassName`, `getElementsByTagName`, or `querySelectorAll`, such as `HTMLCollection` or `NodeList`.
 
 

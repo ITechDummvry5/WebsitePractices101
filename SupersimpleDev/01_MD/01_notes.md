@@ -590,33 +590,42 @@ console.log(person1.name, person2.name); // "Mike" "Mike"
 ## Lesson 8 – DOM
 
 The `document` object represents/models the webpage.
-DOM = `Document Object Model`
+**DOM** = `Document Object Model`
+
+---
 
 ### Syntax Rules in DOM — Same as Objects
-* DOM uses **object.property** and **bracket notation** to access properties.
-* Examples:
+DOM uses **object.property** and **bracket notation** to access properties, same as any JavaScript object.
 
-  * `document.body` → `object.property`
-  * `document["body"]` → `object["property"]`
-  * `document[propertyName]` → property name stored in a variable
+* `document.body` → `object.property`
+* `document["body"]` → `object["property"]`
+* `document[propertyName]` → property name stored in a variable
 
-### DOM Methods
-The `document` object also has **methods**.
-`document.querySelector('button')` → Finds the first `<button>` element.
+---
 
-Yes. I’d add a **DOM Access** section to your notes, because these are important ways to access DOM elements.
+### Object Method vs DOM Method
 
-### DOM Access Methods
-These methods are used to **find/access HTML elements** in the DOM.
+| Type | Example | Purpose |
+|---|---|---|
+| Object Method | `user.login()` | Performs an action on an object |
+| DOM Method | `document.querySelector('button')` | Finds an element in the webpage |
 
-### Quick Reference
-| Method                     | Access By    | Example                                   |
-| -------------------------- | ------------ | ----------------------------------------- |
-| `querySelector()`          | CSS selector | `document.querySelector(".btn")`          |
-| `querySelectorAll()`       | CSS selector | `document.querySelectorAll(".btn")`       |
-| `getElementById()`         | ID           | `document.getElementById("btn")`          |
-| `getElementsByClassName()` | Class        | `document.getElementsByClassName("btn")`  |
-| `getElementsByTagName()`   | Tag          | `document.getElementsByTagName("button")` |
+**Basic idea:**
+* `object.method()` → performs an action
+* `document.method()` → performs an action on the webpage
+
+---
+
+### DOM Access / Selector Methods
+Used to **find/select** an element from the page.
+
+| Method | Access By | Returns | Example |
+|---|---|---|---|
+| `querySelector()` | CSS selector | Single element (first match) | `document.querySelector(".btn")` |
+| `querySelectorAll()` | CSS selector | Collection (all matches) | `document.querySelectorAll(".btn")` |
+| `getElementById()` | ID | Single element | `document.getElementById("btn")` |
+| `getElementsByClassName()` | Class | Collection | `document.getElementsByClassName("btn")` |
+| `getElementsByTagName()` | Tag | Collection | `document.getElementsByTagName("button")` |
 
 **Easy way to remember:**
 * `#btn` → **ID**
@@ -625,18 +634,51 @@ These methods are used to **find/access HTML elements** in the DOM.
 * `querySelector()` → **first match**
 * `querySelectorAll()` → **all matches**
 
-### Object Method vs DOM Method
+---
 
-| Type          | Example                            | Purpose                         |
-| ------------- | ---------------------------------- | ------------------------------- |
-| Object Method | `user.login()`                     | Performs an action on an object |
-| DOM Method    | `document.querySelector('button')` | Finds an element in the webpage |
+### Content Properties
+Used to **read or change** what's inside an already-selected element.
 
-**Basic idea:**
-`object.method()` → performs an action
-`document.method()` → performs an action on the webpage
+| Property | Reads | Whitespace |
+|---|---|---|
+| `innerHTML` | HTML markup + text | Raw, whitespace included |
+| `innerText` | Visible text only | Collapsed (rendered view) |
+| `textContent` | All text, including hidden | Raw, whitespace included |
 
-### InnerHtml 
-every Html elements has a Property .innerHtml
+```javascript
+document.getElementById("btn").innerHTML;              // read
+document.getElementById("btn").innerHTML = "<b>Hi</b>"; // write
+```
 
+---
 
+### Accessing Items by Index
+Collection-returning methods don't give you a single element — even with one match, you still need an **index** to get an individual item out, just like an array.
+
+```javascript
+const buttons = document.querySelectorAll('button');
+
+buttons[0];      // first <button> in the list
+buttons[1];      // second <button> in the list
+buttons.length;  // how many were found
+```
+
+| Element vs Collection | Access Style |
+|---|---|
+| Single element (`querySelector()` / `getElementById()`) | Use directly: `element.textContent` |
+| Collection (`querySelectorAll()` / `getElementsBy...()`) | Use index: `collection[0].textContent` |
+
+⚠️ Using a collection like a single element (e.g. `buttons.textContent`) won't work — index into it first.
+
+---
+
+### Rule: Always Have `trim()`
+When comparing `innerHTML` or `textContent` to a specific string (e.g. `=== 'Subscribe'`), use `.trim()` first.
+
+**Why:** HTML often has extra whitespace/line breaks around text (from indentation), which breaks exact string comparisons.
+
+```javascript
+if (btn.innerHTML.trim() === 'Subscribe') { ... }
+```
+
+`innerText` usually doesn't need `.trim()` since it reflects the rendered, whitespace-collapsed page — but it's less predictable across browsers, so `.trim()` is still the safer habit.

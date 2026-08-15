@@ -298,17 +298,25 @@ const localAnimeStorage = {
       Ochako : 'Zero Gravity'
    }
 }
- localStorage.setItem("localAnimeStorage", JSON.stringify(localAnimeStorage));
+localStorage.setItem("localAnimeStorage", JSON.stringify(localAnimeStorage));
 
- const savedLocalStorage = JSON.parse(localStorage.getItem("localAnimeStorage"));
+const savedLocalStorage = JSON.parse(localStorage.getItem("localAnimeStorage"));
 console.log(savedLocalStorage);
+
+/* ============================================================
+   Explanation
+============================================================ */
+// 1. localStorage only stores strings, so convert the object first with JSON.stringify().
+// 2. setItem("key", value) saves it under that name.
+// 3. getItem("key") gets the saved string back.
+// 4. JSON.parse() turns it back into a real object.
+// 5. Data stays even after refreshing or closing the page.
 
 console.log('==========Primitive Values autoboxing============');
 
 const primitiveString = 'Hello, World!';
-console.log(primitiveString.length); // Accessing the length property of a string
-console.log(primitiveString.toUpperCase()); // Calling the toUpperCase() method on a string
-console.log(primitiveString.toLowerCase()); // Calling the toLowerCase() method on a string
+console.log(primitiveString.length);              // Accessing the length property of a string
+console.log(primitiveString.toUpperCase());        // Calling the toUpperCase() method on a string
+console.log(primitiveString.toLowerCase());        // Calling the toLowerCase() method on a string
 console.log((primitiveString.toLowerCase()).charAt(0)); // combining methods to get the first character in lowercase
-
 
