@@ -364,44 +364,52 @@ const name = userInput || 'Guest';  // fallback if userInput is falsy
 | Default   | `\|\|`  | Provide a fallback value                 |
 
 ---
-
 ## Lesson 6 — Function
-| Term                     | Easy meaning           | Example                   |
-| ------------------------ | ---------------------- | ------------------------- |
+
+| Term                | Easy meaning            | Example                   |
+| ------------------- | ------------------------ | -------------------------- |
 | `Function declaration` | Create a function      | `function greet() {}`     |
 | `Function name`        | Function's name        | `greet`                   |
-| `Parameter`            | Input placeholder      | `function greet(name) {}` |
-| `Argument`             | Actual input value     | `greet("Conan")`          |
-| `Function body`        | Code the function runs | `{ return "Hello"; }`     |
-| `Return`               | Output from function   | `return "Hello";`         |
-| `Function call`        | Run the function       | `greet("Conan")`          |
+| `Parameter`             | Input placeholder      | `name` in `function greet(name) {}` |
+| `Argument`              | Actual input value     | `greet("Conan")`          |
+| `Function body`         | Code the function runs | `{ return "Hello"; }`     |
+| `Return`                | Output from function   | `return "Hello";`         |
+| `Function call`         | Run the function        | `greet("Conan")`          |
 
 ```javascript
 function greet(name) {
     return `Hello ${name}`;
 }
 console.log(greet("Conan"));
+```
 
-// Overview 
+// Overview
+```javascript
 function greet(name) { return `Hello ${name}`; }
-└──────────┬───────┘        │      │
-   function declaration     │      └── parameter
-                            │
-                        (whole { ... } is the) function body
+└─────────┬────────┘ └────────────┬────────────┘
+  function declaration          function body
+```
 
+``` js
 function greet(name) {
          │      │
          │      └── parameter
          └── function name
+```
 
+```js
 greet("Conan")
        │
        └── argument
+```
 
+``` js
 return `Hello ${name}`;
        │
        └── return value
+```
 
+``` js
 greet("Conan")
 │
 └── function call

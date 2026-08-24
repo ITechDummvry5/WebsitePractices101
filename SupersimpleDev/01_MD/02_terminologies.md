@@ -107,6 +107,23 @@ This File - **terminologies.md** — Glossary of terms, short one-line definitio
 | `<dialog>`     | Block        | Dialog or modal window                                 |
 | `<template>`   | —            | Holds HTML that is not rendered immediately            |
 
+### Void Elements
+A void element cannot have a closing tag or contain any content — it stands alone and self-closes by nature.
+
+| Void Element | Description                              |
+| ------------ | ---------------------------------------- |
+| `<meta>`     | Provides metadata about the document     |
+| `<link>`     | Links external resources such as CSS     |
+| `<hr>`       | Thematic break between sections          |
+| `<input>`    | Form input control                       |
+| `<br>`       | Line break                               |
+| `<wbr>`      | Optional line-break opportunity          |
+| `<img>`      | Embeds an image                          |
+| `<source>`   | Provides media or image source           |
+| `<track>`    | Provides text tracks for media           |
+| `<embed>`    | Embeds external content                  |
+
+
 ### DOM
 DOM (Document Object Model) → a model of the webpage where
 

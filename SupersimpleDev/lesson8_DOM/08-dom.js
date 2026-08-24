@@ -435,3 +435,4 @@ for (let i = 0; i < allButtons.length; i++) {
 // i = 1 → allButtons[1]
 // i = 2 → allButtons[2]
 // i = 3 → allButtons[3]
+
