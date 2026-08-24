@@ -337,7 +337,7 @@ console.log(Array.isArray([1, 2, 3]));
 // true
 ```
 
-### Array.from()
+### Array.from()                 
 `Array.from()` creates a new array from an array-like or iterable object.
 52. 
 ```javascript

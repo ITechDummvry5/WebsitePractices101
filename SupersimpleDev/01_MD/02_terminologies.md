@@ -1,5 +1,142 @@
 This File - **terminologies.md** — Glossary of terms, short one-line definitions
 
+# HTML
+
+### HTML Element 
+`HTML Element ` is an individual part of an HTML document, usually created using an opening tag and a closing tag.
+
+| HTML Element   | Category     | Description                                            |
+| -------------- | ------------ | ------------------------------------------------------ |
+| `<html>`       | Block        | Root element of an HTML document                       |
+| `<head>`       | Block        | Contains document metadata and resources               |
+| `<title>`      | —            | Sets the browser tab title                             |
+| `<meta>`       | —            | Provides metadata about the document                   |
+| `<link>`       | —            | Links external resources such as CSS                   |
+| `<style>`      | —            | Contains CSS styles                                    |
+| `<script>`     | —            | Contains or links JavaScript                           |
+| `<body>`       | Block        | Contains the visible webpage content                   |
+| `<header>`     | Block        | Introductory or header content                         |
+| `<nav>`        | Block        | Navigation links                                       |
+| `<main>`       | Block        | Main content of the document                           |
+| `<section>`    | Block        | Thematic section of content                            |
+| `<article>`    | Block        | Independent, self-contained content                    |
+| `<aside>`      | Block        | Related or secondary content                           |
+| `<footer>`     | Block        | Footer content                                         |
+| `<h1>`         | Block        | Main heading                                           |
+| `<h2>`         | Block        | Level 2 heading                                        |
+| `<h3>`         | Block        | Level 3 heading                                        |
+| `<h4>`         | Block        | Level 4 heading                                        |
+| `<h5>`         | Block        | Level 5 heading                                        |
+| `<h6>`         | Block        | Level 6 heading                                        |
+| `<p>`          | Block        | Paragraph                                              |
+| `<div>`        | Block        | Generic block container                                |
+| `<hr>`         | Block        | Thematic break between sections                        |
+| `<pre>`        | Block        | Preformatted text                                      |
+| `<blockquote>` | Block        | Long quotation                                         |
+| `<ol>`         | Block        | Ordered list                                           |
+| `<ul>`         | Block        | Unordered list                                         |
+| `<li>`         | List item    | Item inside an ordered or unordered list               |
+| `<dl>`         | Block        | Description list                                       |
+| `<dt>`         | Block        | Term in a description list                             |
+| `<dd>`         | Block        | Description of a term                                  |
+| `<figure>`     | Block        | Self-contained content such as an image or diagram     |
+| `<figcaption>` | Block        | Caption for a `<figure>`                               |
+| `<table>`      | Block        | Table                                                  |
+| `<thead>`      | Table        | Table header section                                   |
+| `<tbody>`      | Table        | Table body section                                     |
+| `<tfoot>`      | Table        | Table footer section                                   |
+| `<tr>`         | Table        | Table row                                              |
+| `<th>`         | Table        | Table header cell                                      |
+| `<td>`         | Table        | Table data cell                                        |
+| `<caption>`    | Table        | Table caption                                          |
+| `<form>`       | Block        | Form container                                         |
+| `<fieldset>`   | Block        | Groups related form controls                           |
+| `<legend>`     | Block        | Caption for a `<fieldset>`                             |
+| `<label>`      | Inline       | Label for a form control                               |
+| `<input>`      | Inline-block | Form input control                                     |
+| `<button>`     | Inline-block | Interactive button                                     |
+| `<select>`     | Inline-block | Dropdown selection control                             |
+| `<option>`     | —            | Option inside a `<select>`                             |
+| `<textarea>`   | Inline-block | Multi-line text input                                  |
+| `<output>`     | Inline       | Displays a calculation or result                       |
+| `<progress>`   | Inline-block | Displays progress                                      |
+| `<meter>`      | Inline-block | Displays a measurement within a range                  |
+| `<a>`          | Inline       | Hyperlink                                              |
+| `<span>`       | Inline       | Generic inline container                               |
+| `<strong>`     | Inline       | Indicates strong importance                            |
+| `<b>`          | Inline       | Draws attention to text without semantic importance    |
+| `<em>`         | Inline       | Indicates emphasis                                     |
+| `<i>`          | Inline       | Alternate voice or mood                                |
+| `<u>`          | Inline       | Indicates non-textual annotation                       |
+| `<s>`          | Inline       | Represents content that is no longer accurate/relevant |
+| `<small>`      | Inline       | Smaller side comments or fine print                    |
+| `<mark>`       | Inline       | Highlighted or marked text                             |
+| `<del>`        | Inline       | Deleted content                                        |
+| `<ins>`        | Inline       | Inserted content                                       |
+| `<sub>`        | Inline       | Subscript text                                         |
+| `<sup>`        | Inline       | Superscript text                                       |
+| `<br>`         | Inline       | Line break                                             |
+| `<wbr>`        | Inline       | Optional line-break opportunity                        |
+| `<code>`       | Inline       | Represents a piece of computer code                    |
+| `<kbd>`        | Inline       | Represents user keyboard input                         |
+| `<samp>`       | Inline       | Represents sample output from a program                |
+| `<var>`        | Inline       | Represents a variable                                  |
+| `<abbr>`       | Inline       | Abbreviation or acronym                                |
+| `<cite>`       | Inline       | Title of a creative work                               |
+| `<q>`          | Inline       | Short quotation                                        |
+| `<time>`       | Inline       | Represents a date or time                              |
+| `<data>`       | Inline       | Associates content with machine-readable data          |
+| `<ruby>`       | Inline       | Ruby annotation container                              |
+| `<rt>`         | Inline       | Ruby annotation text                                   |
+| `<rp>`         | Inline       | Fallback parentheses for ruby annotations              |
+| `<bdi>`        | Inline       | Isolates text direction                                |
+| `<bdo>`        | Inline       | Overrides text direction                               |
+| `<img>`        | Inline       | Embeds an image                                        |
+| `<picture>`    | Inline       | Provides responsive image sources                      |
+| `<source>`     | —            | Provides media or image source                         |
+| `<audio>`      | Inline-block | Embeds audio                                           |
+| `<video>`      | Inline-block | Embeds video                                           |
+| `<track>`      | —            | Provides text tracks for media                         |
+| `<iframe>`     | Inline       | Embeds another webpage/document                        |
+| `<embed>`      | Inline-block | Embeds external content                                |
+| `<object>`     | Inline-block | Embeds an external resource                            |
+| `<canvas>`     | Inline       | Drawing/graphics area controlled by JavaScript         |
+| `<svg>`        | Inline       | Scalable vector graphics container                     |
+| `<details>`    | Block        | Expandable/collapsible content                         |
+| `<summary>`    | Block        | Visible heading for `<details>`                        |
+| `<dialog>`     | Block        | Dialog or modal window                                 |
+| `<template>`   | —            | Holds HTML that is not rendered immediately            |
+
+### DOM
+DOM (Document Object Model) → a model of the webpage where
+
+### CSS Selector
+A `CSS selector` → a pattern used to select HTML elements based on their tag, ID, class, attributes, descendant selector or other characteristics.
+
+### Tag
+A `tag` → the HTML name that identifies an element, such as `div`, `p`, or `button`.
+
+### ID
+An `ID` → a unique name used to identify a specific HTML element.
+
+### Class (HTML/CSS)
+A `class` → a name used to group HTML elements that share the same styling or purpose, such as `"button"` or `"primary"`.
+
+### Attribute
+An `attribute` → additional information about an HTML element, such as `id`, `class`, `href`, or `type`.
+
+### Class Attribute
+A `class` attribute → adds a class name to an HTML element, allowing it to be grouped, styled, or selected, such as `class="button"` or `class="primary"`.
+
+### ID Attribute
+An `id` attribute → gives a unique name to an HTML element, allowing it to be specifically identified or selected, such as `id="header"`.
+
+### Collection
+A `collection` → a list-like group of HTML elements returned by methods like `getElementsByClassName`, `getElementsByTagName`, or `querySelectorAll`, such as `HTMLCollection` or `NodeList`.
+
+
+# JavaScript
+
 ### Javascript 
 ` Javascript ` is giving instructions to a computer
 
@@ -12,13 +149,13 @@ This File - **terminologies.md** — Glossary of terms, short one-line definitio
 ### Order of Operations
 `Order of Operations` is the order JavaScript follows to evaluate an expression. (doing by following the recipe)
 
-=======================================================================================================================================================
-### Simple relationship: `Variable`(age) → stores → `Value`(25) → which has a → `Data Type`(Number) = All of these are part of `Data`(25).
-1. age → Variable
-2. 25 → Value
-3. 25 is Data
-4. Number → Data Type
-=======================================================================================================================================================
+### Simple relationship: `Variable`(age) → stores → `Value`(25) → which has a → `Data Type`(Number) =  actual `Data`(25).
+| Code / Concept | Part      | Meaning                            |
+| -------------- | --------- | ---------------------------------- |
+| `age`          | Variable  | The variable that stores the value |
+| `25`           | Value     | The specific value stored          |
+| `25`           | Data      | The information being stored       |
+| `Number`       | Data Type | The type of the value              |
 
 ### Data
 `Data` is any information that a program stores or processes.
@@ -134,10 +271,6 @@ JavaScript Condition Operators
 
 ### Conditional Operator (Ternary Operator)
 `Conditional Operator` is a shorter way to write a simple `if...else` statement using the `? :` operator.
-```
-    condition ? valueIfTrue : valueIfFalse
-    age >= 18 ? "Adult" : "Minor"
-```
 
 ### Guard Operator `&&` (AND)
 `Guard Operator` stops early when the left side is falsy. It is used to run something only when a condition is true.
@@ -175,16 +308,17 @@ The function body contains the statements or instructions executed by the functi
 ### Return Statement
 The return statement sends a value back to the code that called the function.
 
-=======================================================================================================================================================
-### Simple relationship: `Object`(person) → contains → `Properties`(name, age) → which have → `Property Values`("John", 25) → with `Data Types`(String, Number).
-1. person → Object
-2. name, age → Properties / Property Name (Key)
-3. "John", 25 → Property Values (the actual data stored inside Properties (name, age))
-4. String, Number → Data Types of the values
-=======================================================================================================================================================
+### Simple relationship Object (person) → contains → Properties (name, age) → which have → Property Values ("John", 25) → which have → Data Types (String, Number).
+| Part                               | Example            | Meaning                                        |
+| ---------------------------------- | ------------------ | ---------------------------------------------- |
+| **Object**                         | `person`           | The object that contains the data              |
+| **Property / Property Name / Key** | `name`, `age`      | Names that identify the data inside the object |
+| **Property Value**                 | `"John"`, `25`     | The actual data stored under each property     |
+| **Data Type**                      | `String`, `Number` | The type of each property value                |
+
 ### Object
 `Object` is a data type and a collection of related data stored as key-value pairs or like a Container.
-`Object` a reference to a location in memory where the object is stored.
+
 1. Let us group and use multiple values together.
 
 ### Properties
@@ -247,32 +381,3 @@ An `argument` is a value passed to a function when it is called.
 
 ### Class (JavaScript)
 `Class` a blueprint or template used to create objects with shared properties and methods.
-
-### DOM
-DOM (Document Object Model) → a model of the webpage where
-
-### CSS Selector
-A `CSS selector` → a pattern used to select HTML elements based on their tag, ID, class, attributes, descendant selector or other characteristics.
-
-### Tag
-A `tag` → the HTML name that identifies an element, such as `div`, `p`, or `button`.
-
-### ID
-An `ID` → a unique name used to identify a specific HTML element.
-
-### Class (HTML/CSS)
-A `class` → a name used to group HTML elements that share the same styling or purpose, such as `"button"` or `"primary"`.
-
-### Attribute
-An `attribute` → additional information about an HTML element, such as `id`, `class`, `href`, or `type`.
-
-### Class Attribute
-A `class` attribute → adds a class name to an HTML element, allowing it to be grouped, styled, or selected, such as `class="button"` or `class="primary"`.
-
-### ID Attribute
-An `id` attribute → gives a unique name to an HTML element, allowing it to be specifically identified or selected, such as `id="header"`.
-
-### Collection
-A `collection` → a list-like group of HTML elements returned by methods like `getElementsByClassName`, `getElementsByTagName`, or `querySelectorAll`, such as `HTMLCollection` or `NodeList`.
-
-

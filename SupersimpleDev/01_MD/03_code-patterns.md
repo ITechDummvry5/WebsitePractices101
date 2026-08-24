@@ -1,3 +1,5 @@
+This File - **code-patterns.md** — JavaScript syntax patterns and structures
+
 ### Variable:
 
 ```js

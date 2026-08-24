@@ -86,7 +86,7 @@ typeof 'hello'  // 'string'
 ### Concatenation — Joining Strings
 ```javascript
 'Hello' + 'World'   // 'HelloWorld'
-'Hello' + 2         // 'Hello2'  (the number auto-converts to text)
+'Hello' + 2         // 'Hello2'  (the number auto-converts to text or 'String')
 ```
 > This automatic switch is called `Type Coercion`.
 
@@ -682,3 +682,8 @@ if (btn.innerHTML.trim() === 'Subscribe') { ... }
 ```
 
 `innerText` usually doesn't need `.trim()` since it reflects the rendered, whitespace-collapsed page — but it's less predictable across browsers, so `.trim()` is still the safer habit.
+
+
+
+
+
