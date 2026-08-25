@@ -398,3 +398,6 @@ An `argument` is a value passed to a function when it is called.
 
 ### Class (JavaScript)
 `Class` a blueprint or template used to create objects with shared properties and methods.
+
+###  Nullish Coalescing
+`Nullish Coalescing` uses ?? to return a default value when the first value is null or undefined.

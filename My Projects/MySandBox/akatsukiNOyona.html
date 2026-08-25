@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akatsuki</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Akatsuki No Yona Love List</h3>
+            <input type="text" class="main-lead">
+            <button onclick="MatchMain()">Match</button>
+            <p class="match-status"></p>
+        </section>
+    </main>
+
+    <script>
+function MatchMain() {
+    const mainResult = document.querySelector('.main-lead');
+    const inputMale = mainResult.value.trim();
+
+    const checkValue =
+        inputMale !== '' && !Number.isNaN(Number(inputMale))
+            ? 'Not A String'
+            :  inputMale.toUpperCase() === 'HAK' || inputMale.toUpperCase() === 'SON HAK'
+                ? `Yona crush is ${inputMale}`
+                : `Yona is not interested in ${inputMale}`;
+
+    document.querySelector('.match-status').innerHTML = checkValue;
+}
+    </script>
+</body>
+</html>

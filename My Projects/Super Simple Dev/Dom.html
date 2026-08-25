@@ -35,6 +35,16 @@
             <button onclick="main()" class="akatsuki-btn">      Hak</button>
         </section>
 
+
+        <section>
+  <hr> 
+  <h3>Amazon Shipping Calculator</h3>
+  <input type="text" class="user-input" placeholder="Cost of order">
+  <button onclick="calculateTotal()">Calculate</button>
+  <p class="display-Cost"></p>
+
+
+        </section>
     </main>
 
     <script>
@@ -48,8 +58,6 @@
         }
             const AkatsukiBtn = document.getElementsByClassName('akatsuki-btn')[0];
 
-
-
         // ============================================================
         // Method 1: toggleNewsletter — inline onclick + if/else
         // trim() removes extra spaces/line breaks so the text matches 'Subscribe' exactly in The Webpage
@@ -62,7 +70,6 @@
                 newsletterBtn.innerHTML = 'Subscribe';
             }
         }
-
 
 // ============================================================
 // Method 2 : toggleNotifications — addEventListener + if/else
@@ -91,6 +98,71 @@
 
         const planBtn = document.getElementById('planBtn');
         planBtn.addEventListener('click', togglePlan);
+
+
+
+        
+// ============================================================
+// 1. Basic Version
+// ============================================================
+
+// function calculateTotal() {
+//     const userInput = document.querySelector('.user-input');
+//     const cost = Number(userInput.value);
+
+//     // If cost is greater than 40, add 10.
+//     // Otherwise, keep the original cost.
+//     const result = cost > 40 ? cost + 10 : cost;
+
+//     document.querySelector('.display-Cost')
+//         .innerHTML = `$${result}`;
+// }
+
+
+// ============================================================
+// 2. If / Else Version
+// ============================================================
+
+// function calculateTotal() {
+//     const userInput = document.querySelector('.user-input');
+//     const cost = Number(userInput.value);
+
+//     let result;
+
+//     // Check if the value is not a valid number.
+//     if (Number.isNaN(cost)) {
+//         result = 'Not a number';
+//     } else {
+//         // If cost is greater than 40, add 10.
+//         // Otherwise, keep the original cost.
+//         result = cost > 40 ? cost + 10 : cost;
+//     }
+
+//     document.querySelector('.display-Cost')
+//         .innerHTML = result;
+// }
+
+
+// ============================================================
+// 3. Ternary Version
+// ============================================================
+
+function calculateTotal() {
+    const userInput = document.querySelector('.user-input');
+    const cost = Number(userInput.value);
+
+    // Check if the value is not a number.
+    // If true: display "Not a number".
+    // If false: check whether cost is greater than 40.
+    const result = Number.isNaN(cost)
+        ? 'Not a number'
+        : cost > 40
+            ? `$${cost + 10}`
+            : `$${cost}`;
+
+    document.querySelector('.display-Cost')
+        .innerHTML = result;
+}
     </script>
 
 </body>

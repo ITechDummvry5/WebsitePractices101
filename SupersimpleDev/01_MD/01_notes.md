@@ -697,4 +697,6 @@ or
 `element.value = value;`
 Get the current value of a form element. 
 
-
+### Typing Current Features 
+clicks, keydowns => events 
+onclick,onkeydowns => eventListeners
