@@ -611,3 +611,12 @@ document.getElementsByClassName("button");
 ```javascript
 document.getElementsByTagName("button");
 ```
+
+### .value
+`.value` gets or sets the **current value** of a form element.
+86. 
+```javascript 
+element.value; 
+element.value = value;
+```
+

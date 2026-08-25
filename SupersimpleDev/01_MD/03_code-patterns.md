@@ -664,3 +664,29 @@ element.textContent = value;
 ```js
 element.innerHTML = value;
 ```
+
+### For Loop — Array Index : 
+
+```js
+for (let index = 0; index < array.length; index++) {
+    const currentValue = array[index];
+    console.log(currentValue);
+}
+```
+
+### Array Index + DOM .textContent
+
+```js
+for (let index = 0; index < array.length; index++) {
+    array[index].textContent = value;
+}
+```
+### Nested Teranary
+
+```js
+const result = condition1
+    ? valueIfTrue
+    : condition2
+        ? valueIfTrue
+        : valueIfFalse;
+```

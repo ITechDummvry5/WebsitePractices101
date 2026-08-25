@@ -1,6 +1,6 @@
 This File - **terminologies.md** — Glossary of terms, short one-line definitions
 
-# HTML
+# HTML ```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
 ### HTML Element 
 `HTML Element ` is an individual part of an HTML document, usually created using an opening tag and a closing tag.
@@ -152,7 +152,7 @@ An `id` attribute → gives a unique name to an HTML element, allowing it to be 
 A `collection` → a list-like group of HTML elements returned by methods like `getElementsByClassName`, `getElementsByTagName`, or `querySelectorAll`, such as `HTMLCollection` or `NodeList`.
 
 
-# JavaScript
+# JavaScript ````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
 ### Javascript 
 ` Javascript ` is giving instructions to a computer

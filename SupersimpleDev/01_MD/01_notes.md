@@ -691,7 +691,10 @@ if (btn.innerHTML.trim() === 'Subscribe') { ... }
 
 `innerText` usually doesn't need `.trim()` since it reflects the rendered, whitespace-collapsed page — but it's less predictable across browsers, so `.trim()` is still the safer habit.
 
-
-
+### Using .value 
+`element.value;` 
+or
+`element.value = value;`
+Get the current value of a form element. 
 
 
