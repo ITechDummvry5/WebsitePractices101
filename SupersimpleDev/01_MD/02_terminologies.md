@@ -166,7 +166,8 @@ A `collection` → a list-like group of HTML elements returned by methods like `
 ### Order of Operations
 `Order of Operations` is the order JavaScript follows to evaluate an expression. (doing by following the recipe)
 
-### Simple relationship: `Variable`(age) → stores → `Value`(25) → which has a → `Data Type`(Number) =  actual `Data`(25).
+### Simple relationship: 
+`Variable`(age) → stores → `Value`(25) → which has a → `Data Type`(Number) =  actual `Data`(25).
 | Code / Concept | Part      | Meaning                            |
 | -------------- | --------- | ---------------------------------- |
 | `age`          | Variable  | The variable that stores the value |

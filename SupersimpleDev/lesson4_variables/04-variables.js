@@ -41,3 +41,12 @@ console.log("//==============================================");
 let = Addtocart = 0; // add to cart Example 
 let vehicleCount = 0; // add vehicle Example
 console.log("//==============================================");
+
+
+String('25')
+console.log('25' - 5 ); // Output: 20
+console.log('25' + 5 ); // Output: 255
+console.log('25' * 5 ); // Output: 125
+console.log('25' / 5 ); // Output: 5
+console.log('25' % 5 ); // Output: 0
+

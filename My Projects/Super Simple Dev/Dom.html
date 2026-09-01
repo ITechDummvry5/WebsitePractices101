@@ -39,8 +39,12 @@
         <section>
   <hr> 
   <h3>Amazon Shipping Calculator</h3>
-  <input type="text" class="user-input" placeholder="Cost of order">
-  <button onclick="calculateTotal()">Calculate</button>
+  <input type="text" class="user-input" 
+  
+            onkeydown="handleKeyDown(event)"
+
+  placeholder="Cost of order">
+  <button onclick="calculateTotal()" >Calculate</button>
   <p class="display-Cost"></p>
 
 
@@ -146,6 +150,13 @@
 // ============================================================
 // 3. Ternary Version
 // ============================================================
+function handleKeyDown(event) {
+    // console.log(event.key); checking the key pressed in the console
+    if (event.key === 'Enter') {
+        calculateTotal();
+    }
+}
+
 
 function calculateTotal() {
     const userInput = document.querySelector('.user-input');
@@ -163,6 +174,9 @@ function calculateTotal() {
     document.querySelector('.display-Cost')
         .innerHTML = result;
 }
+
+
+
     </script>
 
 </body>

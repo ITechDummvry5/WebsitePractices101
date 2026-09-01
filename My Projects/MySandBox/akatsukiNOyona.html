@@ -9,21 +9,32 @@
     <main>
         <section>
             <h3>Akatsuki No Yona Love List</h3>
-            <input type="text" class="main-lead">
+            <input type="text" class="main-lead" onkeydown="handleKeyDown(event)" placeholder="Enter a male leading character name">
             <button onclick="MatchMain()">Match</button>
             <p class="match-status"></p>
         </section>
     </main>
 
     <script>
+
+        function handleKeyDown(event){
+            console.log(event.key);
+            if (event.key === 'Enter') {
+                MatchMain();
+            }
+        }
+
 function MatchMain() {
     const mainResult = document.querySelector('.main-lead');
-    const inputMale = mainResult.value.trim();
+
+    const inputMale = mainResult.value
+        .replace(/\s/g, '')
+        .toUpperCase();
 
     const checkValue =
         inputMale !== '' && !Number.isNaN(Number(inputMale))
             ? 'Not A String'
-            :  inputMale.toUpperCase() === 'HAK' || inputMale.toUpperCase() === 'SON HAK'
+            : inputMale === 'HAK' || inputMale === 'SONHAK'
                 ? `Yona crush is ${inputMale}`
                 : `Yona is not interested in ${inputMale}`;
 
