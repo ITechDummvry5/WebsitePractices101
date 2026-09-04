@@ -1,3 +1,5 @@
+# 03_javascript-quick-reference.md — JavaScript Built-in Methods Reference
+
 ### toFixed()
 The `toFixed()` method formats a number to a fixed number of decimal places.
 1. 

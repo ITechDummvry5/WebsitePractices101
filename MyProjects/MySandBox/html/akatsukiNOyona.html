@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akatsuki</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Akatsuki No Yona Love List</h3>
+            <input type="text" class="main-lead" onkeydown="handleKeyDown(event)" placeholder="Enter a male leading character name">
+            <button onclick="MatchMain()">Match</button>
+            <p class="match-status"></p>
+        </section>
+
+        <section>
+            <h3>Akatsuki No Yona Best Chapter</h3>
+            <input type="text" class="best-chapter" placeholder="Enter the best chapter" onkeydown="handleChapterKeyDown(event)">
+            <button onclick="BestChapter()">Find Best Chapter</button>
+            <p class="best-chapter-status"></p>
+        </section>
+    </main>
+
+    <script src="../javascript/akatsukiNOyona.js"></script>
+</body>
+</html>
