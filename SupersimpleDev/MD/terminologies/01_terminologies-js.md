@@ -22,6 +22,15 @@ This File - **01_terminologies-js.md** — Glossary of JavaScript terms, short o
 ### Order of Operations
 `Order of Operations` is the order JavaScript follows to evaluate an expression. (doing by following the recipe)
 
+
+| Order | Module             | Operators   | Example                      |
+| ----: | ------------------ | ----------- | ---------------------------- |
+| **1** | **Grouping**       | `( )`       | `(2 + 3)`                    |
+| **2** | **Exponentiation** | `**`        | `2 ** 3`                     |
+| **3** | **Multiplicative** | `*` `/` `%` | `10 * 2`, `10 / 2`, `10 % 3` |
+| **4** | **Additive**       | `+` `-`     | `10 + 2`, `10 - 2`           |
+
+
 ## 2. Variables & Data
 
 ### Data

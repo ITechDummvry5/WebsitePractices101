@@ -188,7 +188,7 @@ console.log(JSON.parse('{"name":"Charles"}'));
 // { name: 'Charles' }
 ```
 
-### Local Storage
+### localStorage
 `localStorage` stores data in the browser. It only supports strings.
 24. 
 ```javascript
