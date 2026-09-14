@@ -44,4 +44,17 @@ console.log(myAnime);
 
 
 console.log('================================'); 
+let myloop = 1;
+while (myloop <= 5) { // true
+    console.log('myloop is : ', myloop);
+    myloop++; // same as myloop = myloop + 1 or myloop += 1
+}
+// Use while when you don't know how many times the loop will run.
+
+console.log('================================'); 
+for (let myloop2 = 1; myloop2 <= 5; myloop2++) {
+    console.log('myloop2 is : ', myloop2);
+}
+// Use for when you know how many times the loop will run.                  
+
 

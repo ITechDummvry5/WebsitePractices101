@@ -304,3 +304,25 @@ A shorter way to define a function inside an object without using the `function`
 ### Console.log
 `console` is an `object`.
 `.log` is a `method` (function inside an object).
+
+## 11. 
+
+### Loop Condition
+Loop Condition is the condition that determines whether a loop continues running or stops.
+
+### While Loop
+A while loop repeatedly runs a block of code as long as its loop condition is true.
+
+### Increment step 
+Increment Step is the step that increases a loop's counter, usually by 1, so the loop can eventually stop.
+
+### Loop body
+Loop Body is the block of code that runs repeatedly while the loop condition is true.
+
+### Iteration
+`Iteration` is **one complete repetition of a loop**.
+
+### For Loop
+`For Loop` is a loop that **repeatedly runs a block of code while its loop condition is `true`**, with the initialization, condition, and increment step written together.
+
+
