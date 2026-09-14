@@ -331,6 +331,15 @@ console.log("apple,banana,orange".split(","));
 // ['apple', 'banana', 'orange']
 ```
 
+### splice()
+`splice()` adds, removes, or replaces elements in an array.
+51. 
+```javascript
+const myDisneyArray = ["Mickey", "Minnie", "Donald", "Goofy"];
+myDisneyArray.splice(1, 2);
+// ['Mickey', 'Goofy']
+```
+
 ### Array.isArray()
 `Array.isArray()` checks whether a value is an array.
 51. 

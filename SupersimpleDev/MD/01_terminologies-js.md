@@ -22,14 +22,13 @@ This File - **01_terminologies-js.md** — Glossary of JavaScript terms, short o
 ### Order of Operations
 `Order of Operations` is the order JavaScript follows to evaluate an expression. (doing by following the recipe)
 
-
+**Left - Right**
 | Order | Module             | Operators   | Example                      |
 | ----: | ------------------ | ----------- | ---------------------------- |
 | **1** | **Grouping**       | `( )`       | `(2 + 3)`                    |
 | **2** | **Exponentiation** | `**`        | `2 ** 3`                     |
 | **3** | **Multiplicative** | `*` `/` `%` | `10 * 2`, `10 / 2`, `10 % 3` |
 | **4** | **Additive**       | `+` `-`     | `10 + 2`, `10 - 2`           |
-
 
 ## 2. Variables & Data
 
@@ -51,6 +50,7 @@ This File - **01_terminologies-js.md** — Glossary of JavaScript terms, short o
 ### Simple Relationship
 
 `Variable`(age) → stores → `Value`(25) → which has a → `Data Type`(Number) = actual `Data`(25).
+
 
 | **Part**    | **Example** | **Meaning**                         |
 | ----------- | ----------- | ------------------------------------ |
@@ -93,6 +93,30 @@ Non-primitive values can store multiple values or more complex data structures.
 | `[1, 2, 3]`                   | `Array`   | - Its an special type of an Objects
 | `function greet() {}`         | `Function`|
 
+### Index
+`Index` is the numeric position used to identify an element in an array. JavaScript arrays start counting from `0`.
+
+### Indexing
+`Indexing` is the process of accessing an array element using its index.
+
+### Zero-Based Indexing
+`Zero-Based Indexing` means the first element of an array has an index of `0`, the second has an index of `1`, and so on.
+
+### Simple Relationship
+
+const fruits = ["Apple", "Banana", "Mango"];
+fruits[0]; // "Apple"
+fruits[1]; // "Banana"
+fruits[2]; // "Mango"
+
+| Term                    | Example                        | Meaning                              |
+| ----------------------- | ------------------------------ | ------------------------------------ |
+| **Array**               | `["Apple", "Banana", "Mango"]` | The collection                       |
+| **Element**             | `"Apple"`                      | A value stored in the array          |
+| **Index**               | `0`                            | The position of the element          |
+| **Indexing**            | `fruits[0]`                    | Accessing an element using its index |
+| **Zero-Based Indexing** | `0, 1, 2`                      | Counting starts from `0`             |
+
 ### Integers
 `Integers` are whole numbers without a decimal point. They can be positive, negative, or zero.
 
@@ -126,10 +150,13 @@ Non-primitive values can store multiple values or more complex data structures.
 `Concatenation` is the process of joining two or more values together to create a single value.
 
 ### Ways to Create a String
-`Single Quotes` use `' '` to create a string.
-`Double Quotes` use `" "` and are useful when the string contains a single quote (`'`) inside.
-`Escape Character` uses `\` to include special characters inside a string.
-`Template String` uses backticks (`` ` ` ``) for interpolation and multi-line strings.
+
+| **Way**              | **Syntax** | **Purpose / Meaning**                                                                        |
+| -------------------- | ---------- | -------------------------------------------------------------------------------------------- |
+| **Single Quotes**    | `' '`      | Uses single quotes to create a string.                                                       |
+| **Double Quotes**    | `" "`      | Uses double quotes to create a string. Useful when the string contains a single quote (`'`). |
+| **Escape Character** | `\`        | Uses a backslash to include special characters inside a string.                              |
+| **Template String**  | `` ` ` ``  | Uses backticks for interpolation and multi-line strings.                                     |
 
 ### Interpolation
 `Interpolation` is a feature of template strings that allows variables or expressions to be inserted directly inside a string using `${}`.
