@@ -451,3 +451,8 @@ Because `greet` contains a function and can be called, we commonly call it a **m
 | **Object Method**     | A function belonging to an object    |
 
 This gives you a good foundation because you can now recognize the same pattern across **Objects, Arrays, Strings, Numbers, Functions, Date, Math, and DOM elements**.
+
+### 3 Main Idea of javascript
+1.Save the data
+2.Generate Html 
+3.Make It Interactive

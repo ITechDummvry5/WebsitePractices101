@@ -30,6 +30,25 @@ variableName = newValue;
 ```js
 typeof value;
 ```
+### Accumulator pattern 
+
+```js
+// Addition
+let total = 0;
+total = total + value;
+
+// Multiplication
+let total = 1;
+total = total * value;
+
+// String
+let result = '';
+result = result + value;
+
+// Array
+let result = [];
+result.push(value);
+```
 
 ### Parse Number
 

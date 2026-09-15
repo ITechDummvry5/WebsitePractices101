@@ -325,4 +325,6 @@ Loop Body is the block of code that runs repeatedly while the loop condition is 
 ### For Loop
 `For Loop` is a loop that **repeatedly runs a block of code while its loop condition is `true`**, with the initialization, condition, and increment step written together.
 
+### Accumulator Pattern
+The Accumulator Pattern is a coding pattern where a variable stores and updates a result as a loop runs.
 

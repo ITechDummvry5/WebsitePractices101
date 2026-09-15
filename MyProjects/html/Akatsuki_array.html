@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        const akatsukiNum = [10,20,30];
+        akatsukiNum[2] = 99;
+        console.log(akatsukiNum);
+
+        let ArrayOne = [1, 20, 22, 24, 5]; // count = 5, index = 0,1,2,3,4
+        let ArrayTwo = ['hi', 'hello', 'bye'];  // count = 3, index = 0,1,2
+        
+        function getLastValue(lastIndex){
+            return lastIndex[lastIndex.length - 1]; // Why -1 ?  Because the last index is always 1 less than the count of values in the array.  For example, if there are 5 values in an array, the last index is 4.  If there are 3 values in an array, the last index is 2.
+        }
+        console.log(ArrayOne); //
+        console.log(getLastValue(ArrayOne)); // 5 because the last index is 4, and the value at index 4 is 5
+
+        console.log(ArrayTwo); //
+        console.log(getLastValue(ArrayTwo)); // bye because the last index is 2, and the value at index 2 is bye
+
+
+  
+    
+        
+    </script>
+</body>
+</html>
