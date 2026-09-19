@@ -23,7 +23,19 @@
         console.log(ArrayTwo); //
         console.log(getLastValue(ArrayTwo)); // bye because the last index is 2, and the value at index 2 is bye
 
+        // let ArrayThree = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+        // const ArraySwap = (ArrayThree);
+        // let swap = ArraySwap[0]; // save the value at index 0 in a variable called swap
+        // ArraySwap[0] = ArraySwap[6];
+        // ArraySwap[6] = swap; // input the swap that have saved the value at index 0 into the value at index 6
+        // console.log(ArraySwap);
+// Beginner way to swap values in an array
 
+let ArrayThree = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+const ArraySwap = ArrayThree;
+[ArraySwap[0], ArraySwap[6]] = [ArraySwap[6], ArraySwap[0]];
+console.log(ArraySwap);
+// shorter way to swap values in an array using destructuring assignment
   
     
         

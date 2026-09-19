@@ -1,183 +1,573 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Buttons Demo</title>
+    <title>JavaScript Methods Demo</title>
 </head>
+
 <body>
 
-    <main>
+<main>
 
-        <!-- Card 1: inline onclick, if/else -->
-        <section>
-            <h3>Newsletter</h3>
-            <button
-                id="newsletterBtn"
-                onclick="toggleNewsletter()">   Subscribe</button>
-        </section>
+    <!-- ============================================================
+         METHOD 1
+         INLINE ONCLICK + IF / ELSE
+         ============================================================ -->
 
-        <!-- Card 2: addEventListener, if/else -->
-        <section>
-            <h3>Notifications</h3>
-            <button id="notificationBtn">   Subscribe</button>
-        </section>
+    <section>
 
-        <!-- Card 3: addEventListener, ternary -->
-        <section>
-            <h3>Plan</h3>
-            <button id="planBtn">Basic</button>
-        </section>
+        <h2>Method 1 — Inline onclick + if / else</h2>
 
-             <!-- Card 4: SuperSimpleDev  Call Function and  getElementsByClassName() can find more than one element. so need to have [0]-->
-        <section>
-            <h3>Akatsuki No Yona</h3>
-            <button onclick="main()" class="akatsuki-btn">      Hak</button>
-        </section>
+        <p>
+            <strong>Unique:</strong>
+            onclick is written directly inside the HTML button.
+        </p>
 
 
-        <section>
-  <hr> 
-  <h3>Amazon Shipping Calculator</h3>
-  <input type="text" class="user-input" 
-  
-            onkeydown="handleKeyDown(event)"
+        <!-- =========================
+             WORKING DEMO
+             ========================= -->
 
-  placeholder="Cost of order">
-  <button onclick="calculateTotal()" >Calculate</button>
-  <p class="display-Cost"></p>
+        <h3>Working Demo</h3>
 
-
-        </section>
-    </main>
-
-    <script>
-        function main() {
-            if (AkatsukiBtn.innerHTML.trim() === 'Hak') {
-                AkatsukiBtn.innerHTML = 'Yona';
-            }
-            else{
-                AkatsukiBtn.innerHTML = 'Hak';
-            }
-        }
-            const AkatsukiBtn = document.getElementsByClassName('akatsuki-btn')[0];
-
-        // ============================================================
-        // Method 1: toggleNewsletter — inline onclick + if/else
-        // trim() removes extra spaces/line breaks so the text matches 'Subscribe' exactly in The Webpage
-        // ============================================================
-        function toggleNewsletter() {
-            const newsletterBtn = document.getElementById('newsletterBtn');
-            if (newsletterBtn.innerHTML.trim() === 'Subscribe') {
-                newsletterBtn.innerHTML = 'Unsubscribe';
-            } else {
-                newsletterBtn.innerHTML = 'Subscribe';
-            }
-        }
-
-// ============================================================
-// Method 2 : toggleNotifications — addEventListener + if/else
-// Method 2-a Using trim() needed: innerHTML keeps raw whitespace, so compare with .trim()
-// Method 2-b Alternative : textContent also needs trim() — raw text, whitespace included
-// Method 2-c Alternative : innerText usually doesn't — it reflects the rendered, whitespace-collapsed page
-// ============================================================
-        function toggleNotifications() {
-            // if (notificationBtn.innerHTML === 'Subscribe') { 
-            if (notificationBtn.innerHTML.trim() === 'Subscribe') { 
-                notificationBtn.innerHTML = 'Subscribed';
-            } else {
-                notificationBtn.innerHTML = 'Subscribe';
-            }
-        }
-
-        const notificationBtn = document.getElementById('notificationBtn');
-        notificationBtn.addEventListener('click', toggleNotifications);
-
-        // ============================================================
-        // Method 3: togglePlan — addEventListener + ternary operator
-        // ============================================================
-        function togglePlan() {
-            planBtn.innerHTML = planBtn.innerHTML === 'Basic' ? 'Pro' : 'Basic';
-        }
-
-        const planBtn = document.getElementById('planBtn');
-        planBtn.addEventListener('click', togglePlan);
+        <button
+            id="newsletterBtn"
+            onclick="toggleNewsletter()">
+            Subscribe
+        </button>
 
 
+        <!-- =========================
+             HTML CODE
+             ========================= -->
 
-        
-// ============================================================
-// 1. Basic Version
-// ============================================================
+        <h3>HTML</h3>
 
-// function calculateTotal() {
-//     const userInput = document.querySelector('.user-input');
-//     const cost = Number(userInput.value);
-
-//     // If cost is greater than 40, add 10.
-//     // Otherwise, keep the original cost.
-//     const result = cost > 40 ? cost + 10 : cost;
-
-//     document.querySelector('.display-Cost')
-//         .innerHTML = `$${result}`;
-// }
+        <pre><code>
+&lt;button
+    id="newsletterBtn"
+    onclick="toggleNewsletter()"&gt;
+    Subscribe
+&lt;/button&gt;
+        </code></pre>
 
 
-// ============================================================
-// 2. If / Else Version
-// ============================================================
+        <!-- =========================
+             JAVASCRIPT CODE
+             ========================= -->
 
-// function calculateTotal() {
-//     const userInput = document.querySelector('.user-input');
-//     const cost = Number(userInput.value);
+        <h3>JavaScript</h3>
 
-//     let result;
+        <pre><code>
+function toggleNewsletter() {
 
-//     // Check if the value is not a valid number.
-//     if (Number.isNaN(cost)) {
-//         result = 'Not a number';
-//     } else {
-//         // If cost is greater than 40, add 10.
-//         // Otherwise, keep the original cost.
-//         result = cost > 40 ? cost + 10 : cost;
-//     }
+    const newsletterBtn =
+        document.getElementById('newsletterBtn');
 
-//     document.querySelector('.display-Cost')
-//         .innerHTML = result;
-// }
+    if (newsletterBtn.textContent.trim() === 'Subscribe') {
+
+        newsletterBtn.textContent = 'Unsubscribe';
+
+    } else {
+
+        newsletterBtn.textContent = 'Subscribe';
+
+    }
+}
+        </code></pre>
+
+    </section>
 
 
-// ============================================================
-// 3. Ternary Version
-// ============================================================
-function handleKeyDown(event) {
-    // console.log(event.key); checking the key pressed in the console
-    if (event.key === 'Enter') {
-        calculateTotal();
+    <hr>
+
+
+    <!-- ============================================================
+         METHOD 2
+         ADD EVENT LISTENER + IF / ELSE
+         ============================================================ -->
+
+    <section>
+
+        <h2>Method 2 — addEventListener() + if / else</h2>
+
+        <p>
+            <strong>Unique:</strong>
+            The click event is connected in JavaScript
+            using addEventListener().
+        </p>
+
+
+        <!-- =========================
+             WORKING DEMO
+             ========================= -->
+
+        <h3>Working Demo</h3>
+
+        <button id="notificationBtn">
+            Subscribe
+        </button>
+
+
+        <!-- =========================
+             HTML CODE
+             ========================= -->
+
+        <h3>HTML</h3>
+
+        <pre><code>
+&lt;button id="notificationBtn"&gt;
+    Subscribe
+&lt;/button&gt;
+        </code></pre>
+
+
+        <!-- =========================
+             JAVASCRIPT CODE
+             ========================= -->
+
+        <h3>JavaScript</h3>
+
+        <pre><code>
+function toggleNotifications() {
+
+    if (
+        notificationBtn.textContent.trim()
+        === 'Subscribe'
+    ) {
+
+        notificationBtn.textContent = 'Subscribed';
+
+    } else {
+
+        notificationBtn.textContent = 'Subscribe';
+
     }
 }
 
 
-function calculateTotal() {
-    const userInput = document.querySelector('.user-input');
-    const cost = Number(userInput.value);
+const notificationBtn =
+    document.getElementById('notificationBtn');
 
-    // Check if the value is not a number.
-    // If true: display "Not a number".
-    // If false: check whether cost is greater than 40.
-    const result = Number.isNaN(cost)
-        ? 'Not a number'
-        : cost > 40
-            ? `$${cost + 10}`
-            : `$${cost}`;
+
+notificationBtn.addEventListener(
+    'click',
+    toggleNotifications
+);
+        </code></pre>
+
+    </section>
+
+
+    <hr>
+
+
+    <!-- ============================================================
+         METHOD 3
+         ADD EVENT LISTENER + TERNARY
+         ============================================================ -->
+
+    <section>
+
+        <h2>Method 3 — addEventListener() + ternary</h2>
+
+        <p>
+            <strong>Unique:</strong>
+            Uses the ternary operator instead of if / else.
+        </p>
+
+
+        <!-- =========================
+             WORKING DEMO
+             ========================= -->
+
+        <h3>Working Demo</h3>
+
+        <button id="planBtn">
+            Basic
+        </button>
+
+
+        <!-- =========================
+             HTML CODE
+             ========================= -->
+
+        <h3>HTML</h3>
+
+        <pre><code>
+&lt;button id="planBtn"&gt;
+    Basic
+&lt;/button&gt;
+        </code></pre>
+
+
+        <!-- =========================
+             JAVASCRIPT CODE
+             ========================= -->
+
+        <h3>JavaScript</h3>
+
+        <pre><code>
+function togglePlan() {
+
+    planBtn.textContent =
+        planBtn.textContent === 'Basic'
+            ? 'Pro'
+            : 'Basic';
+
+}
+const planBtn =
+    document.getElementById('planBtn');
+
+
+planBtn.addEventListener(
+    'click',
+    togglePlan
+);
+        </code></pre>
+
+    </section>
+
+
+    <hr>
+
+
+    <!-- ============================================================
+         METHOD 4
+         INLINE ONCLICK + getElementsByClassName() + [0]
+         ============================================================ -->
+
+    <section>
+
+        <h2>
+            Method 4 — getElementsByClassName() + [0]
+        </h2>
+
+        <p>
+            <strong>Unique:</strong>
+            getElementsByClassName() can find multiple elements,
+            so [0] gets the first matching element.
+        </p>
+
+
+        <!-- =========================
+             WORKING DEMO
+             ========================= -->
+
+        <h3>Working Demo</h3>
+
+        <button
+            class="akatsuki-btn"
+            onclick="main()">
+            Hak
+        </button>
+
+
+        <!-- =========================
+             HTML CODE
+             ========================= -->
+
+        <h3>HTML</h3>
+
+        <pre><code>
+&lt;button
+    class="akatsuki-btn"
+    onclick="main()"&gt;
+    Hak
+&lt;/button&gt;
+        </code></pre>
+
+
+        <!-- =========================
+             JAVASCRIPT CODE
+             ========================= -->
+
+        <h3>JavaScript</h3>
+
+        <pre><code>
+const AkatsukiBtn =
+    document.getElementsByClassName(
+        'akatsuki-btn'
+    )[0];
+
+
+function main() {
+
+    if (
+        AkatsukiBtn.textContent.trim()
+        === 'Hak'
+    ) {
+
+        AkatsukiBtn.textContent = 'Yona';
+
+    } else {
+
+        AkatsukiBtn.textContent = 'Hak';
+
+    }
+}
+        </code></pre>
+
+    </section>
+
+
+    <hr>
+
+
+    <!-- ============================================================
+         METHOD 5
+         INPUT + KEYBOARD EVENT + NESTED TERNARY
+         ============================================================ -->
+
+    <section>
+
+        <h2>
+            Method 5 — Input + Enter key + nested ternary
+        </h2>
+
+        <p>
+            <strong>Unique:</strong>
+            Uses input.value, Number(), Number.isNaN(),
+            keydown, event.key, and nested ternary.
+        </p>
+
+
+        <!-- =========================
+             WORKING DEMO
+             ========================= -->
+
+        <h3>Working Demo</h3>
+
+        <input
+            type="text"
+            class="user-input"
+            onkeydown="handleKeyDown(event)"
+            placeholder="Cost of order">
+
+        <button onclick="calculateTotal()">
+            Calculate
+        </button>
+
+        <p class="display-Cost"></p>
+
+
+        <!-- =========================
+             HTML CODE
+             ========================= -->
+
+        <h3>HTML</h3>
+
+        <pre><code>
+&lt;input
+    type="text"
+    class="user-input"
+    onkeydown="handleKeyDown(event)"
+    placeholder="Cost of order"&gt;
+
+&lt;button onclick="calculateTotal()"&gt;
+    Calculate
+&lt;/button&gt;
+
+&lt;p class="display-Cost"&gt;&lt;/p&gt;
+        </code></pre>
+
+
+        <!-- =========================
+             JAVASCRIPT CODE
+             ========================= -->
+
+        <h3>JavaScript</h3>
+
+        <pre><code>
+function handleKeyDown(event) {
+
+    if (event.key === 'Enter') {
+        calculateTotal();
+    }
+
+}
+
+
+function calculateTotal() {
+
+    const userInput =
+        document.querySelector('.user-input');
+
+    const cost =
+        Number(userInput.value);
+
+
+    const result =
+        Number.isNaN(cost)
+            ? 'Not a number'
+            : cost > 40
+                ? `$${cost + 10}`
+                : `$${cost}`;
+
 
     document.querySelector('.display-Cost')
-        .innerHTML = result;
+        .textContent = result;
+
+}
+        </code></pre>
+
+    </section>
+
+</main>
+
+
+<script>
+
+
+// ============================================================
+// METHOD 1
+// Inline onclick + if / else
+// ============================================================
+
+function toggleNewsletter() {
+
+    const newsletterBtn =
+        document.getElementById('newsletterBtn');
+
+    if (newsletterBtn.textContent.trim() === 'Subscribe') {
+
+        newsletterBtn.textContent = 'Unsubscribe';
+
+    } else {
+
+        newsletterBtn.textContent = 'Subscribe';
+
+    }
 }
 
 
 
-    </script>
+// ============================================================
+// METHOD 2
+// addEventListener() + if / else
+// ============================================================
+
+function toggleNotifications() {
+
+    if (notificationBtn.textContent.trim() === 'Subscribe') {
+
+        notificationBtn.textContent = 'Subscribed';
+
+    } else {
+
+        notificationBtn.textContent = 'Subscribe';
+
+    }
+}
+
+
+const notificationBtn =
+    document.getElementById('notificationBtn');
+
+
+notificationBtn.addEventListener(
+    'click',
+    toggleNotifications
+);
+
+
+
+// ============================================================
+// METHOD 3
+// addEventListener() + ternary
+// ============================================================
+
+function togglePlan() {
+
+    planBtn.textContent =
+        planBtn.textContent === 'Basic'
+            ? 'Pro'
+            : 'Basic';
+
+}
+
+
+const planBtn =
+    document.getElementById('planBtn');
+
+
+planBtn.addEventListener(
+    'click',
+    togglePlan
+);
+
+
+
+// ============================================================
+// METHOD 4
+// getElementsByClassName() + [0]
+// ============================================================
+
+const AkatsukiBtn =
+    document.getElementsByClassName(
+        'akatsuki-btn'
+    )[0];
+
+
+function main() {
+
+    if (
+        AkatsukiBtn.textContent.trim()
+        === 'Hak'
+    ) {
+
+        AkatsukiBtn.textContent = 'Yona';
+
+    } else {
+
+        AkatsukiBtn.textContent = 'Hak';
+
+    }
+}
+
+
+
+// ============================================================
+// METHOD 5
+// Input + keyboard event + nested ternary
+// ============================================================
+
+function handleKeyDown(event) {
+    console.log(event.key);
+    if (event.key === 'Enter') {
+        calculateTotal();
+    }
+
+}
+
+
+function calculateTotal() {
+
+    const userInput =
+        document.querySelector('.user-input');
+
+    const cost =
+        Number(userInput.value);
+
+
+    const result =
+        Number.isNaN(cost)
+            ? 'Not a number'
+            : cost > 40
+                ? `$${cost + 10}`
+                : `$${cost}`;
+
+
+    document.querySelector('.display-Cost')
+        .textContent = result;
+
+}
+
+</script>
 
 </body>
 </html>
+
