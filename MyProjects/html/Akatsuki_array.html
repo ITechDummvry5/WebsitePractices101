@@ -1,27 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array</title>
 </head>
+        <!-- [0] -->
+            <input type="text" placeholder="write anime" id="js-anime">
+            <input type="number" placeholder="write ranking" class="js-ranking">
+            <button onclick="addAnimeRank()">add</button>
+            <p id="js-anime-display"></p>
+
 <body>
-    <script>
-        const akatsukiNum = [10,20,30];
+ <script>
+// [1] Data
+const animelist = [
+//     {
+//     naming: 'test',
+//     ranking: 2
+// }
+];
+
+// [2] Render / display
+function renderAnimeList() {
+    let DisplayListHTML = '';
+
+    for (let i = 0; i < animelist.length; i++) {
+        const elementArray = animelist[i];
+        const { naming, ranking } = elementArray;
+
+        const html = `
+            <div>${naming}</div>
+            <div>${ranking}</div>
+            <button onclick="
+                animelist.splice(${i}, 1);
+                renderAnimeList();
+            ">Delete</button>
+        `;
+
+        DisplayListHTML += html;
+    }
+
+    document.getElementById('js-anime-display')
+        .innerHTML = DisplayListHTML;
+}
+
+// [3] Add data
+function addAnimeRank() {
+    const inputElementAnime = document.getElementById('js-anime');
+    const naming = inputElementAnime.value;
+
+    const inputElementRank = document.getElementsByClassName('js-ranking')[0];
+    const ranking = inputElementRank.value;
+
+    animelist.push({
+        naming,
+        ranking
+    });
+
+    inputElementAnime.value = '';
+    inputElementRank.value = '';
+    
+    renderAnimeList();
+}
+
+// [4] Initial display
+renderAnimeList();
+ 
+
+console.log('==============================')
+
+        const akatsukiNum = [10, 20, 30];
         akatsukiNum[2] = 99;
         console.log(akatsukiNum);
 
-        let ArrayOne = [1, 20, 22, 24, 5]; // count = 5, index = 0,1,2,3,4
-        let ArrayTwo = ['hi', 'hello', 'bye'];  // count = 3, index = 0,1,2
-        
-        function getLastValue(lastIndex){
-            return lastIndex[lastIndex.length - 1]; // Why -1 ?  Because the last index is always 1 less than the count of values in the array.  For example, if there are 5 values in an array, the last index is 4.  If there are 3 values in an array, the last index is 2.
-        }
-        console.log(ArrayOne); //
-        console.log(getLastValue(ArrayOne)); // 5 because the last index is 4, and the value at index 4 is 5
 
-        console.log(ArrayTwo); //
-        console.log(getLastValue(ArrayTwo)); // bye because the last index is 2, and the value at index 2 is bye
+        let ArrayOne = [1, 20, 22, 24, 5]; // count = 5, index = 0,1,2,3,4
+        let ArrayTwo = ['hi', 'hello', 'bye']; // count = 3, index = 0,1,2
+
+        function getLastValue(lastIndex) {
+            return lastIndex[lastIndex.length - 1];
+            // Why -1? Because the last index is always 1 less than the count of values.
+            // 5 values → last index = 4 | 3 values → last index = 2
+        }
+
+        console.log(ArrayOne);
+        console.log(getLastValue(ArrayOne)); // 5 because the last index is 4
+
+        console.log(ArrayTwo);
+        console.log(getLastValue(ArrayTwo)); // bye because the last index is 2
+
+
+        // Alternative A — Shorter and modern way
+
+        let ArrayThree = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+        const ArraySwap = ArrayThree;
+        [ArraySwap[0], ArraySwap[6]] = [ArraySwap[6], ArraySwap[0]];
+        console.log(ArraySwap);
+
+
+        // Alternative B — Beginner way
 
         // let ArrayThree = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
         // const ArraySwap = (ArrayThree);
@@ -29,16 +108,10 @@
         // ArraySwap[0] = ArraySwap[6];
         // ArraySwap[6] = swap; // input the swap that have saved the value at index 0 into the value at index 6
         // console.log(ArraySwap);
-// Beginner way to swap values in an array
 
-let ArrayThree = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
-const ArraySwap = ArrayThree;
-[ArraySwap[0], ArraySwap[6]] = [ArraySwap[6], ArraySwap[0]];
-console.log(ArraySwap);
-// shorter way to swap values in an array using destructuring assignment
-  
-    
-        
+
     </script>
 </body>
+
 </html>
+

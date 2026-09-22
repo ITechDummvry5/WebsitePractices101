@@ -4,10 +4,6 @@
     <title>Todo List</title>
   </head>
   <body>
-    <p>Add MC</p>
-      <input placeholder="Mc Name"
-        class="js-mc-input">
-        <button onclick="addMcToList()">add </button>
 
     <p>Todo List</p>
     <div class="todo-input-grid">
@@ -18,19 +14,7 @@
     <div class="js-todo-list"></div>
 
   <script>
-    const addMc = [];
-function addMcToList() { 
-    const mcInputElement = document.querySelector('.js-mc-input');
-    const mcName = mcInputElement.value;
-
-    addMc.push(mcName);
-    console.log(addMc);
-}
-
 console.log('======================')
-
-
-
 const todoList = [{
   name: 'make dinner',
   dueDate: '2022-12-22'
@@ -40,7 +24,6 @@ const todoList = [{
 }];
 
 renderTodoList();
-
 function renderTodoList() {
   let todoListHTML = '';
 
@@ -55,7 +38,7 @@ function renderTodoList() {
       <button onclick="
         todoList.splice(${i}, 1);
         renderTodoList();
-      " class="delete-todo-button">Delete</button> 
+      ">Delete</button> 
     `;
     todoListHTML += html;
   } // generate the HTML for the todo list

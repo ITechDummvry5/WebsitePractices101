@@ -18,7 +18,7 @@
       console.log('================================');
 
 
-         [1, 'Touch', true, { name: 'socks' }, [1, 2]]
+      
          console.log(typeof [1, 'Touch', true, { name: 'socks' }, [1, 2]]);
          console.log(Array.isArray([1, 2 , 'true, false', { name: 'socks' }, [1, 2]]));
 
@@ -27,8 +27,10 @@
 
          myDisneyArray.push('mulan');
          console.log(myDisneyArray);
-         
+            // "snowWhite", "cinderella", "aurora", "belle", "jasmine", "rapunzel" , "anna", "mulan"
          myDisneyArray.splice(0, 4);
+        //  0 = starting index → start at index 0
+        // 4 = number of elements to remove → remove 4 elements
          console.log(myDisneyArray);
 
 console.log('================================'); 
