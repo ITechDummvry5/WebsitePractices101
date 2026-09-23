@@ -22,13 +22,14 @@ const animelist = [
 // }
 ];
 
+
 // [2] Render / display
 function renderAnimeList() {
     let DisplayListHTML = '';
 
     for (let i = 0; i < animelist.length; i++) {
-        const elementArray = animelist[i];
-        const { naming, ranking } = elementArray;
+        const elementArrayObject = animelist[i];
+        const { naming, ranking } = elementArrayObject;
 
         const html = `
             <div>${naming}</div>

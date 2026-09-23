@@ -328,3 +328,6 @@ Loop Body is the block of code that runs repeatedly while the loop condition is 
 ### Accumulator Pattern
 The Accumulator Pattern is a coding pattern where a variable stores and updates a result as a loop runs.
 
+### Destructuring
+Destructuring a way to **extract values from an array or properties from an object** and store them in variables.
+

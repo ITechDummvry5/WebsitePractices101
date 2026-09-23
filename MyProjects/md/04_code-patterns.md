@@ -25,6 +25,15 @@ variableName = newValue;
 
 > `const` cannot be reassigned. `let` and `var` can.
 
+### Destructuring
+
+```js
+const [variable1, variable2] = arrayName;
+
+const { property1, property2 } = objectName;
+```
+
+
 ### `typeof`
 
 ```js
